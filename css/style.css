@@ -1,0 +1,45 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.row {
+    margin: 0;
+}
+
+nav {
+    height: 80px;
+    background-color: #5A5B5C;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    color: white;
+    padding: 0 30px;
+}
+
+.bottommenu {
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+main header {
+    background-color: white;
+    padding: 20px 30px;
+}
+
+main article {
+    padding: 10px;
+}
+
+main article .card {
+    border-radius: 1rem !important;
+}
+
+main article .card-img-top {
+    border-radius: 1rem 1rem 0 0;
+}

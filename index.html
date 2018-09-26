@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thrifter.</title>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("nav").style.top = "0";
+            } else if (window.pageYOffset > 80 && prevScrollpos < currentScrollPos) {
+                document.getElementById("nav").style.top = "-80px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav id="nav" class="d-flex justify-content-between align-items-center">
+    <h1 class="display-4">Thrifter.</h1>
+    <i class="fas fa-bars fa-2x"></i>
+</nav>
+<div class="spacing" style="height: 80px"></div>
+<div class="bottommenu row d-flex align-items-center">
+    <div class="col-4 text-center"><i class="fas fa-stroopwafel fa-3x"></i></div>
+    <div class="col-4 text-center"><i class="fas fa-stroopwafel fa-3x"></i></div>
+    <div class="col-4 text-center"><i class="fas fa-stroopwafel fa-3x"></i></div>
+</div>
+<main>
+    <header>
+        <div class="row justify-content-between align-items-center">
+            <span class="h1" style="font-weight: 600">What's New</span>
+            <i class="fas fa-filter fa-2x"></i>
+        </div>
+        <!--<div class="input-group my-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Suchen" aria-label="Small"
+                   aria-describedby="basic-addon1">
+        </div>-->
+    </header>
+    <article>
+        <div class="card">
+            <img src="pics/_DSC1438.jpg" class="img-fluid card-img-top">
+            <div class="card-body">
+                <div class="row justify-content-between align-items-center">
+                    <div class="h1">Titel</div>
+                    <div class="h3">43€</div>
+                </div>
+                <div class="h5 my-2">Patryk</div>
+            </div>
+
+
+        </div>
+    </article>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
