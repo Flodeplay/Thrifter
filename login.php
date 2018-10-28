@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/login.css">
+
     <!-- scripts-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -35,7 +37,8 @@
 <main>
     <div>
         <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: 100vh"></div>
-        <div style="position: absolute; top: 50%; transform: translateY(-50%)" class="text-white display-4 text-center"> Früher Deins, Heute Meins <div><button type="button" class="btn btn-outline-light btn-lg">Anmelden</button></div></div>
+        <div style="position: absolute; top: 50%; transform: translateY(-50%)" class="text-white display-4 text-center"> Früher Deins, Heute Meins <div><button type="button" class="btn btn-outline-light btn-lg" href="#" data-toggle="modal" data-target="#login-modal">Anmelden</button></div></div>
+
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="loginmodal-container">
@@ -55,7 +58,7 @@
 
 
     </div>
-</main>w
+</main>
 <footer>
     <img src="assets/Logo.svg">
     <div class="display-4">"Früher Deins,<br> Heute Meins"</div>
