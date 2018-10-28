@@ -1,6 +1,7 @@
 
 body {
     background-color: #f2f2f2;
+    max-width: 500px;
 }
 .row {
     margin: 0;
@@ -37,17 +38,12 @@ nav * {
     display: block;
     z-index: 10;
 }
-
-main {
-    max-width: 1024px;
-}
-
 main header {
     background-color: white;
     padding: 5px 30px;
 }
 main article {
-    padding: 10px 10px;
+    padding: 20px 30px 5px;
 }
 
 main article .product {
@@ -67,4 +63,38 @@ main article .card-img-top {
 
 main article .card-img-top-container {
 
+}
+.img_container {
+    position: relative;
+}
+
+.btn_container {
+    position: absolute;
+    top: 0;
+}
+.btn_container .btnDislike {
+    height: 100%;
+    width: 50%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btn_container .btnDislike:hover {
+    opacity: 0.6;
+    background: rgb(255,0,0);
+    background: linear-gradient(270deg, rgba(255,0,0,0.0920334719540028) 0%, rgba(255,0,0,1) 100%);
+}
+
+.btn_container .btnLike {
+    height: 100%;
+    width: 50%;
+    background-color: #555;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btn_container .btnLike:hover {
+    opacity: 0.8;
+    background: rgb(0, 128, 0);
+    background: linear-gradient(90deg, rgba(0, 128, 0, 0.0920334719540028) 0%, rgba(0, 128, 0, 1) 100%);
 }
