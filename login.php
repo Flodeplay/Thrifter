@@ -36,6 +36,22 @@
     <div>
         <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: 100vh"></div>
         <div style="position: absolute; top: 50%; transform: translateY(-50%)" class="text-white display-4 text-center"> Früher Deins, Heute Meins <div><button type="button" class="btn btn-outline-light btn-lg">Anmelden</button></div></div>
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    <h1>Login to Your Account</h1><br>
+                    <form>
+                        <input type="text" name="user" placeholder="Username">
+                        <input type="password" name="pass" placeholder="Password">
+                        <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                    </form>
+
+                    <div class="login-help">
+                        <a href="#">Register</a> - <a href="#">Forgot Password</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>
