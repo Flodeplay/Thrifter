@@ -1,25 +1,32 @@
 nav {
     height: 60px;
-    background-color: #565656;
+    background-color: var(--main-dark);/*#565656*/
     width: 100%;
     display: flex;
 	align-items: center;
 	justify-content: space-between;
-    transition: top 0.3s;
     color: white;
     padding: 0 30px;
     z-index: 10;
 	position: fixed;
+	top: 0;
 }
 nav img{
-	height: 40px;
+	opacity: 0;
+	height: 30px;
 	width: auto;
+	animation: 700ms opacity-0-1 ease 500ms running both;
+}
+nav i{
+	opacity: 0;
+	animation: 1000ms opacity-0-1 ease 1000ms running both;
 }
 nav * {
-   color: var(--main-green)!important;
+   color: var(--main-red)!important;
 }
 
 .bottommenu {
+	animation: 700ms opacity-0-1 ease 2000ms running both;
     height: 50px;
     background-color: white;
     position: fixed;

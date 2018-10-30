@@ -1,6 +1,7 @@
 :root {
     --main-red: #FF6A79; 
 	--main-green: #8DB; 
+	--main-dark: #505050;
 }
 body {
     background-color: #f2f2f2;
@@ -18,14 +19,23 @@ body {
     color: var(--main-green);
 }
 main{
+	margin-top: 60px;
 	position: relative;
 }
-main header {
+header {
+	/*animation: 700ms opacity-0-1 ease 1000ms running both;*/
     background-color: white;
     padding: 5px 30px;
+	height: 50px;
+	top: 60px;
+	position: fixed;
+	width: 100%;
+	z-index: 9;
 }
 main article {
+	/*animation: 700ms opacity-0-1 ease 1500ms running both;*/
     padding: 20px 30px 5px;
+	
 }
 
 main article .product {
@@ -79,4 +89,35 @@ main article .card-img-top-container {
     opacity: 0.8;
     background: rgb(0, 128, 0);
     background: linear-gradient(90deg, rgba(0, 128, 0, 0.0920334719540028) 0%, rgba(0, 128, 0, 1) 100%);
+}
+/* Image im background*/
+.back-img{
+	background-size: cover;background-position: center;
+}
+.img-overlay{
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+.img-overlay .content{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+@keyframes opacity-0-1{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
 }
