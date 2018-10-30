@@ -7,17 +7,17 @@
     <meta charset="UTF-8">
     <meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
 
-<!-- extern stylesheets-->
-<link rel="stylesheet" href="./css/all.css">
-<link rel="stylesheet" href="./css/bootstrap.min.css">
-<!-- custom style-->
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/nav.css">
-<link rel="stylesheet" href="./css/footer.css">
-<!-- scripts-->
-<script src="./JS/jquery-3.2.1.slim.min.js"></script>
-<script src="./JS/popper.min.js"></script>
-<script src="./JS/bootstrap.min.js"></script>
+    <!-- extern stylesheets-->
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- custom style-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <!-- scripts-->
+    <script src="./JS/jquery-3.2.1.slim.min.js"></script>
+    <script src="./JS/popper.min.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
 
     <!-- scripts-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
