@@ -1,6 +1,6 @@
 nav {
     height: 60px;
-    background-color: var(--main-dark);/*#565656*/
+    background-color: var(--main-dark);
     width: 100%;
     display: flex;
 	align-items: center;
@@ -33,5 +33,31 @@ nav * {
     bottom: 0;
     width: 100%;
     display: block;
-    z-index: 10;
+    z-index: 9;
+}
+nav .sidemenu{
+	position: fixed;
+	z-index: 10;
+	top: 60px;
+	left: 0;
+	height: calc(100vh - 60px);
+	width: 100%;
+	background-color: var(--main-dark);
+	animation: 700ms sidemenu-open ease 0s running both;
+}
+nav .sidemenu .content{
+	
+}
+@media (max-width: 720px) {
+	nav .sidemenu{
+		display: block;
+	}
+}
+@keyframes sidemenu-open{
+	from{
+		height: 0;
+	}
+	to{
+		height: calc(100vh - 60px);
+	}
 }
