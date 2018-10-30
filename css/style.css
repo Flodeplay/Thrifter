@@ -113,6 +113,10 @@ main article .card-img-top-container {
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 }
+
+.register-input {
+    display: none;
+}
 @keyframes opacity-0-1{
 	from{
 		opacity: 0;
