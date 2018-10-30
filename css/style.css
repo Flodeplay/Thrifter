@@ -32,6 +32,14 @@ header {
 	width: 100%;
 	z-index: 9;
 }
+
+main section {
+    position: relative;
+}
+
+main .full-height-section {
+    min-height: 100vh;
+}
 main article {
 	/*animation: 700ms opacity-0-1 ease 1500ms running both;*/
     padding: 20px 30px 5px;
@@ -112,6 +120,42 @@ main article .card-img-top-container {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
+}
+
+.register-input {
+    display: none;
+}
+
+.scrollup {
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    top: 60px;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+}
+
+.scrollup:hover {
+    top: 65px;
+}
+
+.scrolldown {
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    bottom: 20px;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+}
+
+.scrolldown:hover {
+    bottom: 25px;
 }
 @keyframes opacity-0-1{
 	from{

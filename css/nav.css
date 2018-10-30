@@ -38,6 +38,7 @@ nav .menu-button {
     z-index: 9;
 }
 nav .sidemenu{
+    display: none;
 	position: fixed;
 	z-index: 10;
 	top: 60px;
@@ -45,11 +46,23 @@ nav .sidemenu{
 	height: calc(100vh - 60px);
 	width: 100%;
 	background-color: var(--main-dark);
-	animation: 700ms sidemenu-open ease 0s running both;
+}
+
+nav .open {
+    display: block;
+    animation: 700ms sidemenu-open ease 0s running both;
+}
+
+nav .close {
+    display: block;
+    animation: 700ms sidemenu-close ease 1000ms running forwards;
+}
+
+nav .open .content {
+    animation: 1000ms opacity-0-1 ease 1000ms running both;
 }
 nav .sidemenu .content{
     margin-top: 50px;
-    animation: 1000ms opacity-0-1 ease 1000ms running both;
 }
 
 nav .sidemenu li {
@@ -67,9 +80,10 @@ nav .sidemenu hr {
     border-bottom: white solid 0.1px;
     width: calc(100% - 60px);
 }
-@media (max-width: 720px) {
+
+@media (min-width: 720px) {
 	nav .sidemenu{
-		display: block;
+        display: none;
 	}
 }
 @keyframes sidemenu-open{
@@ -79,4 +93,14 @@ nav .sidemenu hr {
 	to{
 		height: calc(100vh - 60px);
 	}
+}
+
+@keyframes sidemenu-close {
+    0% {
+        height: calc(100vh - 60px);
+    }
+    100% {
+        display: none;
+        height: 0;
+    }
 }

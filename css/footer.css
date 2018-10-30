@@ -1,4 +1,4 @@
-footer{
+.footer {
 	min-height: 100vh;
 	display: flex;
 	justify-content: space-between;
@@ -8,11 +8,13 @@ footer{
 	background-color: #E3E3E3;
 	text-align: center;
 }
-footer img{
+
+.footer img {
 	width: 80%;
 	margin: 0 auto;
 }
-footer .row{
+
+.footer .row {
 	padding: 30px 0;
 }
 .seperator{
@@ -20,7 +22,7 @@ footer .row{
 	margin: 0 10px;
 }
 @media (max-width: 720px) {
-	footer .seperator{
+    .footer .seperator {
 		display: none;
 	}
 }
