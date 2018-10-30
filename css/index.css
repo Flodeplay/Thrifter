@@ -1,0 +1,7 @@
+/* CSS Document */
+#headpic-text{
+	animation: 1000ms opacity-0-1 ease 1000ms running both;
+}
+#headpic-button{
+	animation: 700ms opacity-0-1 ease 1500ms running both;
+}
