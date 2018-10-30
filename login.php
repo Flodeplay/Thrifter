@@ -7,16 +7,17 @@
     <meta charset="UTF-8">
     <meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
 
-    <!-- extern stylesheets-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- custom style-->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/login.css">
+<!-- extern stylesheets-->
+<link rel="stylesheet" href="./css/all.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<!-- custom style-->
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/nav.css">
+<link rel="stylesheet" href="./css/footer.css">
+<!-- scripts-->
+<script src="./JS/jquery-3.2.1.slim.min.js"></script>
+<script src="./JS/popper.min.js"></script>
+<script src="./JS/bootstrap.min.js"></script>
 
     <!-- scripts-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
