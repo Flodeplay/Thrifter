@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="./css/nav.css">
 <link rel="stylesheet" href="./css/footer.css">
 <!-- scripts-->
-    <script src="./JS/jquery-3.2.1.slim.min.js"></script>
+    <script src="./JS/jquery-3.3.1.min.js"></script>
     <script src="./JS/popper.min.js"></script>
     <script src="./JS/bootstrap.min.js"></script>
     <script src="./JS/base.js"></script>
@@ -38,8 +38,8 @@
     </div>
 </nav>
 <main>
-  <div>
-    <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: 100vh"></div>
+    <section class="position-relative">
+        <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: calc(100vh - 60px)"></div>
       <div style="position: absolute; top: 50%; transform: translateY(-50%)" class="text-white display-4 text-center">
           Früher Deins, Heute Meins
           <div>
@@ -48,9 +48,20 @@
               </button>
           </div>
       </div>
-  </div>
+        <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
+    </section>
+    <section class="full-height-section d-flex align-items-center p-5">
+        <blockquote class="blockquote">
+            <p class="mb-0">Someone that religiously shops at Thrift Stores looking for bargains and often scores
+                amazing deals. Often dedicated to recycling and reuse of products to keep our planet "greener".
+            </p>
+            <footer class="blockquote-footer">Urban Dictionary</footer>
+        </blockquote>
+        <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
+    </section>
+
 </main>
-<footer>
+<footer class="footer">
 	<img src="assets/Logo.svg">
 	<div class="display-4">"Früher Deins,<br> Heute Meins"</div>
 	<div class="row font-weight-bold justify-content-center mt-5"><i class="fab fa-instagram mx-3 fa-2x"></i><i class="fab fa-facebook-f fa-2x mx-3"></i><i class="fab fa-twitter fa-2x mx-3"></i><span class="seperator"></span><span class="mx-3 h3">office@Thrifter.at</span></div>

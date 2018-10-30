@@ -10,7 +10,26 @@ $(function () {
             $(".register-button span").text("Register");
         }
         $(".register-input").toggle();
-    })
+    });
+    $("section .scrolldown").click(function () {
+        var sections = $("section");
+        console.log(sections);
+        var cursection = $(this).parents("section");
+        for (var x = 0; x < sections.length; x++) {
+            if (sections[x] === cursection[0]) {
+                $('html,body').animate({
+                    scrollTop: $(sections[(x + 1)]).offset().top
+                }, 1000);
+                break;
+            }
+        }
+
+    });
+    $(".scrollup").click(function () {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 1000)
+    });
 });
 
 function navbar() {
