@@ -1,9 +1,22 @@
+<?php
+    error_reporting(0);
+    session_start();
+    session_destroy();
+    $_SESSION = array();
+?>
+
 <?php echo file_get_contents('html/head1.html'); ?>
 <title>Thrifter.</title>
 <?php echo file_get_contents('html/head2.html'); ?>
 <body>
 <?php echo file_get_contents('html/navbarTop.html'); ?>
 <main>
+    <form action="home.php" method="post">
+        <p><input name="username"> Username</p>
+        <p><input type="password" name="pwd"> Password</p>
+        <p><input type="submit" value="Login"></p>
+    </form>
+
     <section class="position-relative">
         <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: calc(100vh - 60px)"></div>
         <div style="position: absolute; top: 50%; transform: translateY(-50%)" class="text-white display-4 text-center">
@@ -40,25 +53,25 @@
             </div>
             <div class="modal-body">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                    <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username">
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Passwort" aria-label="Passwort">
+                    <input type="text" name="pwd" class="form-control" placeholder="Passwort" aria-label="Passwort">
                 </div>
                 <div class="input-group register-input mb-3">
-                    <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+                    <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email">
                 </div>
                 <div class="input-group register-input mb-3">
-                    <input type="text" class="form-control" placeholder="Vorname" aria-label="Vorname">
-                    <input type="text" class="form-control" placeholder="Nachname" aria-label="Nachname">
+                    <input type="text" name="forename" class="form-control" placeholder="Vorname" aria-label="Vorname">
+                    <input type="text" name="surname" class="form-control" placeholder="Nachname" aria-label="Nachname">
                 </div>
                 <div class="input-group register-input mb-3">
 
-                    <input type="text" class="form-control" placeholder="Postal-Code / ZIP-Code"
+                    <input type="text" name="zipcode" class="form-control" placeholder="Postal-Code / ZIP-Code"
                            aria-label="Postal-code">
                 </div>
                 <div class="input-group register-input mb-3">
-                    <input type="text" class="form-control" placeholder="Telefon" aria-label="Telefon">
+                    <input type="text" name="phonenr" class="form-control" placeholder="Telefon" aria-label="Telefon">
                 </div>
             </div>
             <div class="modal-footer">
