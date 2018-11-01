@@ -1,53 +1,19 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
+<?php echo file_get_contents('html/head1.html'); ?>
 <title>Thrifter.</title>
-	
-<!-- Meta Tags-->
-<meta charset="UTF-8">
-<meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
-
-<!-- extern stylesheets-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
-          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-<!-- custom style-->
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/nav.css">
-<link rel="stylesheet" href="./css/footer.css">
-<!-- scripts-->
-    <script src="./JS/jquery-3.3.1.min.js"></script>
-    <script src="./JS/popper.min.js"></script>
-    <script src="./JS/bootstrap.min.js"></script>
-    <script src="./JS/base.js"></script>
-</head>
+<?php echo file_get_contents('html/head2.html'); ?>
 <body>
-<nav id="nav">
-  <img src="assets/Logo.svg">
-    <i class="fas fa-bars fa-lg menu-button"></i>
-    <div class="sidemenu">
-        <div class="content">
-            <li>Home</li>
-            <li>Home</li>
-            <li>Home</li>
-            <hr>
-            <div class="row font-weight-bold justify-content-center mt-5"><i class="fab fa-instagram mx-3 fa-2x"></i><i
-                    class="fab fa-facebook-f fa-2x mx-3"></i><i class="fab fa-twitter fa-2x mx-3"></i></div>
-            <div class="my-3 h4 text-center">office@Thrifter.at</div>
-        </div>
-    </div>
-</nav>
+<?php echo file_get_contents('html/navbarTop.html'); ?>
 <main>
     <section class="position-relative">
         <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: calc(100vh - 60px)"></div>
-      <div style="position: absolute; top: 50%; transform: translateY(-50%)" class="text-white display-4 text-center">
-          Früher Deins, Heute Meins
-          <div>
-              <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#login-modal">
-                  Anmelden
-              </button>
-          </div>
-      </div>
+        <div style="position: absolute; top: 50%; transform: translateY(-50%)" class="text-white display-4 text-center">
+            Früher Deins, Heute Meins
+            <div>
+                <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#login-modal">
+                    Anmelden
+                </button>
+            </div>
+        </div>
         <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
     <section class="full-height-section d-flex align-items-center p-5">
@@ -61,11 +27,7 @@
     </section>
 
 </main>
-<footer class="footer">
-	<img src="assets/Logo.svg">
-	<div class="display-4">"Früher Deins,<br> Heute Meins"</div>
-	<div class="row font-weight-bold justify-content-center mt-5"><i class="fab fa-instagram mx-3 fa-2x"></i><i class="fab fa-facebook-f fa-2x mx-3"></i><i class="fab fa-twitter fa-2x mx-3"></i><span class="seperator"></span><span class="mx-3 h3">office@Thrifter.at</span></div>
-</footer>
+<?php echo file_get_contents('html/footer.html'); ?>
 </body>
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
