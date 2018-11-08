@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
 :root {
     --main-red: #FF6A79; 
 	--main-green: #8DB;
@@ -17,6 +18,9 @@ body {
 
 .green {
     color: var(--main-green);
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.display-1,.display-2,.display-3,.display-4{
+	font-family: 'Montserrat', sans-serif;
 }
 main{
 	margin-top: 60px;

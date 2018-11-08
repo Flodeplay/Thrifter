@@ -1,29 +1,55 @@
-<?php
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<?php
     error_reporting(0);
     session_start();
     session_destroy();
     $_SESSION = array();
-?>
-
-<?php echo file_get_contents('html/head1.html'); ?>
+	?>
+<?php echo file_get_contents('html/head.html'); ?>
 <title>Thrifter.</title>
-<?php echo file_get_contents('html/head2.html'); ?>
+
+<!-- Meta Tags-->
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
+
+<!-- extern stylesheets-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- custom style-->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/footer.css">
+<!-- scripts-->
+<script src="JS/jquery-3.3.1.min.js"></script>
+<script src="JS/popper.min.js"></script>
+<script src="JS/bootstrap.min.js"></script>
+<script src="JS/base.js"></script>
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#ff6a79">
+<link rel="shortcut icon" href="assets/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+</head>
 <body>
 <?php echo file_get_contents('html/navbarTop.html'); ?>
+<body>
 <main>
-    <form action="home.php" method="post">
-        <p><input name="username"> Username</p>
-        <p><input type="password" name="pwd"> Password</p>
-        <p><input type="submit" value="Login"></p>
-    </form>
-
     <section class="position-relative">
         <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: calc(100vh - 60px)"></div>
         <div style="position: absolute; top: 50%; transform: translateY(-50%)" class="text-white display-4 text-center">
             Früher Deins, Heute Meins
             <div>
                 <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#login-modal">
-                    Anmelden
+                    Anmelden!
                 </button>
             </div>
         </div>
@@ -36,12 +62,10 @@
             </p>
             <footer class="blockquote-footer">Urban Dictionary</footer>
         </blockquote>
-        <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
+        <div class="scrolldown text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-
+	<section></section>
 </main>
-<?php echo file_get_contents('html/footer.html'); ?>
-</body>
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -52,11 +76,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="input-group mb-3">
+			<form action="home.php" method="post">
+				<div class="input-group mb-3">
                     <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username">
                 </div>
-                <div class="input-group mb-3">
-                    <input type="text" name="pwd" class="form-control" placeholder="Passwort" aria-label="Passwort">
+				<div class="input-group mb-3">
+                    <input  type="password" name="pwd" class="form-control" placeholder="Passwort" aria-label="Passwort">
                 </div>
                 <div class="input-group register-input mb-3">
                     <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email">
@@ -76,8 +101,11 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-success register-button"><span>Registrieren</span></button>
-                <button type="button" class="btn btn-secondary"><span>Login</span></button>
+                <input type="submit" value="Login" type="button" class="btn btn-secondary"></input>
             </div>
+			</form>
         </div>
     </div>
 </div>
+<?php echo file_get_contents('html/footer.html'); ?>
+</body>

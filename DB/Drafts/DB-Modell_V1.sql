@@ -8,17 +8,17 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema Thrifter
+-- Schema WS-P1-Thrifter
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema Thrifter
+-- Schema WS-P1-Thrifter
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `Thrifter` DEFAULT CHARACTER SET utf8 ;
 USE `Thrifter` ;
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`u_users`
+-- Table `WS-P1-Thrifter`.`u_users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`u_users` (
   `u_id` INT NOT NULL AUTO_INCREMENT,
@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`col_colors`
+-- Table `WS-P1-Thrifter`.`col_colors`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`col_colors` (
   `col_id` INT NOT NULL AUTO_INCREMENT,
@@ -50,7 +50,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`b_brands`
+-- Table `WS-P1-Thrifter`.`b_brands`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`b_brands` (
   `b_id` INT NOT NULL AUTO_INCREMENT,
@@ -60,7 +60,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`g_genders`
+-- Table `WS-P1-Thrifter`.`g_genders`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`g_genders` (
   `g_id` INT NOT NULL AUTO_INCREMENT,
@@ -70,7 +70,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`ca_categories`
+-- Table `WS-P1-Thrifter`.`ca_categories`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`ca_categories` (
   `ca_id` INT NOT NULL AUTO_INCREMENT,
@@ -80,7 +80,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`con_conditions`
+-- Table `WS-P1-Thrifter`.`con_conditions`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`con_conditions` (
   `con_id` INT NOT NULL AUTO_INCREMENT,
@@ -90,7 +90,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`s_sizes`
+-- Table `WS-P1-Thrifter`.`s_sizes`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`s_sizes` (
   `s_id` INT NOT NULL AUTO_INCREMENT,
@@ -101,7 +101,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`p_post`
+-- Table `WS-P1-Thrifter`.`p_post`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`p_post` (
   `p_id` INT NOT NULL AUTO_INCREMENT,
@@ -163,7 +163,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`f_favorites`
+-- Table `WS-P1-Thrifter`.`f_favorites`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`f_favorites` (
   `f_u_user` INT NOT NULL,
@@ -185,7 +185,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thrifter`.`sca_SizeCategories`
+-- Table `WS-P1-Thrifter`.`sca_SizeCategories`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Thrifter`.`sca_SizeCategories` (
   `s_sizes_s_id` INT NOT NULL,
