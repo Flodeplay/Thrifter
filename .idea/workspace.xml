@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55c7e6de-1146-4174-9caf-28442feac6ed" name="Default Changelist" comment="login">
-      <change afterPath="$PROJECT_DIR$/website-dir/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/712a5abe-d558-4e82-873f-1ab51c6bf2cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/712a5abe-d558-4e82-873f-1ab51c6bf2cb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Thrifter_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Thrifter_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/home_php___Florian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/home_php___Florian.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+    <list default="true" id="55c7e6de-1146-4174-9caf-28442feac6ed" name="Default Changelist" comment="index.html |login.php">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WS-P1-Thrifter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WS-P1-Thrifter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website-dir/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/_notes/dwsync.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website-dir/css/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/css/_notes/dwsync.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website-dir/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website-dir/home.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/website-dir/html/sessionFail.html" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website-dir/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/website-dir/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/JS/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/JS/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/JS/jquery-3.2.1.slim.min.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,11 +41,6 @@
         <item name="thrifter@127.0.0.1" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="thrifter: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="thrifter@127.0.0.1" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -114,32 +101,41 @@
         <counts>
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.56" value="1" />
+          <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="41" />
-          <entry key="php" value="286" />
+          <entry key="html" value="58" />
+          <entry key="js" value="32" />
+          <entry key="php" value="291" />
+          <entry key="txt" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="41" />
-          <entry key="PHP" value="286" />
+          <entry key="HTML" value="58" />
+          <entry key="JavaScript" value="32" />
+          <entry key="PHP" value="291" />
+          <entry key="PLAIN_TEXT" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
+          <entry key="SCHEMA:thrifter" value="1" />
+          <entry key="html" value="4" />
+          <entry key="js" value="3" />
           <entry key="php" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
+          <entry key="HTML" value="4" />
+          <entry key="JavaScript" value="3" />
           <entry key="PHP" value="2" />
+          <entry key="UML" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -150,7 +146,16 @@
         <entry file="file://$PROJECT_DIR$/website-dir/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/website-dir/JS/base.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -158,20 +163,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website-dir/html/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="73" lean-forward="true" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
+            <state relative-caret-position="442">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/website-dir/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -212,9 +208,11 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/website-dir/html/sessionFail.html" />
         <option value="$PROJECT_DIR$/website-dir/home.php" />
-        <option value="$PROJECT_DIR$/website-dir/index.php" />
         <option value="$PROJECT_DIR$/website-dir/login.php" />
         <option value="$PROJECT_DIR$/website-dir/html/login.html" />
+        <option value="$PROJECT_DIR$/website-dir/index.php" />
+        <option value="$PROJECT_DIR$/website-dir/html/footer.html" />
+        <option value="$PROJECT_DIR$/website-dir/JS/base.js" />
       </list>
     </option>
   </component>
@@ -224,14 +222,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
-      <server deployment_server="af4db263-1154-4884-8121-7845e1ff1ecd" host="localhost" id="fb8a4b30-3cd7-4c1a-a2d1-456526cb0ce7" name="XAMPP Apache" use_path_mappings="true" />
       <server host="localhost" id="068fd6dd-beca-4b04-b7b3-cd64700b70d7" name="Apache XAMPP" use_path_mappings="true" />
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
+      <path value="$PROJECT_DIR$/../.." />
       <path value="$PROJECT_DIR$/../.." />
       <path value="C:/xampp" />
     </include_path>
@@ -247,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,10 +269,17 @@
               <item name="website-dir" type="462c0819:PsiDirectoryNode" />
               <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="website-dir" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,6 +291,116 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="C:/xampp" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/website-dir/index.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -327,6 +442,7 @@
       <workItem from="1541583063086" duration="1842000" />
       <workItem from="1541682882190" duration="1093000" />
       <workItem from="1541752982824" duration="2874000" />
+      <workItem from="1541764296701" duration="1870000" />
     </task>
     <task id="LOCAL-00001" summary="Offline Libraries | html head optimization">
       <created>1540898695404</created>
@@ -356,11 +472,32 @@
       <option name="project" value="LOCAL" />
       <updated>1540918182701</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="index.html |login.php">
+      <created>1541764346329</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541764346329</updated>
+    </task>
+    <task id="LOCAL-00006" summary="index.html |login.php">
+      <created>1541764563595</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541764563595</updated>
+    </task>
+    <task id="LOCAL-00007" summary="base.js">
+      <created>1541765414018</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1541765414018</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23451000" />
+    <option name="totallyTimeSpent" value="25321000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -373,8 +510,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21208054" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -386,9 +524,9 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3248227" />
+      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32907802" />
       <window_info anchor="bottom" id="File Transfer" order="12" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -440,7 +578,9 @@
     <MESSAGE value="nav.css | style.css | index.html" />
     <MESSAGE value="nix gemacht" />
     <MESSAGE value="login" />
-    <option name="LAST_COMMIT_MESSAGE" value="login" />
+    <MESSAGE value="index.html |login.php" />
+    <MESSAGE value="base.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="base.js" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -456,27 +596,87 @@
     <entry file="file://$PROJECT_DIR$/DB/Drafts/Thrifter-DB_V1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/website-dir/login.php">
+    <entry file="file://$PROJECT_DIR$/website-dir/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="-564">
+          <caret line="42" column="55" lean-forward="true" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website-dir/html/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="73" lean-forward="true" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
+        <state relative-caret-position="442">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website-dir/index.php">
+    <entry file="file://$PROJECT_DIR$/website-dir/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
+        <state relative-caret-position="425">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/712a5abe-d558-4e82-873f-1ab51c6bf2cb.SCHEMA:thrifter">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>712a5abe-d558-4e82-873f-1ab51c6bf2cb.SCHEMA:thrifter</OriginalElement>
+          <nodes>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.g_genders</node>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.s_sizes</node>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.p_post</node>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.sca_sizecategories</node>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.b_brands</node>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.f_favorites</node>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.col_colors</node>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.u_users</node>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.con_conditions</node>
+            <node x="" y="">712a5abe-d558-4e82-873f-1ab51c6bf2cb.TABLE:thrifter.ca_categories</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.9412268188302433" x="691.0000000000001" y="408.959955506118" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/JS/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/JS/jquery-3.3.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/html/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/JS/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
         </state>
       </provider>
     </entry>
