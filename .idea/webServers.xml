@@ -13,9 +13,6 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
-      <webServer id="a841ddc9-5e71-4654-84be-ec8090d87193" name="Xampp florian" url="http://localhost/WS-P1-Thrifter">
-        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs" accessType="MOUNT" />
-      </webServer>
     </option>
   </component>
 </project>

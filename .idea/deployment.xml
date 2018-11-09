@@ -5,21 +5,14 @@
       <paths name="Easyname - Florian - Trifter">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/../WS-P1-Thrifter" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="XAMPP Apache">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/../WS-P1-Thrifter" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Xampp florian">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/../WS-P1-Thrifter" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
