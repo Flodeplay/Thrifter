@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="XAMPP Apache" uploadOnCheckin="af4db263-1154-4884-8121-7845e1ff1ecd">
+  <component name="PublishConfigData" autoUpload="Always" serverName="XAMPP Apache" uploadOnCheckin="af4db263-1154-4884-8121-7845e1ff1ecd">
     <serverData>
       <paths name="Easyname - Florian - Trifter">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/../WS-P1-Thrifter" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="XAMPP Apache">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/../WS-P1-Thrifter" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Xampp florian">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/../WS-P1-Thrifter" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
     <option name="myUploadOnCheckinName" value="XAMPP Apache" />
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
