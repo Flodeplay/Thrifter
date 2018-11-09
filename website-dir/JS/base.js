@@ -7,7 +7,7 @@ $(function () {
             $(".register-button span").text("Login");
         }
         else if ($(".register-input").css("Display") === "block") {
-            $(".register-button span").text("Register");
+            $(".register-button span").text("Registrieren");
         }
         $(".register-input").toggle();
     });
