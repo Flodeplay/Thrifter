@@ -41,7 +41,6 @@
 </head>
 <body>
 <?php echo file_get_contents('html/navbarTop.html'); ?>
-<body>
 <main>
     <section class="position-relative">
         <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: calc(100vh - 60px)"></div>
@@ -101,6 +100,7 @@
                     <button type="button" class="btn btn-success register-button"><span>Registrieren</span></button>
                     <input type="submit" value="Login" class="btn btn-secondary"></input>
                 </form>
+            </div>
         </div>
     </div>
 </div>
