@@ -26,6 +26,18 @@ main{
 	margin-top: 60px;
 	position: relative;
 }
+.main-header{
+    position: relative !important;
+    max-width: 1024px;
+    margin: 120px auto 0;
+    padding: 30px;
+}
+main .w-1024{
+    position: relative !important;
+    max-width: 1024px !important;
+    margin: 0 auto;
+    padding: 30px;
+}
 header {
 	/*animation: 700ms opacity-0-1 ease 1000ms running both;*/
     background-color: white;
@@ -48,25 +60,6 @@ main article {
 	/*animation: 700ms opacity-0-1 ease 1500ms running both;*/
     padding: 20px 30px 5px;
 	
-}
-
-main article .product {
-    border-radius: 1rem !important;
-}
-
-main article .user .product img {
-    border-radius: 1rem 0 0 1rem !important;
-}
-
-main article .card-body {
-    padding: 0.5rem 1rem;
-}
-main article .card-img-top {
-    border-radius: 1rem 1rem 0 0;
-}
-
-main article .card-img-top-container {
-
 }
 .img_container {
     position: relative;

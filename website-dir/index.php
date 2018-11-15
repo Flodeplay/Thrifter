@@ -4,8 +4,6 @@
 	<?php
     error_reporting(0);
     session_start();
-    session_destroy();
-    $_SESSION = array();
 	?>
 <title>Thrifter.</title>
 
@@ -21,6 +19,16 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/footer.css">
+    <style>
+        #headpic{
+            background-image: url('assets/DSC_9514-4.JPG');background-position: right;
+        }
+        @media (max-width: 992px) {
+            #headpic{
+                background-image: url('assets/DSC_9662-7.JPG');background-position: top center;
+            }
+        }
+    </style>
 <!-- scripts-->
 <script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/popper.min.js"></script>
@@ -43,10 +51,10 @@
 <?php echo file_get_contents('html/navbarTop.html'); ?>
 <main>
     <section class="position-relative">
-        <div class="back-img" style="background-image: url('assets/_DSC1438.jpg'); height: calc(100vh - 60px)"></div>
-        <div class="img-overlay text-white display-4 text-center">
+        <div class="back-img" id="headpic" style="height: calc(100vh - 60px)"></div>
+        <div class="img-overlay text-white display-3 text-center">
             <div class="content">
-                Früher Deins, Heute Meins
+                Hast du noch Platz im Kleiderschrank?
                 <div>
                     <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#login-modal">
                         Anmelden!
@@ -56,20 +64,56 @@
         </div>
         <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="full-height-section d-flex flex-column justify-content-center align-items-center pl-4">
+    <section class="full-height-section w-1024 d-flex flex-column justify-content-center pl-4">
 
         <h1 style="border-left: 4px #FF6A79 solid;padding-left: 10px" class="mb-3">Auf der Suche nach etwas neuem Alten?<br></h1>
         <h2 style="border-left: 4px #8DB solid;padding-left: 10px">Starte noch heute mit Thrifter.</h2>
         <a class="btn btn-dark w-auto mt-3 text-white btn-lg" data-toggle="modal" data-target="#login-modal">
             Anmelden | Registrieren
         </a>
+        <div class="row pt-5">
+            <div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
+                <div class="card product">
+                    <div class="card-img-top">
+                        <img src="assets/_DSC1438.jpg" class="img-fluid card-img-top ">
+                    </div>
+                    <div class="card-body">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="h2" class="product-name">Adidas Pullover</div>
+                            <div class="h2" class="product-name">43€</div>
+                        </div>
+                        <div class="row justify-content-between align-items-center">
+                            <div class="h6" class="product-user" >Patryk</div>
+                            <div class="h6" class="product-loc">Wien</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
+                <div class="card product">
+                    <div class="card-img-top">
+                        <img src="assets/DSC_9662-7.JPG" class="img-fluid card-img-top ">
+                    </div>
+                    <div class="card-body">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="h2" class="product-name">Adidas Pullover</div>
+                            <div class="h2" class="product-name">43€</div>
+                        </div>
+                        <div class="row justify-content-between align-items-center">
+                            <div class="h6" class="product-user" >Patryk</div>
+                            <div class="h6" class="product-loc">Wien</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="scrolldown text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="position-relative">
-        <div class="back-img" style="background-image: url('assets/_DSC1438.jpg'); height: calc(100vh - 60px)"></div>
+    <section class="position-relative full-height-section">
+        <div class="back-img" style="background-image: url('assets/_DSC1438-2.jpg'); height: 100vh"></div>
         <div class="img-overlay text-white display-4 text-center">
             <div class="content">
-                Hast du noch Platz im Kleiderschrank?
+                "Früher Deins, Heute Meins"
             </div>
         </div>
         <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>

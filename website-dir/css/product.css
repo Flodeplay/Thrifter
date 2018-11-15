@@ -1,0 +1,38 @@
+/*
+<div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
+<div class="card product">
+                <div class="card-img-top">
+                    <img src="assets/_DSC1438.jpg" class="img-fluid card-img-top ">
+                </div>
+                <div class="card-body">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="h2" class="product-name">Adidas Pullover</div>
+                        <div class="h2" class="product-name">43€</div>
+                    </div>
+                    <div class="row justify-content-between align-items-center">
+                        <div class="h6" class="product-user" >Patryk</div>
+                        <div class="h6" class="product-loc">Wien</div>
+                    </div>
+                </div>
+</div>
+</div>
+ */
+ .product-outer {
+     padding: 10px!important;
+
+}
+.product{
+    border-radius: 1rem !important;
+    -webkit-box-shadow: 10px 10px 45px -25px rgba(0,0,0,0.2);
+    -moz-box-shadow: 10px 10px 45px -25px rgba(0,0,0,0.2);
+    box-shadow: 10px 10px 45px -25px rgba(0,0,0,0.2);
+}
+ .product img {
+    border-radius: 1rem 1rem 0 0 0!important;
+}
+ .card-body {
+    padding: 0.5rem 1rem;
+}
+ .card-img-top {
+    border-radius: 1rem 1rem 0 0;
+}
