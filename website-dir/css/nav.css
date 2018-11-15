@@ -36,26 +36,26 @@ nav .menu-button {
     display: block;
     z-index: 9;
 }
-nav .sidemenu .sidemenu-spacing{
+nav .sidenav{
+    display: flex;
+    flex-direction: row;
+    visibility: hidden;
+    position: fixed;
+    z-index: 10;
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 60px);
+    width: 100%;
+}
+nav .sidenav .sidemenu-spacing{
     background-color: rgba(0, 0, 0, 0.31);
     height: 100%;
 }
 nav .sidemenu{
-    visibility: hidden;
-	position: fixed;
-	z-index: 10;
-	top: 60px;
-	left: 0;
-	height: calc(100vh - 60px);
-	width: 100%;
-
-}
-nav .sidemenu .content{
     height: 100%;
     padding-top: 10px;
     background-color: var(--main-dark);
 }
-
 nav .content li {
     font-size: 1.5em;
     padding: 20px;

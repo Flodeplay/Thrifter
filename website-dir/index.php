@@ -43,7 +43,7 @@
 <?php echo file_get_contents('html/navbarTop.html'); ?>
 <main>
     <section class="position-relative">
-        <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: calc(100vh - 60px)"></div>
+        <div class="back-img" style="background-image: url('assets/_DSC1438.jpg'); height: calc(100vh - 60px)"></div>
         <div class="img-overlay text-white display-4 text-center">
             <div class="content">
                 Früher Deins, Heute Meins
@@ -56,9 +56,23 @@
         </div>
         <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="full-height-section d-flex flex-column justify-content-center pl-4">
+    <section class="full-height-section d-flex flex-column justify-content-center align-items-center pl-4">
+
         <h1 style="border-left: 4px #FF6A79 solid;padding-left: 10px" class="mb-3">Auf der Suche nach etwas neuem Alten?<br></h1>
         <h2 style="border-left: 4px #8DB solid;padding-left: 10px">Starte noch heute mit Thrifter.</h2>
+        <a class="btn btn-dark w-auto mt-3 text-white btn-lg" data-toggle="modal" data-target="#login-modal">
+            Anmelden | Registrieren
+        </a>
+        <div class="scrolldown text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
+    </section>
+    <section class="position-relative">
+        <div class="back-img" style="background-image: url('assets/_DSC1438.jpg'); height: calc(100vh - 60px)"></div>
+        <div class="img-overlay text-white display-4 text-center">
+            <div class="content">
+                Hast du noch Platz im Kleiderschrank?
+            </div>
+        </div>
+        <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
     <section class="full-height-section d-flex align-items-center p-5">
         <blockquote class="blockquote">
@@ -80,30 +94,34 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="login.php" method="post" class="w-100">
+                <form action="login.php" method="post" class="w-100 login-input">
                     <div class="input-group mb-3">
                         <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username">
                     </div>
                     <div class="input-group mb-3">
                         <input  type="password" name="pwd" class="form-control" placeholder="Passwort" aria-label="Passwort">
                     </div>
-                    <div class="input-group register-input mb-3">
+                    <button type="button" class="btn btn-success rounded-0 w-100 my-1 register-button"><span>Brauchst du ein Konto?</span></button>
+                    <button type="submit" name="submit" value="login" class="btn btn-secondary rounded-0 w-100 my-1">Login</button>
+                </form>
+                <form action="login.php" method="post" class="w-100 register-input">
+                    <div class="input-group mb-3">
                         <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email">
                     </div>
-                    <div class="input-group register-input mb-3">
+                    <div class="input-group mb-3">
                         <input type="text" name="forename" class="form-control" placeholder="Vorname" aria-label="Vorname">
                         <input type="text" name="surname" class="form-control" placeholder="Nachname" aria-label="Nachname">
                     </div>
-                    <div class="input-group register-input mb-3">
+                    <div class="input-group mb-3">
 
                         <input type="text" name="zipcode" class="form-control" placeholder="Postal-Code / ZIP-Code"
                                aria-label="Postal-code">
                     </div>
-                    <div class="input-group register-input mb-3">
+                    <div class="input-group mb-3">
                         <input type="text" name="phonenr" class="form-control" placeholder="Telefon" aria-label="Telefon">
                     </div>
-                    <button type="button" class="btn btn-success register-button"><span>Registrieren</span></button>
-                    <input type="submit" value="Login" class="btn btn-secondary"></input>
+                    <button type="button" class="btn btn-success rounded-0 w-100 my-1 login-button"><span>Hast du ein Konto?</span></button>
+                    <button type="submit" name="submit" value="reg"  class="btn btn-secondary rounded-0 w-100 my-1">Registrieren</button>
                 </form>
             </div>
         </div>

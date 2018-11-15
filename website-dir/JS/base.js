@@ -1,17 +1,13 @@
 $(function () {
-    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-    if(isSafari){
-        $(".sidemenu-close-btn").css("bottom","90px");
-    }
     $(".menu-button, .sidemenu-close-btn, .sidemenu-spacing").click(function () {
-        if ($(".sidemenu").css("Visibility") === "hidden") {
-            $(".sidemenu").removeClass("sidemenu-close");
-            $(".sidemenu").addClass("sidemenu-open");
+        if ($(".sidenav").css("Visibility") === "hidden") {
+            $(".sidenav").removeClass("sidemenu-close");
+            $(".sidenav").addClass("sidemenu-open");
             $("body").addClass("sidemenu-body");
         }
         else{
-            $(".sidemenu").removeClass("sidemenu-open");
-            $(".sidemenu").addClass("sidemenu-close");
+            $(".sidenav").removeClass("sidemenu-open");
+            $(".sidenav").addClass("sidemenu-close");
             $("body").removeClass("sidemenu-body");
         }
     });
