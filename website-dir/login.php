@@ -31,6 +31,52 @@
 <?php echo file_get_contents('html/navbarTop.html'); ?>
 <main>
 <section class="d-flex flex-column align-items-center p-5 justify-content-center" style="height: calc(100vh - 60px)">
+    <?php
+    require_once 'config.php';
+    error_reporting(0);
+    session_start();
+    /*
+    try {
+        $conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PWD);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+    }
+    catch(PDOException $e)
+    {
+        die("Connection failed: " . $e->getMessage());
+    }
+    */
+    if  (isset($_POST["submit"])) {
+        $conn = new mysqli(DB_HOST,DB_USER, DB_PWD, DB_NAME);
+        if (conn) {
+
+            if (!empty($_POST["username"]) && !empty($_POST["pwd"])) {
+                $user = mysqli_real_escape_string($conn, $_POST["username"]);
+                $pwd = hash("sha384", $_POST["pwd"], FALSE);
+                //$query = mysqli_query($conn,"SELECT * FROM u_users WHERE u_username = '$user' AND u_pwd LIKE'$pwd';");
+                $query = mysqli_query($conn, "SELECT * FROM u_users WHERE u_username = '$user' AND u_pwd LIKE '$pwd';");
+                if (mysqli_num_rows($query) == 1) {
+                    $data = mysqli_fetch_assoc($query);
+                    $_SESSION['user_id'] = $data["u_id"];
+                    $_SESSION['username'] = $data["u_username"];
+                    echo "<h1 class='display-4'>Hallo,<br> " . $_SESSION["username"] . ".</h1>";
+                } else {
+                    echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
+                    exit(file_get_contents('html/login.html'));
+                }
+            } else {
+                echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
+                exit(file_get_contents('html/login.html'));
+            }
+            mysqli_close($conn);
+        } else {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+    } else {
+
+    }
+    ?>
 </section>
 </main>
 </body>
