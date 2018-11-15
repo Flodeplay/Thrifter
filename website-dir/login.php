@@ -35,18 +35,7 @@
     require_once 'config.php';
     error_reporting(0);
     session_start();
-    /*
-    try {
-        $conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PWD);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected successfully";
-    }
-    catch(PDOException $e)
-    {
-        die("Connection failed: " . $e->getMessage());
-    }
-    */
+
     if  (isset($_POST["submit"])) {
         $conn = new mysqli(DB_HOST,DB_USER, DB_PWD, DB_NAME);
         if (conn) {

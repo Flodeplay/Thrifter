@@ -1,10 +1,13 @@
+<?php
+error_reporting(0);
+session_start();
+if (!isset($_SESSION["user_id"])) {
+    header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <?php
-    error_reporting(0);
-    session_start();
-    ?>
     <title>Thrifter.</title>
 
     <!-- Meta Tags-->
