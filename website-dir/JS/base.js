@@ -11,15 +11,11 @@ $(function () {
             $("body").removeClass("sidemenu-body");
         }
     });
-    $(".register-button").click(function () {
-        if ($(".register-input").css("Display") === "none") {
-            $(".register-button span").text("Login");
-        }
-        else if ($(".register-input").css("Display") === "block") {
-            $(".register-button span").text("Registrieren");
-        }
-        $(".register-input").toggle();
+    $(".register-button,.login-button").click(function () {
+            $(".register-input").toggle();
+            $(".login-input").toggle();
     });
+
     $("section .scrolldown, footer .scrolldown").click(function () {
         var sections = $("section");
         var cursection = $(this).parents("section");

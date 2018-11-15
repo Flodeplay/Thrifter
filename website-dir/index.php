@@ -87,43 +87,44 @@
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header bg-success">
-                <h5 class="modal-title text-center" id="Login-title"><i class="fas fa-lock mr-3"></i>Login</h5>
+            <div class="modal-header bg-success p-4">
+                <h4 class="modal-title text-center" id="Login-title"><i class="fas fa-lock mr-3"></i>Login</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"><i class="fas fa-times"></i></span>
                 </button>
             </div>
             <div class="modal-body">
-                <form action="login.php" method="post" class="w-100 login-input">
-                    <div class="input-group mb-3">
-                        <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input  type="password" name="pwd" class="form-control" placeholder="Passwort" aria-label="Passwort">
-                    </div>
-                    <button type="button" class="btn btn-success rounded-0 w-100 my-1 register-button"><span>Brauchst du ein Konto?</span></button>
+                <div class="login">
+                <form action="login.php" method="post" class="login-input">
+                    <span>Nutzername</span>
+                    <input type="text" name="username" class="form-control" placeholder="ManuelTroll" aria-label="Username">
+                    <span>Passwort</span>
+                    <input  type="password" name="pwd" class="form-control" placeholder="*******" aria-label="Passwort">
+                    <hr>
+                    <button type="button" class="btn btn-success rounded-0 w-100 my-1 register-button">Brauchst du ein Konto?</button>
                     <button type="submit" name="submit" value="login" class="btn btn-secondary rounded-0 w-100 my-1">Login</button>
                 </form>
                 <form action="login.php" method="post" class="w-100 register-input">
-                    <div class="input-group mb-3">
-                        <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email">
+                    <span>Nutzername</span>
+                    <input type="text" name="username" class="form-control" placeholder="ManuelTroll" aria-label="Username">
+                    <span>E-Mail</span>
+                    <input type="text" name="email" class="form-control" placeholder="Manuel@Thrifter.at" aria-label="Email">
+                    <span>Passwort</span>
+                    <input  type="password" name="pwd" class="form-control" placeholder="*******" aria-label="Passwort">
+                    <span>Vorname | Nachname</span>
+                    <div class="row">
+                    <input type="text" name="forename" class="form-control w-50" placeholder="Manuel" aria-label="Vorname">
+                    <input type="text" name="surname" class="form-control w-50" placeholder="Köllner" aria-label="Nachname">
                     </div>
-                    <div class="input-group mb-3">
-                        <input type="text" name="forename" class="form-control" placeholder="Vorname" aria-label="Vorname">
-                        <input type="text" name="surname" class="form-control" placeholder="Nachname" aria-label="Nachname">
-                    </div>
-                    <div class="input-group mb-3">
-
-                        <input type="text" name="zipcode" class="form-control" placeholder="Postal-Code / ZIP-Code"
-                               aria-label="Postal-code">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" name="phonenr" class="form-control" placeholder="Telefon" aria-label="Telefon">
-                    </div>
-                    <button type="button" class="btn btn-success rounded-0 w-100 my-1 login-button"><span>Hast du ein Konto?</span></button>
+                    <span>PLZ</span>
+                    <input type="text" name="zipcode" class="form-control" placeholder="Postal-Code / ZIP-Code" aria-label="Postal-code">
+                    <span>Telefonnummer</span>
+                    <input type="text" name="phonenr" class="form-control" placeholder="Telefon" aria-label="Telefon">
+                    <button type="button" class="btn btn-success rounded-0 w-100 my-1 login-button">Hast du ein Konto?</button>
                     <button type="submit" name="submit" value="reg"  class="btn btn-secondary rounded-0 w-100 my-1">Registrieren</button>
                 </form>
             </div>
+        </div>
         </div>
     </div>
 </div>
