@@ -7,7 +7,6 @@
     session_destroy();
     $_SESSION = array();
 	?>
-<?php echo file_get_contents('html/head.html'); ?>
 <title>Thrifter.</title>
 
 <!-- Meta Tags-->
@@ -24,8 +23,9 @@
 <link rel="stylesheet" href="css/footer.css">
 <!-- scripts-->
 <script src="JS/jquery-3.3.1.min.js"></script>
-<script src="JS/popper.min.js"></script>
-<script src="JS/bootstrap.min.js"></script>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/vh-fix.js"></script>
 <script src="JS/base.js"></script>
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
@@ -44,15 +44,21 @@
 <main>
     <section class="position-relative">
         <div style="background-image: url('assets/_DSC1438.jpg'); background-size: cover; background-position: center; height: calc(100vh - 60px)"></div>
-        <div style="position: absolute; top: 50%; transform: translateY(-50%)" class="text-white display-4 text-center">
-            Früher Deins, Heute Meins
-            <div>
-                <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#login-modal">
-                    Anmelden!
-                </button>
+        <div class="img-overlay text-white display-4 text-center">
+            <div class="content">
+                Früher Deins, Heute Meins
+                <div>
+                    <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#login-modal">
+                        Anmelden!
+                    </button>
+                </div>
             </div>
         </div>
         <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
+    </section>
+    <section class="full-height-section d-flex flex-column justify-content-center pl-4">
+        <h1 style="border-left: 4px #FF6A79 solid;padding-left: 10px" class="mb-3">Auf der Suche nach etwas neuem Alten?<br></h1>
+        <h2 style="border-left: 4px #8DB solid;padding-left: 10px">Starte noch heute mit Thrifter.</h2>
     </section>
     <section class="full-height-section d-flex align-items-center p-5">
         <blockquote class="blockquote">

@@ -1,6 +1,19 @@
 $(function () {
-    $(".menu-button").click(function () {
-        navbar();
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+    if(isSafari){
+        $(".sidemenu-close-btn").css("bottom","90px");
+    }
+    $(".menu-button, .sidemenu-close-btn, .sidemenu-spacing").click(function () {
+        if ($(".sidemenu").css("Visibility") === "hidden") {
+            $(".sidemenu").removeClass("sidemenu-close");
+            $(".sidemenu").addClass("sidemenu-open");
+            $("body").addClass("sidemenu-body");
+        }
+        else{
+            $(".sidemenu").removeClass("sidemenu-open");
+            $(".sidemenu").addClass("sidemenu-close");
+            $("body").removeClass("sidemenu-body");
+        }
     });
     $(".register-button").click(function () {
         if ($(".register-input").css("Display") === "none") {
@@ -30,14 +43,3 @@ $(function () {
         }, 1200)
     });
 });
-
-function navbar() {
-    if ($(".sidemenu").css("Visibility") === "hidden") {
-        $(".sidemenu").removeClass("close");
-        $(".sidemenu").addClass("open");
-    }
-    else if ($(".sidemenu").css("Visibility") === "visible") {
-        $(".sidemenu").removeClass("open");
-        $(".sidemenu").addClass("close");
-    }
-}
