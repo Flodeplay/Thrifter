@@ -24,7 +24,7 @@
 .links li{
 	list-style: none;
 	padding: 10px 70px;
-	border-left: var(--main-red) 4px solid;
+	border-left: var(--main-dark) 4px solid;
 	margin-bottom: 20px;
 }
 
