@@ -31,31 +31,6 @@
 <?php echo file_get_contents('html/navbarTop.html'); ?>
 <main>
 <section class="d-flex flex-column align-items-center p-5 justify-content-center" style="height: calc(100vh - 60px)">
-<?php
-    error_reporting(0);
-    session_start();
-
-    /* Login if */
-    if (isset($_POST["username"]) && empty($_POST["email"])) {
-        if ($_POST["username"] == "admin" && $_POST["pwd"] == "root") {
-            $_SESSION["username"] = $_POST["username"];
-			echo "<h1 class='display-4'>Hallo,<br> " . $_SESSION["username"] . ".</h1>";
-        }
-		else{
-		    echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
-			exit(file_get_contents('html/login.html'));
-		}
-    }
-    /* register if */
-    else if(isset($_POST["email"])){
-        if(true){
-
-        }
-        else{
-
-        }
-    }
-?>
 </section>
 </main>
 </body>
