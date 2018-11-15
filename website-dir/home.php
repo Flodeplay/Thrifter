@@ -53,18 +53,16 @@ if (!isset($_SESSION["user_id"])) {
 </head>
 <body>
 <?php echo file_get_contents('html/navbarTop.html'); ?>
-<header>
+<header class="shadow">
     <div class="row justify-content-between align-items-center">
         <span class="h2 page-title" style="font-weight: 600">Home</span>
     </div>
 </header>
 <main class="main-header">
     <section class="my-3">
-        <?
-            echo "<h1 class='display-3'>Hallo,<br> " . $_SESSION["forename"] . ".</h1>";
+        <?php
+            echo "<h1 class='display-3'>Hallo,<br> " . $_SESSION['forename'] . "</h1>";
         ?>
-
-        <div class="display-3">Vorname</div>
         <hr>
         <div class="row">
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-map-marker-alt fa-2x"></i>Map</div>
