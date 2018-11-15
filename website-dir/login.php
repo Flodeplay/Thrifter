@@ -31,7 +31,6 @@
 <?php echo file_get_contents('html/navbarTop.html'); ?>
 <main>
 <section class="d-flex flex-column align-items-center p-5 justify-content-center" style="height: calc(100vh - 60px)">
-
 </section>
 </main>
 </body>
