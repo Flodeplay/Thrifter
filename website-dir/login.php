@@ -50,31 +50,46 @@
     if  (isset($_POST["submit"])) {
         $conn = new mysqli(DB_HOST,DB_USER, DB_PWD, DB_NAME);
         if (conn) {
+            switch ($_POST["submit"]) {
+                case "login":
+                    if (!empty($_POST["username"]) && !empty($_POST["pwd"])) {
+                        $user = mysqli_real_escape_string($conn, $_POST["username"]);
+                        $pwd = hash("sha384", $_POST["pwd"], FALSE);
+                        //$query = mysqli_query($conn,"SELECT * FROM u_users WHERE u_username = '$user' AND u_pwd LIKE'$pwd';");
+                        $query = mysqli_query($conn, "SELECT * FROM u_users WHERE u_username = '$user' AND u_pwd LIKE '$pwd';");
+                        if (mysqli_num_rows($query) == 1) {
+                            $data = mysqli_fetch_assoc($query);
+                            $_SESSION['user_id'] = $data["u_id"];
+                            $_SESSION['username'] = $data["u_username"];
+                            echo "<h1 class='display-4'>Hallo,<br> " . $_SESSION["username"] . ".</h1>";
+                        } else {
+                            echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
+                            exit(file_get_contents('html/login.html'));
+                        }
+                    } else {
+                        echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
+                        exit(file_get_contents('html/login.html'));
+                    }
+                    break;
+                case "reg":
+                    if (!empty($_POST["username"]) && !empty($_POST["email"]) && !empty($_POST["pwd"]) && !empty($_POST["forename"]) && !empty($_POST["surname"]) && !empty("zipcode") && !empty($_POST["phonenr"])) {
+                        if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 
-            if (!empty($_POST["username"]) && !empty($_POST["pwd"])) {
-                $user = mysqli_real_escape_string($conn, $_POST["username"]);
-                $pwd = hash("sha384", $_POST["pwd"], FALSE);
-                //$query = mysqli_query($conn,"SELECT * FROM u_users WHERE u_username = '$user' AND u_pwd LIKE'$pwd';");
-                $query = mysqli_query($conn, "SELECT * FROM u_users WHERE u_username = '$user' AND u_pwd LIKE '$pwd';");
-                if (mysqli_num_rows($query) == 1) {
-                    $data = mysqli_fetch_assoc($query);
-                    $_SESSION['user_id'] = $data["u_id"];
-                    $_SESSION['username'] = $data["u_username"];
-                    echo "<h1 class='display-4'>Hallo,<br> " . $_SESSION["username"] . ".</h1>";
-                } else {
-                    echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
-                    exit(file_get_contents('html/login.html'));
-                }
-            } else {
-                echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
-                exit(file_get_contents('html/login.html'));
+                        } else {
+
+                        }
+                        $pwd = hash("sha384", $_POST["pwd"], FALSE);
+                    }
+                    break;
+                default:
+                    break;
             }
             mysqli_close($conn);
+            $conn = null;
         } else {
             die("Connection failed: " . mysqli_connect_error());
         }
     } else {
-
     }
     ?>
 </section>
