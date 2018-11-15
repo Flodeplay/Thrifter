@@ -63,7 +63,6 @@
         </blockquote>
         <div class="scrolldown text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-	<section></section>
 </main>
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">

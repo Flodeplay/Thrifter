@@ -27,7 +27,6 @@ nav .menu-button {
    color: var(--main-red)!important;
 }
 .bottommenu {
-
 	animation: 700ms opacity-0-1 ease 2000ms running both;
     height: 50px;
     background-color: white;
@@ -38,7 +37,7 @@ nav .menu-button {
     z-index: 9;
 }
 nav .sidemenu{
-    display: none;
+    visibility: hidden;
 	position: fixed;
 	z-index: 10;
 	top: 60px;
@@ -49,12 +48,10 @@ nav .sidemenu{
 }
 
 nav .open {
-    display: block;
     animation: 700ms sidemenu-open ease 0s running both;
 }
 
 nav .close {
-    display: block;
     animation: 700ms sidemenu-close ease 1000ms running forwards;
 }
 
@@ -88,6 +85,7 @@ nav .sidemenu hr {
 }
 @keyframes sidemenu-open{
 	from{
+        visibility: visible;
 		height: 0;
 	}
 	to{
@@ -100,7 +98,7 @@ nav .sidemenu hr {
         height: calc(100vh - 60px);
     }
     100% {
-        display: none;
+        visibility: hidden;
         height: 0;
     }
 }

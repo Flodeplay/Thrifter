@@ -129,24 +129,10 @@ main article .card-img-top-container {
 .register-input {
     display: none;
 }
-
-.scrollup {
-    position: absolute;
-    cursor: pointer;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-    top: 60px;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-
+.scrollup:hover,.scrolldown:hover {
+    bottom: 25px;
 }
-
-.scrollup:hover {
-    top: 65px;
-}
-
-.scrolldown {
+.scrolldown,.scrollup  {
     position: absolute;
     cursor: pointer;
     left: 50%;
@@ -158,8 +144,11 @@ main article .card-img-top-container {
 
 }
 
-.scrolldown:hover {
-    bottom: 25px;
+
+@media (max-width: 720px) {
+    .display-1,.display-2,.display-3,.display-4{
+        font-size: 2.5rem;
+    }
 }
 @keyframes opacity-0-1{
 	from{

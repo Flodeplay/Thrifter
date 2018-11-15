@@ -11,15 +11,14 @@ $(function () {
         }
         $(".register-input").toggle();
     });
-    $("section .scrolldown").click(function () {
+    $("section .scrolldown, footer .scrolldown").click(function () {
         var sections = $("section");
-        console.log(sections);
         var cursection = $(this).parents("section");
         for (var x = 0; x < sections.length; x++) {
             if (sections[x] === cursection[0]) {
                 $('html,body').animate({
                     scrollTop: $(sections[(x + 1)]).offset().top
-                }, 1000);
+                }, 600);
                 break;
             }
         }
@@ -28,16 +27,16 @@ $(function () {
     $(".scrollup").click(function () {
         $('html,body').animate({
             scrollTop: 0
-        }, 1000)
+        }, 1200)
     });
 });
 
 function navbar() {
-    if ($(".sidemenu").css("Display") === "none") {
+    if ($(".sidemenu").css("Visibility") === "hidden") {
         $(".sidemenu").removeClass("close");
         $(".sidemenu").addClass("open");
     }
-    else if ($(".sidemenu").css("Display") === "block") {
+    else if ($(".sidemenu").css("Visibility") === "visible") {
         $(".sidemenu").removeClass("open");
         $(".sidemenu").addClass("close");
     }
