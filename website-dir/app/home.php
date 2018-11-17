@@ -17,42 +17,32 @@ if (!isset($_SESSION["user_id"])) {
     <!-- extern stylesheets-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- custom style-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <style>
-        #headpic{
-            background-image: url('assets/DSC_9514-4.JPG');background-position: right;
-        }
-        @media (max-width: 992px) {
-            #headpic{
-                background-image: url('assets/DSC_9662-7.JPG');background-position: top center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <!-- scripts-->
-    <script src="JS/jquery-3.3.1.min.js"></script>
-    <script src="JS/popper.min.js"></script>
-    <script src="JS/bootstrap.min.js"></script>
-    <script src="JS/vh-fix.js"></script>
-    <script src="JS/base.js"></script>
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <script src="../JS/popper.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/vh-fix.js"></script>
+    <script src="../JS/base.js"></script>
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#ff6a79">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="../assets/favicons/safari-pinned-tab.svg" color="#ff6a79">
+    <link rel="shortcut icon" href="../assets/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
 </head>
 <body>
-<?php echo file_get_contents('html/navbarTop.html'); ?>
+<?php echo file_get_contents('../html/navbarTop.html'); ?>
 <header class="shadow">
     <div class="row justify-content-between align-items-center">
         <span class="h2 page-title" style="font-weight: 600">Home</span>
@@ -79,7 +69,7 @@ if (!isset($_SESSION["user_id"])) {
             <div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
                 <div class="card product">
                     <div class="card-img-top">
-                        <img src="assets/_DSC1438.jpg" class="img-fluid card-img-top ">
+                        <img src="../assets/index/_DSC1438-2.JPG" class="img-fluid card-img-top ">
                     </div>
                     <div class="card-body">
                         <div class="row justify-content-between align-items-center">
@@ -96,7 +86,7 @@ if (!isset($_SESSION["user_id"])) {
             <div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
                 <div class="card product">
                     <div class="card-img-top">
-                        <img src="assets/DSC_9662-7.JPG" class="img-fluid card-img-top ">
+                        <img src="../assets/index/DSC_9662-7.JPG" class="img-fluid card-img-top ">
                     </div>
                     <div class="card-body">
                         <div class="row justify-content-between align-items-center">
@@ -119,7 +109,7 @@ if (!isset($_SESSION["user_id"])) {
             <div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
                 <div class="card product">
                     <div class="card-img-top">
-                        <img src="assets/_DSC1438.jpg" class="img-fluid card-img-top ">
+                        <img src="../assets/index/_DSC1438.jpg" class="img-fluid card-img-top ">
                     </div>
                     <div class="card-body">
                         <div class="row justify-content-between align-items-center">
