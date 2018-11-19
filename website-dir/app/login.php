@@ -31,16 +31,17 @@
 <title>Thrifter. Home</title>
 </head>
 <body>
-<?php echo file_get_contents('html/navbarTop.html'); ?>
 <main>
 <section class="d-flex flex-column align-items-center p-5 justify-content-center" style="height: calc(100vh - 60px)">
     <?php
+
     require_once 'config.php';
+    require_once 'funcs.php';
     error_reporting(0);
     session_start();
 
     if  (isset($_POST["submit"])) {
-        $conn = new mysqli(DB_HOST,DB_USER, DB_PWD, DB_NAME);
+        $conn = establishDB();
         if (conn) {
             switch ($_POST["submit"]) {
                 case "login":

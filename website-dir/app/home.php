@@ -1,9 +1,8 @@
 <?php
 error_reporting(0);
 session_start();
-if (!isset($_SESSION["user_id"])) {
-    header("Location: index.php");
-}
+require_once "funcs.php";
+checkSession();
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -65,42 +64,9 @@ if (!isset($_SESSION["user_id"])) {
     <section class="my-3">
         <div class="display-4">Wishlist</div>
         <hr>
-        <div class="row">
-            <div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
-                <div class="card product">
-                    <div class="card-img-top">
-                        <img src="../assets/index/_DSC1438-2.JPG" class="img-fluid card-img-top ">
-                    </div>
-                    <div class="card-body">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="h2" class="product-name">Adidas Pullover</div>
-                            <div class="h2" class="product-name">43€</div>
-                        </div>
-                        <div class="row justify-content-between align-items-center">
-                            <div class="h6" class="product-user" >Patryk</div>
-                            <div class="h6" class="product-loc">Wien</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
-                <div class="card product">
-                    <div class="card-img-top">
-                        <img src="../assets/index/DSC_9662-7.JPG" class="img-fluid card-img-top ">
-                    </div>
-                    <div class="card-body">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="h2" class="product-name">Adidas Pullover</div>
-                            <div class="h2" class="product-name">43€</div>
-                        </div>
-                        <div class="row justify-content-between align-items-center">
-                            <div class="h6" class="product-user" >Patryk</div>
-                            <div class="h6" class="product-loc">Wien</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+            getWishlist();
+        ?>
     </section>
     <section  class="my-3">
         <div class="display-4">Meine Produkte</div>
