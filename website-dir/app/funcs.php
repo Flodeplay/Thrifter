@@ -30,7 +30,7 @@ function getWishlist()
     //$user = $_SESSION['user_id'];
     $conn = establishDB();
     //TODO check if inline session access works!
-    $query = mysqli_query($conn, "SELECT * FROM f_favorites INNER JOIN p_post ON p_post.p_id = f_p_post WHERE f_u_user = '$_SESSION['user_id']'");
+    $query = mysqli_query($conn, "SELECT * FROM f_favorites INNER JOIN p_post ON f_p_post = p_id WHERE f_u_user = '$_SESSION['user_id']'");
     if (mysqli_num_rows($query) > 0) {
         while ($row = mysqli_fetch_assoc($query)) {
             echo $row['p_title'];
@@ -74,7 +74,7 @@ function getPostsbyUser($user_id){
  */
 function getUserbyID($user_id){
     if(isset($user_id) || !isEmpty()){
-        $query = mysqli_query(establishDB(), "select * from thrifter.u_users where u_users.u_id = '$user_id'");
+        $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_id = '$user_id'");
         if (mysqli_num_rows($query) > 0) {
             while ($row = mysqli_fetch_assoc($query)) {
                 return $row;
@@ -90,7 +90,7 @@ function getUserbyID($user_id){
 }
 function isUserbyID($user_id){
     if(isset($user_id) || !isEmpty()){
-        $query = mysqli_query(establishDB(), "select * from thrifter.u_users where u_users.u_id = '$user_id'");
+        $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_id = '$user_id'");
         if (mysqli_num_rows($query) > 0) {
             return true;
         } else {
