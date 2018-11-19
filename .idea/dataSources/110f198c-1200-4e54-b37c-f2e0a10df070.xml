@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="thrifter@127.0.0.1">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.11">
+    <root id="1">
+      <ServerVersion>5.5.5</ServerVersion>
+      <RdbmsFlavour>MariaDB</RdbmsFlavour>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="information_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="3" parent="1" name="jdbc_pj">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="4" parent="1" name="mysql">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="5" parent="1" name="performance_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="6" parent="1" name="phpmyadmin">
+      <Collation>utf8_bin</Collation>
+    </schema>
+    <schema id="7" parent="1" name="test">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="8" parent="1" name="thrifter">
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+  </database-model>
+</dataSource>

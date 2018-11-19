@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="af4db263-1154-4884-8121-7845e1ff1ecd" name="XAMPP Apache" url="http://localhost/WS-P1-Thrifter">
-        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\WS-T1-Thrifter" accessType="MOUNT" />
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\WS-P1-Thrifter" accessType="MOUNT" />
       </webServer>
       <webServer id="004175e2-7e15-41d7-acdb-5507c3209b65" name="Easyname - Florian - Trifter" url="http://e67103-ftp.services.easyname.eu/html/thrifter">
         <fileTransfer host="e67103-ftp.services.easyname.eu" port="21" rootFolder="/html/thrifter">
