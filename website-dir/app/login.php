@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
 
-    <!-- extern stylesheets-->
+    <!-- external stylesheets-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -32,7 +32,8 @@
 </head>
 <body>
 <main>
-<section class="d-flex flex-column align-items-center p-5 justify-content-center" style="height: calc(100vh - 60px)">
+    <?php echo file_get_contents('../html/navbarTop.html'); ?>
+<section class="d-flex flex-column align-items-center justify-content-center" style="height: calc(100vh - 60px)">
     <?php
 
     require_once 'config.php';
@@ -58,11 +59,11 @@
                             header("Location: home.php");
                         } else {
                             echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
-                            exit(file_get_contents('html/login.html'));
+                            exit(file_get_contents('../html/login.html'));
                         }
                     } else {
                         echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
-                        exit(file_get_contents('html/login.html'));
+                        exit(file_get_contents('../html/login.html'));
                     }
                     break;
                 case "reg":
@@ -105,7 +106,7 @@
                         }
                     } catch (Exception $e) {
                         echo "<h4 class='mb-3 text-danger'>".$e->getMessage()." Please register again!</h4>";
-                        exit(file_get_contents('html/login.html'));
+                        exit(file_get_contents('../html/login.html'));
                     }
                     break;
                 default:
@@ -117,7 +118,7 @@
             die("Connection failed: " . mysqli_connect_error());
         }
     } else {
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
     ?>
 </section>
