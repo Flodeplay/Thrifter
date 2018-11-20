@@ -4,6 +4,7 @@
 	<?php
     error_reporting(0);
     session_start();
+    checkSession();
 	?>
 <title>Thrifter.</title>
 
@@ -84,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
+        <div class="scrolldown text-white hover-red"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
     <section class="full-height-section d-flex flex-column justify-content-center">
 
@@ -129,7 +130,7 @@
                 </div>
             </div>
         </div>
-        <div class="scrolldown text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
+        <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
     <section class="mw-100 full-height-section">
         <div class="back-img" style="background-image: url('assets/index/_DSC1438-2.jpg'); height: 100vh"></div>
@@ -138,7 +139,7 @@
                 "Früher Deins, Heute Meins"
             </div>
         </div>
-        <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
+        <div class="scrolldown text-white hover-red"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
     <section class="full-height-section d-flex align-items-center p-5">
         <blockquote class="blockquote">
@@ -147,7 +148,7 @@
             </p>
             <footer class="blockquote-footer">Urban Dictionary</footer>
         </blockquote>
-        <div class="scrolldown text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
+        <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
 </main>
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">

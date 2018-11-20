@@ -58,7 +58,7 @@ checkSession();
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-plus fa-2x"></i>Neu</div>
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-home fa-2x"></i>Home</div>
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-list-ul fa-2x"></i>Wishlist</div>
-            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-user fa-2x"></i>Konto</div>
+            <a href="profile.php"><div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-user fa-2x"></i>Konto</div></a>
         </div>
     </section
     <section class="my-3">

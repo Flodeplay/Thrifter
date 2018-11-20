@@ -142,3 +142,22 @@ to {
         height: 0;
     }
 }
+
+header {
+    animation: 700ms opacity-0-1 ease 1000ms running both;
+    background-color: white;
+    padding: 5px 30px;
+    height: 60px;
+    top: 60px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 9;
+}
+
+header span{
+    font-size: 170%;
+    font-weight: 600;
+}
