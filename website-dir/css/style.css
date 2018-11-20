@@ -39,12 +39,6 @@ main{
     margin: 120px auto 0;
     padding: 30px;
 }
-main .w-1024{
-    position: relative !important;
-    max-width: 1024px !important;
-    margin: 0 auto;
-    padding: 30px;
-}
 header {
 	/*animation: 700ms opacity-0-1 ease 1000ms running both;*/
     background-color: white;
@@ -57,7 +51,9 @@ header {
 }
 
 main section {
-    position: relative;
+    position: relative !important;
+    max-width: 1024px !important;
+    margin: 0 auto;
 }
 
 main .full-height-section {

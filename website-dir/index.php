@@ -72,7 +72,7 @@
     </div>
 </nav>
 <main>
-    <section class="position-relative">
+    <section class="mw-100">
         <div class="back-img" id="headpic" style="height: calc(100vh - 60px)"></div>
         <div class="img-overlay text-white display-3 text-center">
             <div class="content">
@@ -86,7 +86,7 @@
         </div>
         <div class="scrolldown text-white text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="full-height-section w-1024 d-flex flex-column justify-content-center pl-4">
+    <section class="full-height-section d-flex flex-column justify-content-center">
 
         <h1 style="border-left: 4px #FF6A79 solid;padding-left: 10px" class="mb-3">Auf der Suche nach etwas neuem Alten?<br></h1>
         <h2 style="border-left: 4px #8DB solid;padding-left: 10px">Starte noch heute mit Thrifter.</h2>
@@ -131,7 +131,7 @@
         </div>
         <div class="scrolldown text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="position-relative full-height-section">
+    <section class="mw-100 full-height-section">
         <div class="back-img" style="background-image: url('assets/index/_DSC1438-2.jpg'); height: 100vh"></div>
         <div class="img-overlay text-white display-4 text-center">
             <div class="content">
