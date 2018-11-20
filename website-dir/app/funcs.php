@@ -47,14 +47,33 @@ function establishDB(){
  * @date: 19.11.2018
  *
  */
-function getWishlist()
+function getWishlist($range)
 {
     //TODO check if inline session access works!
-    $query = mysqli_query(establishDB(), "SELECT * FROM f_favorites INNER JOIN p_post ON f_p_post = p_id WHERE f_u_user = ".$_SESSION['user_id'].";");
+    $query = mysqli_query(establishDB(), "SELECT * FROM f_favorites INNER JOIN p_post ON f_favorites.f_p_post = p_post.p_id
+                        INNER JOIN u_users ON p_post.p_u_user = u_users.u_id WHERE f_u_user = " . $_SESSION['user_id'] .";");
     if (mysqli_num_rows($query) > 0) {
+
         while ($row = mysqli_fetch_assoc($query)) {
-            echo $row['p_title'];
-        }
+                echo "<div class=\"product-outer col-12 col-sm-4 col-md-3 col-xl-3\">
+                        <div class=\"card product\">
+                            <div class=\"card-img-top\">
+                                <img src=\"assets/_DSC1438.jpg\" class=\"img-fluid card-img-top \">
+                            </div>
+                                <div class=\"card-body\">
+                                    <div class=\"row justify-content-between align-items-center\">
+                                        <div class=\"h2\" class=\"product-name\">" . $row["p_title"] ."</div>
+                                        <div class=\"h2\" class=\"product-name\">" . $row["p_price"] ."</div>
+                                    </div>
+                                    <div class=\"row justify-content-between align-items-center\">
+                                        <div class=\"h6 product-user\">" . $row["u_username"] ."</div>
+                                        <div class=\"h6 product-loc\">" . $row["u_zipcode"] ."</div>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>";
+            }
+
     } else {
         echo "Keine Produke vorhanden";
     }

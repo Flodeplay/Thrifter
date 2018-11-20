@@ -1,17 +1,25 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: flori
+ * Date: 20.11.2018
+ * Time: 20:50
+ */
 error_reporting(0);
 session_start();
 require_once "funcs.php";
 checkSession();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
+    <title>Thrifter.</title>
+
     <!-- Meta Tags-->
     <meta charset="UTF-8">
     <meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
 
-    <!-- external stylesheets-->
+    <!-- extern stylesheets-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -36,17 +44,21 @@ checkSession();
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <title>Thrifter. Profil</title>
+
 </head>
 <body>
 <?php echo file_get_contents('../html/navbarTop.html'); ?>
 <header class="shadow">
-        <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
-        <span>Profil</span>
-        <i class="fas fa-sliders-h fa-lg"></i>
+    <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
+    <span>Merkliste</span>
+    <i class="fas fa-sliders-h fa-lg"></i>
 </header>
-<main>
-
+<main class="main-header">
+    <section>
+<?php
+    getWishlist(10);
+?>
+    </section>
 </main>
 </body>
 </html>

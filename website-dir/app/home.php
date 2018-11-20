@@ -43,9 +43,8 @@ checkSession();
 <body>
 <?php echo file_get_contents('../html/navbarTop.html'); ?>
 <header class="shadow">
-    <div class="row justify-content-between align-items-center">
-        <span class="h2 page-title" style="font-weight: 600">Home</span>
-    </div>
+    <span>Home</span>
+    <i class="fas fa-sliders-h fa-lg"></i>
 </header>
 <main class="main-header">
     <section class="my-3">
@@ -57,12 +56,12 @@ checkSession();
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-map-marker-alt fa-2x"></i>Map</div>
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-plus fa-2x"></i>Neu</div>
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-home fa-2x"></i>Home</div>
-            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-list-ul fa-2x"></i>Wishlist</div>
+            <a href="wishlist.php"><div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-list-ul fa-2x"></i>Merkliste</div></a>
             <a href="profile.php"><div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-user fa-2x"></i>Konto</div></a>
         </div>
     </section
     <section class="my-3">
-        <div class="display-4">Wishlist</div>
+        <div class="display-4">Merkliste</div>
         <hr>
         <?php
             getWishlist();
@@ -72,7 +71,7 @@ checkSession();
         <div class="display-4">Meine Produkte</div>
         <hr>
         <?php
-        getPostsbyUser(null);
+            getPostsbyUser(null);
         ?>
     </section>
 </main>
