@@ -58,11 +58,11 @@
                             header("Location: home.php");
                         } else {
                             echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
-                            exit(file_get_contents('html/login.html'));
+                            exit(file_get_contents('../html/login.html'));
                         }
                     } else {
                         echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
-                        exit(file_get_contents('html/login.html'));
+                        exit(file_get_contents('../html/login.html'));
                     }
                     break;
                 case "reg":
@@ -105,7 +105,7 @@
                         }
                     } catch (Exception $e) {
                         echo "<h4 class='mb-3 text-danger'>".$e->getMessage()." Please register again!</h4>";
-                        exit(file_get_contents('html/login.html'));
+                        exit(file_get_contents('../html/login.html'));
                     }
                     break;
                 default:
