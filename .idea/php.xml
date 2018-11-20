@@ -12,4 +12,5 @@
       <server host="localhost" id="068fd6dd-beca-4b04-b7b3-cd64700b70d7" name="Apache XAMPP" use_path_mappings="true" />
     </servers>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
 </project>

@@ -21,11 +21,11 @@
 <link rel="stylesheet" href="css/footer.css">
     <style>
         #headpic{
-            background-image: url('assets/DSC_9514-4.JPG');background-position: right;
+            background-image: url('assets/index/DSC_9514-4.JPG');background-position: right;
         }
         @media (max-width: 992px) {
             #headpic{
-                background-image: url('assets/DSC_9662-7.JPG');background-position: top center;
+                background-image: url('assets/index/DSC_9662-7.JPG');background-position: top center;
             }
         }
     </style>
@@ -110,7 +110,7 @@
         <div class="scrolldown text-center"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
     <section class="position-relative full-height-section">
-        <div class="back-img" style="background-image: url('assets/_DSC1438-2.jpg'); height: 100vh"></div>
+        <div class="back-img" style="background-image: url('assets/index/_DSC1438-2.jpg'); height: 100vh"></div>
         <div class="img-overlay text-white display-4 text-center">
             <div class="content">
                 "Früher Deins, Heute Meins"
@@ -139,7 +139,7 @@
             </div>
             <div class="modal-body">
                 <div class="login">
-                <form action="login.php" method="post" class="login-input">
+                <form action="app/login.php" method="post" class="login-input">
                     <span>Nutzername</span>
                     <input type="text" name="username" class="form-control" placeholder="ManuelTroll" aria-label="Username">
                     <span>Passwort</span>
@@ -148,7 +148,7 @@
                     <button type="button" class="btn btn-success rounded-0 w-100 my-1 register-button">Brauchst du ein Konto?</button>
                     <button type="submit" name="submit" value="login" class="btn btn-secondary rounded-0 w-100 my-1">Login</button>
                 </form>
-                <form action="login.php" method="post" class="w-100 register-input">
+                <form action="app/login.php" method="post" class="w-100 register-input">
                     <span>Nutzername</span>
                     <input type="text" name="username" class="form-control" placeholder="ManuelTroll" aria-label="Username">
                     <span>E-Mail</span>

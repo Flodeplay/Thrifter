@@ -23,6 +23,7 @@
     <schema id="6" parent="1" name="phpmyadmin">
       <Collation>utf8_bin</Collation>
     </schema>
+<<<<<<< HEAD
     <schema id="7" parent="1" name="sp_2chif">
       <Collation>latin1_swedish_ci</Collation>
     </schema>
@@ -36,10 +37,17 @@
       <Collation>latin1_swedish_ci</Collation>
     </schema>
     <schema id="11" parent="1" name="thrifter">
+=======
+    <schema id="7" parent="1" name="test">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="8" parent="1" name="thrifter">
+>>>>>>> origin/master
       <Current>1</Current>
       <Visible>1</Visible>
       <Collation>utf8_general_ci</Collation>
     </schema>
+<<<<<<< HEAD
     <schema id="12" parent="1" name="wordpress">
       <Collation>latin1_swedish_ci</Collation>
     </schema>
@@ -1444,5 +1452,7 @@ ca_categories_ca_id</ColNames>
       <ColNames>u_email</ColNames>
       <UnderlyingIndexName>u_e-mail_UNIQUE</UnderlyingIndexName>
     </key>
+=======
+>>>>>>> origin/master
   </database-model>
 </dataSource>
