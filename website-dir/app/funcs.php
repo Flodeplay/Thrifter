@@ -5,7 +5,9 @@
  * Date: 19.11.2018
  * Time: 10:16
  */
-getUserbyID(1);
+
+
+
 function checkSession()
 {
     if (!isset($_SESSION["user_id"])) {
@@ -30,7 +32,7 @@ function getWishlist()
     //$user = $_SESSION['user_id'];
     $conn = establishDB();
     //TODO check if inline session access works!
-    $query = mysqli_query($conn, "SELECT * FROM f_favorites INNER JOIN p_post ON f_p_post = p_id WHERE f_u_user = '$_SESSION['user_id']'");
+    $query = mysqli_query($conn, "SELECT * FROM f_favorites INNER JOIN p_post ON f_p_post = p_id WHERE f_u_user = ".$_SESSION['user_id'].";");
     if (mysqli_num_rows($query) > 0) {
         while ($row = mysqli_fetch_assoc($query)) {
             echo $row['p_title'];
@@ -50,7 +52,7 @@ function getPostsbyUser($user_id){
     if(!isset($user_id)) {
         //$user_id = $_SESSION['user_id'];
         $conn = establishDB();
-        $query = mysqli_query($conn, "SELECT * FROM p_post WHERE p_u_user = '$_SESSION['user_id']'");
+        $query = mysqli_query($conn, "SELECT * FROM p_post WHERE p_u_user = ".$_SESSION['user_id'].";");
         if (mysqli_num_rows($query) > 0) {
             while ($row = mysqli_fetch_assoc($query)) {
                 echo $row['p_title'];
@@ -74,7 +76,7 @@ function getPostsbyUser($user_id){
  */
 function getUserbyID($user_id){
     if(isset($user_id) || !isEmpty()){
-        $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_id = '$user_id'");
+        $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_id = ". $user_id .";");
         if (mysqli_num_rows($query) > 0) {
             while ($row = mysqli_fetch_assoc($query)) {
                 return $row;
@@ -88,9 +90,16 @@ function getUserbyID($user_id){
         throw new Exception("");
     }
 }
+/*
+ * Gibt zurück ob ein User existiert
+ * @param: User ID
+ * @Exception: Wird geworfen falls
+ * @Author: Florian Parfuss
+ * @Date: 19.11.2018
+ */
 function isUserbyID($user_id){
     if(isset($user_id) || !isEmpty()){
-        $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_id = '$user_id'");
+        $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_id = ".$user_id.";");
         if (mysqli_num_rows($query) > 0) {
             return true;
         } else {
