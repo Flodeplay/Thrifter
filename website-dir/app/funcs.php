@@ -12,7 +12,6 @@
  * @param none
  * @Author: Manuel Köllner
  * @Date: 20.11.2018
- *
  */
 function checkSession()
 {
