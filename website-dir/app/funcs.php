@@ -80,8 +80,8 @@ function getPostsbyUser($user_id){
 
     }
     else{
-        //check if user is valid
-        //return rows
+        //TODO check if user is valid
+        //TODO return rows
     }
 }
 /*
@@ -103,7 +103,7 @@ function getUserbyID($user_id){
         }
     }
     else{
-        //trow exeption is param is null or empty
+        //TODO trow exeption is param is null or empty
         throw new Exception("");
     }
 }
@@ -124,7 +124,7 @@ function isUserbyID($user_id){
         }
     }
     else{
-        //trow exeption is param is null or empty
+        //TODO trow exeption is param is null or empty
         throw new Exception("");
     }
 }
