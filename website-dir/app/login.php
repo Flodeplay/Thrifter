@@ -117,7 +117,7 @@
             die("Connection failed: " . mysqli_connect_error());
         }
     } else {
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
     ?>
 </section>
