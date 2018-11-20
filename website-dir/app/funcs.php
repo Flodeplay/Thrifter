@@ -47,6 +47,7 @@ function establishDB(){
  * @date: 19.11.2018
  *
  */
+//TODO CODE OPTIMIEREN!!!!!!!!!!!!!!
 function getWishlist($range)
 {
     //TODO check if inline session access works!
