@@ -48,6 +48,6 @@
 		display: none;
 	}
 	.links li:first-child{
-		border-left: var(--main-red) 4px solid;
+		border-left: var(--main-dark) 4px solid;
 	}
 }
