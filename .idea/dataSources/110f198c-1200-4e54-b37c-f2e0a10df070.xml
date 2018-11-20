@@ -23,7 +23,6 @@
     <schema id="6" parent="1" name="phpmyadmin">
       <Collation>utf8_bin</Collation>
     </schema>
-<<<<<<< HEAD
     <schema id="7" parent="1" name="sp_2chif">
       <Collation>latin1_swedish_ci</Collation>
     </schema>
@@ -37,17 +36,10 @@
       <Collation>latin1_swedish_ci</Collation>
     </schema>
     <schema id="11" parent="1" name="thrifter">
-=======
-    <schema id="7" parent="1" name="test">
-      <Collation>latin1_swedish_ci</Collation>
-    </schema>
-    <schema id="8" parent="1" name="thrifter">
->>>>>>> origin/master
       <Current>1</Current>
       <Visible>1</Visible>
       <Collation>utf8_general_ci</Collation>
     </schema>
-<<<<<<< HEAD
     <schema id="12" parent="1" name="wordpress">
       <Collation>latin1_swedish_ci</Collation>
     </schema>
@@ -1108,26 +1100,27 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="277" parent="252" name="fk_f_favorites_u_users1_idx">
+    <index id="277" parent="252" name="fk_u_users_has_p_post_u_users1_idx">
       <ColNames>f_u_user</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="278" parent="252" name="fk_f_favorites_p_post1_idx">
+    <index id="278" parent="252" name="fk_u_users_has_p_post_p_post1_idx">
       <ColNames>f_p_post</ColNames>
       <Type>btree</Type>
     </index>
     <key id="279" parent="252" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>f_u_user</ColNames>
+      <ColNames>f_u_user
+f_p_post</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="280" parent="252" name="fk_f_favorites_u_users1">
+    <foreign-key id="280" parent="252" name="fk_u_users_has_p_post_u_users1">
       <ColNames>f_u_user</ColNames>
       <RefSchemaName>thrifter</RefSchemaName>
       <RefTableName>u_users</RefTableName>
       <RefColNames>u_id</RefColNames>
     </foreign-key>
-    <foreign-key id="281" parent="252" name="fk_f_favorites_p_post1">
+    <foreign-key id="281" parent="252" name="fk_u_users_has_p_post_p_post1">
       <ColNames>f_p_post</ColNames>
       <RefSchemaName>thrifter</RefSchemaName>
       <RefTableName>p_post</RefTableName>
@@ -1452,7 +1445,5 @@ ca_categories_ca_id</ColNames>
       <ColNames>u_email</ColNames>
       <UnderlyingIndexName>u_e-mail_UNIQUE</UnderlyingIndexName>
     </key>
-=======
->>>>>>> origin/master
   </database-model>
 </dataSource>
