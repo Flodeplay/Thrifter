@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="XAMPP Apache" uploadOnCheckin="af4db263-1154-4884-8121-7845e1ff1ecd">
+  <component name="PublishConfigData" serverName="XAMPP Apache" uploadOnCheckin="af4db263-1154-4884-8121-7845e1ff1ecd">
     <serverData>
       <paths name="Easyname - Florian - Trifter">
         <serverdata>
@@ -18,6 +18,5 @@
       </paths>
     </serverData>
     <option name="myUploadOnCheckinName" value="XAMPP Apache" />
-    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
