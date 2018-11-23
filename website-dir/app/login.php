@@ -76,11 +76,9 @@
                             if (mysqli_num_rows($queryUsername) > 0) {
                                 throw new Exception("User already exists");
                             }
-                            if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-                                $email = mysqli_real_escape_string($conn, $_POST["email"]);
-                            } else {
-                                throw new Exception("Invalid email!");
-                            }
+
+                            reg_Email(mysqli_real_escape_string($conn, $_POST["email"]));
+
                             $pwd = hash("sha384", $_POST["pwd"], FALSE);
                             $forename = mysqli_real_escape_string($conn, $_POST["forename"]);
                             $surename = mysqli_real_escape_string($conn, $_POST["surname"]);
