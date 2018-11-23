@@ -158,39 +158,3 @@ function printProduct($row){
                         </div>
                         </div>";
 }
-
-function reg_Email($email) {
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $conn = establishDB();
-        $queryUpdate = mysqli_query($conn, "UPDATE u_users SET u_email = '$email' WHERE u_id LIKE ".$_SESSION['user_id'].";");
-        if (mysqli_affected_rows($queryUpdate) < 1) {
-            throw new Exception("Error while updating email!");
-        }
-    } else {
-        throw new Exception("Invalid email!");
-    }
-}
-function reg_Pwd($pwd) {
-
-}
-function reg_Surname($surname) {
-
-}
-function reg_Forename($forename) {
-
-}
-function reg_Birthdate($birthdate) {
-
-}
-function reg_Zipcode($zipcode) {
-
-}
-function reg_Image($image) {
-
-}
-function reg_Phonenumber($phonenr) {
-
-}
-function reg_Description($description) {
-
-}

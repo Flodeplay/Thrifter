@@ -45,8 +45,26 @@ checkSession();
         <span>Profil</span>
         <i class="fas fa-sliders-h fa-lg"></i>
 </header>
-<main>
+<main class="main-header">
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <?php echo "<img src=\"../assets/users/DSC_4374.jpg\" class=\"rounded-circle img-fluid\" style=\"max-width: 350px; margin: 0 auto \">"; ?>
+            </div>
+            <div class="col-md-6">
+                <?php echo "<div class=\"display-4\">". $_SESSION["u_forename"] . " " . $_SESSION["u_surname"] . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
 
+            </div>
+        </div>
+    </section>
+    <section>
+        <form class="login-input">
+            <span>Nutzername</span>
+            <input type="text" name="username" class="form-control" placeholder="ManuelTroll" aria-label="Username">
+            <button type="submit" name="submit" value="login" class="btn btn-secondary rounded-0 w-100 my-1">Submit</button>
+        </form>
+    </section>
+    </div>
 </main>
 </body>
 </html>

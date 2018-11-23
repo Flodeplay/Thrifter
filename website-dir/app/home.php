@@ -64,9 +64,12 @@ checkSession();
     <section class="my-3">
         <div class="display-4">Merkliste</div>
         <hr>
+        <div class="row">
         <?php
-            getWishlist();
+            getWishlist(20);
         ?>
+        </div>
+
     </section>
     <section  class="my-3">
         <div class="display-4">Meine Produkte</div>
