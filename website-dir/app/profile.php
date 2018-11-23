@@ -49,7 +49,7 @@ checkSession();
     <section>
         <div class="row">
             <div class="col-md-6">
-                <?php echo "<img src=\"../assets/users/DSC_4374.jpg\" class=\"rounded-circle img-fluid\" style=\"max-width: 350px; margin: 0 auto \">"; ?>
+                <?php echo "<img src=\"../assets/users/".$_SESSION['u_image']."\" class=\"rounded-circle img-fluid\" style=\"max-width: 350px; margin: 0 auto \">"; ?>
             </div>
             <div class="col-md-6">
                 <?php echo "<div class=\"display-4\">". $_SESSION["u_forename"] . " " . $_SESSION["u_surname"] . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
@@ -58,11 +58,112 @@ checkSession();
         </div>
     </section>
     <section>
-        <form class="login-input">
-            <span>Nutzername</span>
-            <input type="text" name="username" class="form-control" placeholder="ManuelTroll" aria-label="Username">
-            <button type="submit" name="submit" value="login" class="btn btn-secondary rounded-0 w-100 my-1">Submit</button>
-        </form>
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Persönliche Daten ändern
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <form class="login-input" id="submit_form">
+                            <label>E-Mail Adresse</label>
+                            <input type="text" name="email" id="email" class="form-control" placeholder="<?php echo $_SESSION['u_email'];?>" aria-label="EMail">
+                            <label>Nachname</label>
+                            <input type="text" name="surname" id="surname" class="form-control" placeholder="<?php echo $_SESSION['u_surname'];?>" aria-label="Surname">
+                            <label>Vorname</label>
+                            <input type="text" name="forename" id="forename" class="form-control" placeholder="<?php echo $_SESSION['u_forename'];?>" aria-label="Forename">
+                            <label>Geburtstag</label>
+                            <input type="text" name="birthdate" id="birthdate" class="form-control" placeholder="<?php echo $_SESSION['u_birthdate'];?>" aria-label="Birthdate">
+                            <label>Postleitzahl</label>
+                            <input type="text" name="zipcode" id="zipcode" class="form-control" placeholder="<?php echo $_SESSION['u_zipcode'];?>" aria-label="Zipcode">
+                            <label>Profilbild</label>
+                            <input type="text" name="image" id="image" class="form-control" placeholder="<?php echo $_SESSION['u_image'];?>" aria-label="Image">
+                            <label>Telefonnummer</label>
+                            <input type="text" name="phonenumber" id="phonenumber" class="form-control" placeholder="<?php echo $_SESSION['u_phonenumber'];?>" aria-label="phonenumber">
+                            <label>Beschreibung</label>
+                            <input type="text" name="description" id="description" class="form-control" placeholder="<?php echo $_SESSION['u_description'];?>" aria-label="Description">
+
+
+
+                            <br />
+                            <input type="button" name="submit" id="submit" class="btn btn-secondary rounded-0 w-100 my-1" value="Submit" />
+                            <span id="error_message" class="text-danger"></span>
+                            <span id="success_message" class="text-success"></span>
+                        </form>
+                        <script>
+                            $(document).ready(function () {
+                                $('#submit').click(function () {
+                                    var email  = $('#email').val();
+                                    var surname = $('#surname').val();
+                                    var forename = $('#forename').val();
+                                    var birthdate = $('#birthdate').val();
+                                    var zipcode = $('#zipcode').val();
+                                    var image = $('#image').val();
+                                    var phonenumber = $('#phonenumber').val();
+                                    var description = $('#description').val();
+                                    if (email == '' && surname == '' && forename == '' && birthdate == '' && zipcode == '' && image == '' && phonenumber == '' && description == '') {
+                                        $('#error_message').html("Keine Änderungen vorgenommen!");
+                                    } else {
+                                        $('#error_message').html('');
+                                        $.ajax({
+                                            url: "reg.php",
+                                            method: "POST",
+                                            data: {email:email, surname:surname, forename:forename, birthdate:birthdate, zipcode:zipcode, image:image, phonenumber:phonenumber, description:description},
+                                            success:function (data) {
+                                                if (data == 'error') {
+                                                    $('#error_message').html('Fehler beim Vornehmen der Änderung(en)');
+                                                } else {
+                                                    $('form').trigger('reset');
+                                                    $('#success_message').fadeIn().html('Änderungen vorgenommen');
+                                                    setTimeout(function () {
+                                                        $('#success_message').fadeOut('Slow');
+                                                    }, 20000);
+                                                }
+                                            }
+                                        });
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Weitere Informationen zu deinem Konto
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Fragen zu deinem Konto?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
     </div>
 </main>

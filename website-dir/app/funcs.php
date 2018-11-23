@@ -15,7 +15,7 @@
  */
 function checkSession()
 {
-    if (!isset($_SESSION["user_id"])) {
+    if (!isset($_SESSION["u_id"])) {
         header("Location: ../index.php");
     }
 }
@@ -52,7 +52,7 @@ function getWishlist($range)
 {
     //TODO check if inline session access works!
     $query = mysqli_query(establishDB(), "SELECT * FROM f_favorites INNER JOIN p_post ON f_favorites.f_p_post = p_post.p_id
-                        INNER JOIN u_users ON p_post.p_u_user = u_users.u_id WHERE f_u_user = " . $_SESSION['user_id'] .";");
+                        INNER JOIN u_users ON p_post.p_u_user = u_users.u_id WHERE f_u_user = " . $_SESSION['u_id'] .";");
     if (mysqli_num_rows($query) > 0) {
         if(isset($range)){
             $index = 0;
@@ -79,7 +79,7 @@ function getWishlist($range)
  */
 function getPostsbyUser($user_id){
     if(!isset($user_id)) {
-        $query = mysqli_query(establishDB(), "SELECT * FROM p_post WHERE p_u_user = ".$_SESSION['user_id'].";");
+        $query = mysqli_query(establishDB(), "SELECT * FROM p_post WHERE p_u_user = ".$_SESSION['u_id'].";");
         if (mysqli_num_rows($query) > 0) {
             while ($row = mysqli_fetch_assoc($query)) {
                 echo $row['p_title'];
@@ -162,10 +162,8 @@ function printProduct($row){
 function reg_Email($email) {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $conn = establishDB();
-        $queryUpdate = mysqli_query($conn, "UPDATE u_users SET u_email = '$email' WHERE u_id LIKE ".$_SESSION['user_id'].";");
-        if (mysqli_affected_rows($queryUpdate) < 1) {
-            throw new Exception("Error while updating email!");
-        }
+        $queryUpdate = mysqli_query($conn, "UPDATE u_users SET u_email = '$email' WHERE u_id LIKE ".$_SESSION['u_id'].";");
+
     } else {
         throw new Exception("Invalid email!");
     }

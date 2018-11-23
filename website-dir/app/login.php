@@ -53,10 +53,13 @@
                         $query = mysqli_query($conn, "SELECT * FROM u_users WHERE u_username = '$user' AND u_pwd LIKE '$pwd';");
                         if (mysqli_num_rows($query) == 1) {
                             $data = mysqli_fetch_assoc($query);
-                            $_SESSION['user_id'] = $data["u_id"];
-                            $_SESSION['username'] = $data["u_username"];
-                            $_SESSION['forename'] = $data["u_forename"];
-                            $_SESSION['image'] = $data["u_image"];
+                            $_SESSION['u_id'] = $data["u_id"];
+                            $_SESSION['u_username'] = $data["u_username"];
+                            $_SESSION['u_forename'] = $data["u_forename"];
+                            $_SESSION['u_email'] = $data['u_email'];
+                            $_SESSION['u_birthdate'] = $data['u_birthdate'];
+                            $_SESSION['u_surname'] = $data['u_surname'];
+                            $_SESSION['u_image'] = $data["u_image"];
                             header("Location: home.php");
                         } else {
                             echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
@@ -77,11 +80,11 @@
                                 throw new Exception("User already exists");
                             }
 
-                            reg_Email(mysqli_real_escape_string($conn, $_POST["email"]));
+                            $email = reg_Email(mysqli_real_escape_string($conn, $_POST["email"]));
 
                             $pwd = hash("sha384", $_POST["pwd"], FALSE);
                             $forename = mysqli_real_escape_string($conn, $_POST["forename"]);
-                            $surename = mysqli_real_escape_string($conn, $_POST["surname"]);
+                            $surname = mysqli_real_escape_string($conn, $_POST["surname"]);
                             if (strlen($_POST["zipcode"]) < 11) {
                                 $zipcode = mysqli_real_escape_string($conn, $_POST["zipcode"]);
                             } else {
@@ -91,12 +94,13 @@
                             // INSERT INTO u_users (u_birthdate) VALUE (STR_TO_DATE($birthdate['20010501'], '%Y%m%d'));
                             $birthdate = null;
 
-                            mysqli_query($conn, "INSERT INTO u_users (u_username, u_email, u_pwd, u_surname, u_forename, u_birthdate, u_zipcode) VALUES ('$username','$email','$pwd','$surename','$forename','$birthdate','$zipcode');");
+                            mysqli_query($conn, "INSERT INTO u_users (u_username, u_email, u_pwd, u_surname, u_forename, u_birthdate, u_zipcode) VALUES ('$username','$email','$pwd','$surname','$forename','$birthdate','$zipcode');");
                             if (mysqli_affected_rows() == 1) {
-                                $_SESSION['user_id'] = null;
-                                $_SESSION['username'] = $username;
-                                $_SESSION['forename'] = $forename;
-                                $_SESSION['image'] = $data["u_image"];
+                                $_SESSION['u_id'] = null;
+                                $_SESSION['u_username'] = $username;
+                                $_SESSION['u_forename'] = $forename;
+                                $_SESSION['u_surname'] = $data['u_surname'];
+                                $_SESSION['u_image'] = $data["u_image"];
                                 header("Location: home.php");
                             } else {
                                 throw new Exception("DB: Insert Failure");
