@@ -20,7 +20,7 @@ nav img{
 
 nav .menu-button {
 	opacity: 0;
-	animation: 1000ms opacity-0-1 ease 1000ms running both;
+	animation: 700ms opacity-0-1 ease 700ms running both;
 }
 
 nav .menu-button {

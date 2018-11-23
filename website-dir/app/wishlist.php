@@ -55,9 +55,11 @@ checkSession();
 </header>
 <main class="main-header">
     <section>
+        <div class="row">
 <?php
     getWishlist(10);
 ?>
+        </div>
     </section>
 </main>
 </body>
