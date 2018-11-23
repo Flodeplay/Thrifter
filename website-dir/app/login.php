@@ -56,6 +56,7 @@
                             $_SESSION['user_id'] = $data["u_id"];
                             $_SESSION['username'] = $data["u_username"];
                             $_SESSION['forename'] = $data["u_forename"];
+                            $_SESSION['image'] = $data["u_image"];
                             header("Location: home.php");
                         } else {
                             echo "<h4 class='mb-3 text-danger'>Something went wrong. Please log in again!</h4>";
@@ -97,6 +98,7 @@
                                 $_SESSION['user_id'] = null;
                                 $_SESSION['username'] = $username;
                                 $_SESSION['forename'] = $forename;
+                                $_SESSION['image'] = $data["u_image"];
                                 header("Location: home.php");
                             } else {
                                 throw new Exception("DB: Insert Failure");
