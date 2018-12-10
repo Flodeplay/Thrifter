@@ -1,7 +1,8 @@
 <?php
+require_once "funcs.inc.php";
+require_once "user.php";
 error_reporting(0);
 session_start();
-require_once "funcs.php";
 checkSession();
 ?>
 <!DOCTYPE html>
@@ -41,7 +42,9 @@ checkSession();
 
 </head>
 <body>
-<?php echo file_get_contents('../html/navbarTop.html'); ?>
+<?php
+echo file_get_contents('../html/navbarTop.html');
+?>
 <header class="shadow">
     <span>Home</span>
     <i class="fas fa-sliders-h fa-lg"></i>
@@ -49,7 +52,8 @@ checkSession();
 <main class="main-header">
     <section class="my-3">
         <?php
-            echo "<h1 class='display-3'>Hallo,<br> " . $_SESSION['forename'] . "</h1>";
+
+            echo "<h1 class='display-3'>Hallo,<br> " . $_SESSION["u_user"]->u_forename . "</h1>";
         ?>
         <hr>
         <div class="row">
@@ -58,7 +62,7 @@ checkSession();
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-home fa-2x"></i>Home</div>
             <a href="wishlist.php"><div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-list-ul fa-2x"></i>Merkliste</div></a>
             <a href="profile.php"><div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-user fa-2x"></i>Konto</div></a>
-            <a href="profile.php"><div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-user fa-2x"></i>Konto</div></a>
+
         </div>
     </section
     <section class="my-3">
@@ -66,16 +70,18 @@ checkSession();
         <hr>
         <div class="row">
         <?php
-            getWishlist(20);
-        ?>
-        </div>
+            $_SESSION["u_user"]->getWishlist(2);
+            ?>
 
+        </div>
+        <a href="#"><h4 class="my-3 text-center">Mehr</h4></a>
     </section>
+    <hr>
     <section  class="my-3">
         <div class="display-4">Meine Produkte</div>
         <hr>
         <?php
-            getPostsbyUser(null);
+            getPostsbyUser($_SESSION["u_user"]->u_id);
         ?>
     </section>
 </main>

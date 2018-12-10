@@ -11,10 +11,7 @@ $(function () {
             $("body").removeClass("sidemenu-body");
         }
     });
-    $(".register-button,.login-button").click(function () {
-            $(".register-input").toggle();
-            $(".login-input").toggle();
-    });
+
 
     $("section .scrolldown, footer .scrolldown").click(function () {
         var sections = $("section");

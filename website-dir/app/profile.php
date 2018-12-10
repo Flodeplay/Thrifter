@@ -1,7 +1,8 @@
 <?php
 error_reporting(0);
+require_once "funcs.inc.php";
+require_once "user.php";
 session_start();
-require_once "funcs.php";
 checkSession();
 ?>
 <!DOCTYPE html>
@@ -36,29 +37,29 @@ checkSession();
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <title>Thrifter. Profil</title>
+    <title>Profil - Thrifter.</title>
 </head>
 <body>
 <?php echo file_get_contents('../html/navbarTop.html'); ?>
 <header class="shadow">
         <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
         <span>Profil</span>
-        <i class="fas fa-sliders-h fa-lg"></i>
+        <i></i>
 </header>
 <main class="main-header">
     <section>
         <div class="row">
+            <div class="col-md-6 d-flex justify-content-center">
+                <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style=\"max-height: 150px;\">"; ?>
+                </div>
             <div class="col-md-6">
-                <?php echo "<img src=\"../assets/users/".$_SESSION['u_image']."\" class=\"rounded-circle img-fluid\" style=\"max-width: 350px; margin: 0 auto \">"; ?>
-            </div>
-            <div class="col-md-6">
-                <?php echo "<div class=\"display-4\">". $_SESSION["u_forename"] . " " . $_SESSION["u_surname"] . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
+                <?php echo "<div class=\"display-4 text-center\">". $_SESSION['u_user']->u_forename . "<br>" . $_SESSION['u_user']->u_surname . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
 
             </div>
         </div>
     </section>
+    <hr>
     <section>
-
         <div id="accordion">
             <div class="card">
                 <div class="card-header" id="headingOne">
@@ -73,21 +74,21 @@ checkSession();
                     <div class="card-body">
                         <form class="login-input" id="submit_form">
                             <label>E-Mail Adresse</label>
-                            <input type="text" name="email" id="email" class="form-control" placeholder="<?php echo $_SESSION['u_email'];?>" aria-label="EMail">
+                            <input type="text" name="email" id="email" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_email;?>" aria-label="EMail">
                             <label>Nachname</label>
-                            <input type="text" name="surname" id="surname" class="form-control" placeholder="<?php echo $_SESSION['u_surname'];?>" aria-label="Surname">
+                            <input type="text" name="surname" id="surname" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_surname;?>" aria-label="Surname">
                             <label>Vorname</label>
-                            <input type="text" name="forename" id="forename" class="form-control" placeholder="<?php echo $_SESSION['u_forename'];?>" aria-label="Forename">
+                            <input type="text" name="forename" id="forename" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_forename;?>" aria-label="Forename">
                             <label>Geburtstag</label>
-                            <input type="text" name="birthdate" id="birthdate" class="form-control" placeholder="<?php echo $_SESSION['u_birthdate'];?>" aria-label="Birthdate">
+                            <input type="text" name="birthdate" id="birthdate" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_birthdate;?>" aria-label="Birthdate">
                             <label>Postleitzahl</label>
-                            <input type="text" name="zipcode" id="zipcode" class="form-control" placeholder="<?php echo $_SESSION['u_zipcode'];?>" aria-label="Zipcode">
+                            <input type="text" name="zipcode" id="zipcode" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_zipcode;?>" aria-label="Zipcode">
                             <label>Profilbild</label>
-                            <input type="text" name="image" id="image" class="form-control" placeholder="<?php echo $_SESSION['u_image'];?>" aria-label="Image">
+                            <input type="text" name="image" id="image" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_image;?>" aria-label="Image">
                             <label>Telefonnummer</label>
-                            <input type="text" name="phonenumber" id="phonenumber" class="form-control" placeholder="<?php echo $_SESSION['u_phonenumber'];?>" aria-label="phonenumber">
+                            <input type="text" name="phonenumber" id="phonenumber" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_phonenumber;?>" aria-label="phonenumber">
                             <label>Beschreibung</label>
-                            <input type="text" name="description" id="description" class="form-control" placeholder="<?php echo $_SESSION['u_description'];?>" aria-label="Description">
+                            <input type="text" name="description" id="description" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_description;?>" aria-label="Description">
 
 
 
@@ -138,7 +139,7 @@ checkSession();
                 <div class="card-header" id="headingTwo">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Weitere Informationen zu deinem Konto
+                            Weitere Informationen
                         </button>
                     </h5>
                 </div>
@@ -165,7 +166,6 @@ checkSession();
         </div>
 
     </section>
-    </div>
 </main>
 </body>
 </html>

@@ -1,9 +1,12 @@
 <?php
+require_once 'funcs.inc.php';
+require_once 'user.php';
 session_start();
-require_once 'funcs.php';
+
 try {
+    $user = $_SESSION["u_user"];
     if ($_POST['email']) {
-        reg_Email($_POST['email']);
+        $user->reg_Email($_POST['email']);
     }
     if ($_POST['surname']) {
         echo $_POST['surname'];

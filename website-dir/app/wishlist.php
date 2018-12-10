@@ -1,13 +1,14 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: flori
+ * user: flori
  * Date: 20.11.2018
  * Time: 20:50
  */
+require_once "funcs.inc.php";
+require_once "user.php";
 error_reporting(0);
 session_start();
-require_once "funcs.php";
 checkSession();
 ?>
 <!DOCTYPE html>
@@ -56,9 +57,9 @@ checkSession();
 <main class="main-header">
     <section>
         <div class="row">
-<?php
-    getWishlist(10);
-?>
+<?php echo $user = $_SESSION["u_user"];
+        $user->getWishlist(10);
+        ?>
         </div>
     </section>
 </main>
