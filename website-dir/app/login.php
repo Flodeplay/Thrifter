@@ -71,7 +71,7 @@
 
                             header("Location: home.php");
                         } else {
-                            echo "<h4 class='mb-3 text-danger'>Passwort Oder Benützername ist Falsch!</h4>";
+                            echo "<h4 class='mb-3 text-danger'>Passwort Oder Benutzername ist Falsch!</h4>";
                             exit(file_get_contents('../html/login.html'));
                         }
                     break;

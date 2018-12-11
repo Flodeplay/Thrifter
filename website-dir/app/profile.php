@@ -98,6 +98,9 @@ checkSession();
                             <span id="success_message" class="text-success"></span>
                         </form>
                         <script>
+                            //TODO birtdate -> calendar field to choose
+                            //TODO passsword -> 2 fields which gets compared if equal
+                            //TODO image -> option to upload new one (Button)
                             $(document).ready(function () {
                                 $('#submit').click(function () {
                                     var email  = $('#email').val();
@@ -121,6 +124,10 @@ checkSession();
                                                     $('#error_message').html('Fehler beim Vornehmen der Änderung(en)');
                                                 } else {
                                                     $('form').trigger('reset');
+
+                                                    //TODO find better way to update the placeholders w/ SESSION-data
+                                                    window.location.reload();
+
                                                     $('#success_message').fadeIn().html('Änderungen vorgenommen');
                                                     setTimeout(function () {
                                                         $('#success_message').fadeOut('Slow');
