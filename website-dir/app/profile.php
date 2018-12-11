@@ -50,54 +50,53 @@ checkSession();
     <section>
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center">
-                <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style=\"max-height: 150px;\">"; ?>
-
                 <form id="form" action="image_upload.php" method="post" enctype="multipart/form-data">
-                    <input type="file" name="image" id="uploadImage" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_image;?>" aria-label="Image" accept="image/*">
-                    <div id="preview"><img src="filed.png" /></div><br>
-                    <input class="btn btn-success" type="submit" value="Upload">
+                    <label for="uploadImage">
+                        <img src="../assets/users/<?php echo $_SESSION['u_user']->u_image;?>" class="rounded-circle img-fluid" style="max-height: 150px;">
+                    </label>
+                    <input type="file" name="image" id="uploadImage" style="display: none" accept="image/*">
+
                 </form>
-
-                <div id="err"></div>
-
                 <script>
-                    $(document).ready(function (e) {
-                        $("#form").on('submit',(function(e) {
-                            e.preventDefault();
-                            $.ajax({
-                                url: "image_upload.php",
-                                type: "POST",
-                                data:  new FormData(this),
-                                contentType: false,
-                                cache: false,
-                                processData:false,
-                                beforeSend : function()
+                    document.getElementById("uploadImage").onchange = function () {
+                        document.getElementById('form').submit();
+                    };
+                    $("#form").on('submit',(function(e) {
+                        e.preventDefault();
+                        $.ajax({
+                            url: "image_upload.php",
+                            type: "POST",
+                            data:  new FormData(this),
+                            contentType: false,
+                            cache: false,
+                            processData:false,
+                            beforeSend : function()
+                            {
+                                //$("#preview").fadeOut();
+                                $("#err").fadeOut();
+                            },
+                            success: function(data)
+                            {
+                                if(data=='invalid')
                                 {
-                                    //$("#preview").fadeOut();
-                                    $("#err").fadeOut();
-                                },
-                                success: function(data)
-                                {
-                                    if(data=='invalid')
-                                    {
-                                        // invalid file format.
-                                        $("#err").html("Invalid File !").fadeIn();
-                                    }
-                                    else
-                                    {
-                                        // view uploaded file.
-                                        $("#preview").html(data).fadeIn();
-                                        $("#form")[0].reset();
-                                    }
-                                },
-                                error: function(e)
-                                {
-                                    $("#err").html(e).fadeIn();
+                                    // invalid file format.
+                                    $("#err").html("Invalid File !").fadeIn();
                                 }
-                            });
-                        }));
-                    });
+                                else
+                                {
+                                    // view uploaded file.
+                                    $("#preview").html(data).fadeIn();
+                                    $("#form")[0].reset();
+                                }
+                            },
+                            error: function(e)
+                            {
+                                $("#err").html(e).fadeIn();
+                            }
+                        });
+                    }));
                 </script>
+                <div id="err"></div>
             </div>
             <div class="col-md-6">
                 <?php echo "<div class=\"display-4 text-center\">". $_SESSION['u_user']->u_forename . "<br>" . $_SESSION['u_user']->u_surname . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
