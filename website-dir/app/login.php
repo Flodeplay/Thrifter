@@ -121,7 +121,6 @@
         exit(file_get_contents('../html/login.html'));
     }
     ?>
-   </div>
 </section>
 </main>
 </body>
