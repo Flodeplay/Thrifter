@@ -51,10 +51,56 @@ checkSession();
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center">
                 <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style=\"max-height: 150px;\">"; ?>
-                </div>
+
+                <form id="form" action="image_upload.php" method="post" enctype="multipart/form-data">
+                    <input type="file" name="image" id="uploadImage" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_image;?>" aria-label="Image" accept="image/*">
+                    <div id="preview"><img src="filed.png" /></div><br>
+                    <input class="btn btn-success" type="submit" value="Upload">
+                </form>
+
+                <div id="err"></div>
+
+                <script>
+                    $(document).ready(function (e) {
+                        $("#form").on('submit',(function(e) {
+                            e.preventDefault();
+                            $.ajax({
+                                url: "image_upload.php",
+                                type: "POST",
+                                data:  new FormData(this),
+                                contentType: false,
+                                cache: false,
+                                processData:false,
+                                beforeSend : function()
+                                {
+                                    //$("#preview").fadeOut();
+                                    $("#err").fadeOut();
+                                },
+                                success: function(data)
+                                {
+                                    if(data=='invalid')
+                                    {
+                                        // invalid file format.
+                                        $("#err").html("Invalid File !").fadeIn();
+                                    }
+                                    else
+                                    {
+                                        // view uploaded file.
+                                        $("#preview").html(data).fadeIn();
+                                        $("#form")[0].reset();
+                                    }
+                                },
+                                error: function(e)
+                                {
+                                    $("#err").html(e).fadeIn();
+                                }
+                            });
+                        }));
+                    });
+                </script>
+            </div>
             <div class="col-md-6">
                 <?php echo "<div class=\"display-4 text-center\">". $_SESSION['u_user']->u_forename . "<br>" . $_SESSION['u_user']->u_surname . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
-
             </div>
         </div>
     </section>
@@ -83,8 +129,10 @@ checkSession();
                             <input type="text" name="birthdate" id="birthdate" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_birthdate;?>" aria-label="Birthdate">
                             <label>Postleitzahl</label>
                             <input type="text" name="zipcode" id="zipcode" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_zipcode;?>" aria-label="Zipcode">
+                            <!--
                             <label>Profilbild</label>
-                            <input type="text" name="image" id="image" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_image;?>" aria-label="Image">
+                            <input type="file" name="image" id="image" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_image;?>" aria-label="Image" accept="image/*">
+                            -->
                             <label>Telefonnummer</label>
                             <input type="text" name="phonenumber" id="phonenumber" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_phonenumber;?>" aria-label="phonenumber">
                             <label>Beschreibung</label>
