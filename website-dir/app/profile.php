@@ -50,8 +50,49 @@ checkSession();
     <section>
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center">
-                <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style=\"max-height: 150px;\">"; ?>
+                <label class="btn btn-default btn-file">
+                    <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style=\"max-height: 150px;\">"; ?>
+                    <input type="file" name="image" id="imageChange" style="display: none;" aria-label="Image" accept="image/*">
+                </label>
+                <span id="err_message" class="text-danger"></span>
+                <span id="suc_message" class="text-success"></span>
+                <script>
+                    $(document).ready(function() {
+                        $('#imageChange').change(function(){
+                            var file_data = $('#imageChange').prop('files')[0];
+                            var form_data = new FormData();
+                            form_data.append('image', file_data);
+                            $.ajax({
+                                url: "image_upload.php",
+                                type: "POST",
+                                data: form_data,
+                                contentType: false,
+                                cache: false,
+                                processData: false,
+                                //TODO succes doesn't work
+                                success: function(data){
+                                    //window.location.reload();
+                                    /*
+                                    $('#err_message').html('haööp');
+                                    //window.location.reload();
+                                    if (data != 'success') {
+                                        $('#err_message').html(data);
+                                    } else {
+                                        //window.location.reload();
 
+                                        $('#suc_message').fadeIn().html('Änderungen vorgenommen');
+                                        setTimeout(function () {
+                                            $('#suc_message').fadeOut('Slow');
+                                        }, 20000);
+                                    }
+                                    */
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+                <!--
                 <form id="form" action="image_upload.php" method="post" enctype="multipart/form-data">
                     <input type="file" name="image" id="uploadImage" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_image;?>" aria-label="Image" accept="image/*">
                     <div id="preview"><img src="filed.png" /></div><br>
@@ -98,6 +139,7 @@ checkSession();
                         }));
                     });
                 </script>
+                -->
             </div>
             <div class="col-md-6">
                 <?php echo "<div class=\"display-4 text-center\">". $_SESSION['u_user']->u_forename . "<br>" . $_SESSION['u_user']->u_surname . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
@@ -129,10 +171,6 @@ checkSession();
                             <input type="text" name="birthdate" id="birthdate" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_birthdate;?>" aria-label="Birthdate">
                             <label>Postleitzahl</label>
                             <input type="text" name="zipcode" id="zipcode" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_zipcode;?>" aria-label="Zipcode">
-                            <!--
-                            <label>Profilbild</label>
-                            <input type="file" name="image" id="image" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_image;?>" aria-label="Image" accept="image/*">
-                            -->
                             <label>Telefonnummer</label>
                             <input type="text" name="phonenumber" id="phonenumber" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_phonenumber;?>" aria-label="phonenumber">
                             <label>Beschreibung</label>
@@ -156,20 +194,33 @@ checkSession();
                                     var forename = $('#forename').val();
                                     var birthdate = $('#birthdate').val();
                                     var zipcode = $('#zipcode').val();
-                                    var image = $('#image').val();
                                     var phonenumber = $('#phonenumber').val();
                                     var description = $('#description').val();
-                                    if (email == '' && surname == '' && forename == '' && birthdate == '' && zipcode == '' && image == '' && phonenumber == '' && description == '') {
+                                    if (email == '' && surname == '' && forename == '' && birthdate == '' && zipcode == '' && phonenumber == '' && description == '') {
                                         $('#error_message').html("Keine Änderungen vorgenommen!");
                                     } else {
-                                        $('#error_message').html('');
                                         $.ajax({
                                             url: "reg.php",
                                             method: "POST",
-                                            data: {email:email, surname:surname, forename:forename, birthdate:birthdate, zipcode:zipcode, image:image, phonenumber:phonenumber, description:description},
+                                            data: {email:email, surname:surname, forename:forename, birthdate:birthdate, zipcode:zipcode, phonenumber:phonenumber, description:description},
                                             success:function (data) {
+                                                /*
                                                 if (data == 'error') {
                                                     $('#error_message').html('Fehler beim Vornehmen der Änderung(en)');
+                                                } else {
+                                                    $('form').trigger('reset');
+
+                                                    //TODO find better way to update the placeholders w/ SESSION-data
+                                                    window.location.reload();
+
+                                                    $('#success_message').fadeIn().html('Änderungen vorgenommen');
+                                                    setTimeout(function () {
+                                                        $('#success_message').fadeOut('Slow');
+                                                    }, 20000);
+                                                }
+                                                */
+                                                if (data != 'success')  {
+                                                    $('#error_message').html(data);
                                                 } else {
                                                     $('form').trigger('reset');
 
@@ -200,7 +251,47 @@ checkSession();
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
+                        <label>Profilbild</label>
+                        <br>
+                        <label class="btn btn-default btn-file">
+                            <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style=\"max-height: 150px;\">"; ?>
+                            <input type="file" name="image" id="imageChange" style="display: none;" aria-label="Image" accept="image/*">
+                        </label>
+                        <span id="err_message" class="text-danger"></span>
+                        <span id="suc_message" class="text-success"></span>
 
+                        <script>
+                            $(document).ready(function() {
+                                $('#imageChange').change(function(){
+                                    var file_data = $('#imageChange').prop('files')[0];
+                                    var form_data = new FormData();
+                                    form_data.append('image', file_data);
+                                    $.ajax({
+                                        url: "image_upload.php",
+                                        type: "POST",
+                                        data: form_data,
+                                        contentType: false,
+                                        cache: false,
+                                        processData: false,
+                                        //TODO succes doesn't work
+                                        success: function(data){
+                                            $('#err_message').html('haööp');
+                                            //window.location.reload();
+                                            if (data != 'success') {
+                                                $('#err_message').html(data);
+                                            } else {
+                                                //window.location.reload();
+
+                                                $('#suc_message').fadeIn().html('Änderungen vorgenommen');
+                                                setTimeout(function () {
+                                                    $('#suc_message').fadeOut('Slow');
+                                                }, 20000);
+                                            }
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
