@@ -11,6 +11,11 @@ nav {
 	position: fixed;
 	top: 0;
 }
+@media (max-width: 576px) {
+    nav{
+        position: relative;
+    }
+}
 nav img{
 	opacity: 0;
 	height: 30px;
@@ -148,8 +153,8 @@ header {
     background-color: white;
     padding: 5px 30px;
     height: 60px;
-    top: 60px;
-    position: fixed;
+    top: 0px;
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;

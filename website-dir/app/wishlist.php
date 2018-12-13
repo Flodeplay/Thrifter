@@ -48,7 +48,7 @@ checkSession();
 
 </head>
 <body>
-<?php echo file_get_contents('../html/navbarTop.html'); ?>
+<?php echo file_get_contents('../html/navs.html'); ?>
 <header class="shadow">
     <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
     <span>Merkliste</span>

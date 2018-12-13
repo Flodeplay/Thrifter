@@ -43,7 +43,7 @@ checkSession();
 </head>
 <body>
 <?php
-echo file_get_contents('../html/navbarTop.html');
+echo file_get_contents('../html/navs.html');
 ?>
 <header class="shadow">
     <span>Home</span>
@@ -84,5 +84,6 @@ echo file_get_contents('../html/navbarTop.html');
             getPostsbyUser($_SESSION["u_user"]->u_id);
         ?>
     </section>
+
 </main>
 </body>

@@ -45,7 +45,7 @@
 </head>
 <body>
 <main>
-    <?php echo file_get_contents('../html/navbarTop.html'); ?>
+    <?php echo file_get_contents('../html/navs.html'); ?>
 <section class="d-flex flex-column align-items-center justify-content-center" style="height: calc(100vh - 60px);">
     <?php
     require_once "user.php";

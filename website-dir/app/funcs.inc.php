@@ -10,6 +10,22 @@ function checkSession()
     if (!isset($_SESSION["u_user"])) {
         header("Location: ../index.php");
     }
+
+}
+/*
+ * Checks if user is logged in
+ * @param: none
+ * @Author: Florian Parfuss
+ * @date: 13.12.2018
+ * @return: Boolean (true;false) 
+ */
+function isSession(){
+    if (isset($_SESSION["u_user"])) {
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 /*
