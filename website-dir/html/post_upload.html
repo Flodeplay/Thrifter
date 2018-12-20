@@ -28,21 +28,21 @@
 <div class="post-upload-modal">
     <div class="post-upload-inner p-3">
         <div class="post-upload-head row d-flex justify-content-between">
-            <a onclick="cancelPost()"><i class="fas fa-times-circle"></i></a>
+            <a onclick="closePost()"><i class="fas fa-times-circle"></i></a>
             <a onclick="validatepost()">fertig</a>
         </div>
         <hr>
         <div class="post-upload-body py-3">
             <div class="form-outer">
                 <form name="newPost">
-                    <label>Bild</label>
-                    <input type="file" class="form-control-file">
+                    <label for="picture">Bild</label>
+                    <input id="picture" type="file" class="form-control-file">
 
-                    <label>Titel</label>
+                    <label for="titel">Titel</label>
                     <input id="titel" class="form-control" type="text">
 
-                    <label>Beschreibung</label>
-                    <input id="descriptiom" class="form-control" type="text">
+                    <label for="description">Beschreibung</label>
+                    <input id="description" class="form-control" type="text">
 
                     <label>Preis</label>
                     <input id="price" type="number" class="form-control">

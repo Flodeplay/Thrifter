@@ -146,7 +146,15 @@ main article {
     transition-timing-function: ease;
 
 }
-
+.login-main{
+     background: #ff6a79;
+     background: -moz-linear-gradient(-45deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
+     background: -webkit-linear-gradient(-45deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
+     background: -o-linear-gradient(-45deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
+     background: -ms-linear-gradient(-45deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
+     background: linear-gradient(135deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6a79', endColorstr='#88ddbb', GradientType=1);
+ }
 .form-outer {
     width: 100%;
     max-width: 500px;

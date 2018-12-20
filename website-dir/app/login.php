@@ -36,27 +36,13 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
-    <!-- custom style-->
-    <!-- this is one piece of a schaß -->
-    <style>
-        main {
-            background: #ff6a79;
-            background: -moz-linear-gradient(-45deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
-            background: -webkit-linear-gradient(-45deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
-            background: -o-linear-gradient(-45deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
-            background: -ms-linear-gradient(-45deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
-            background: linear-gradient(135deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6a79', endColorstr='#88ddbb', GradientType=1);
-        }
-    </style>
     <title>Login - Thrifter.</title>
 </head>
 <body>
-<main>
+<main class="login-main">
     <?php echo file_get_contents('../html/navs.html'); ?>
     <section class="d-flex flex-column align-items-center justify-content-center"
-             style="min-height: calc(100vh - 60px);padding: 20px;">
+             style="min-height: calc(100vh - 60px); padding: 20px;">
         <?php
         if (isset($_POST["submit"])) {
             try {

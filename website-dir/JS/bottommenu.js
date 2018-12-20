@@ -6,7 +6,7 @@ function addnewPost() {
     newPostCOntainer.fadeIn();
 }
 
-function cancelPost() {
+function closePost() {
     var newPostCOntainer = $("#new_post-container");
     newPostCOntainer.animate(function () {
         0
@@ -17,5 +17,6 @@ function cancelPost() {
 }
 
 function validatepost() {
-    cancelPost();
+    //Todo validate post funktionnen Manu
+    closePost();
 }

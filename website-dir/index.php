@@ -93,7 +93,7 @@
         </div>
         <div class="scrolldown text-white hover-red"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="full-height-section d-flex flex-column justify-content-center">
+    <section class="full-height-section p-3 d-flex flex-column justify-content-center">
 
         <h1 style="border-left: 4px #FF6A79 solid;padding-left: 10px" class="mb-3">Auf der Suche nach etwas neuem Alten?<br>
         </h1>
@@ -101,42 +101,6 @@
         <a class="btn btn-dark w-auto mt-3 text-white btn-lg" data-toggle="modal" data-target="#login-modal">
             Anmelden | Registrieren
         </a>
-        <div class="row pt-5">
-            <div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
-                <div class="card product">
-                    <div class="card-img-top">
-                        <img src="assets/_DSC1438.jpg" class="img-fluid card-img-top ">
-                    </div>
-                    <div class="card-body">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="h2" class="product-name">Adidas Pullover</div>
-                            <div class="h2" class="product-name">43€</div>
-                        </div>
-                        <div class="row justify-content-between align-items-center">
-                            <div class="h6" class="product-user">Patryk</div>
-                            <div class="h6" class="product-loc">Wien</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-outer col-6 col-sm-4 col-md-3 col-xl-3">
-                <div class="card product">
-                    <div class="card-img-top">
-                        <img src="assets/DSC_9662-7.JPG" class="img-fluid card-img-top ">
-                    </div>
-                    <div class="card-body">
-                        <div class="row justify-content-between align-items-center">
-                            <div class="h2" class="product-name">Adidas Pullover</div>
-                            <div class="h2" class="product-name">43€</div>
-                        </div>
-                        <div class="row justify-content-between align-items-center">
-                            <div class="h6" class="product-user">Patryk</div>
-                            <div class="h6" class="product-loc">Wien</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
     <section class="mw-100 full-height-section">
@@ -148,7 +112,7 @@
         </div>
         <div class="scrolldown text-white hover-red"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="full-height-section d-flex align-items-center p-5">
+    <section class="full-height-section p-3 d-flex align-items-center">
         <blockquote class="blockquote">
             <p class="mb-0">Someone that religiously shops at Thrift Stores looking for bargains and often scores
                 amazing deals. Often dedicated to recycling and reuse of products to keep our planet "greener".
@@ -321,5 +285,37 @@
         </div>
     </div>
 </div>
-<?php echo file_get_contents('html/footer.html'); ?>
+<section>
+    <footer class="footer">
+        <img src="assets/logo/Logo.svg">
+        <div class="display-3">"Früher Deins,<br> Heute Meins"</div>
+    </footer>
+</section>
+
+<div class="links">
+    <div class="scrollup text-white text-center"><i class="fas fa-chevron-up fa-2x"></i></div>
+    <div class="row">
+        <li class="col-md-3 col-sm-6">
+            <h1>Start</h1>
+            <a>link</a>
+        </li>
+        <li class="col-md-3 col-sm-6">
+            <h1>Konto</h1>
+            <a href="#">Anmelden</a>
+            <a href="#">Registrieren</a>
+            <a href="#">Konto löschen</a>
+        </li>
+        <li class="col-md-3 col-sm-6">
+            <h1>Hilfe</h1>
+            <a>link</a>
+        </li>
+        <li class="col-md-3 col-sm-6">
+            <h1>Hilfe</h1>
+            <a>link</a>
+        </li>
+    </div>
+    <div class="row font-weight-bold justify-content-center mt-5"><i class="fab fa-instagram mx-3 fa-2x"></i><i
+                class="fab fa-facebook-f fa-2x mx-3"></i><i class="fab fa-twitter fa-2x mx-3"></i><span
+                class="seperator"></span><span class="mx-3 h3">office@Thrifter.at</span></div>
+</div>
 </body>
