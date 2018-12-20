@@ -18,7 +18,7 @@ checkSession();
 
     <!-- Meta Tags-->
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
+    <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
 
     <!-- extern stylesheets-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
@@ -57,9 +57,9 @@ checkSession();
 <main class="main-header">
     <section>
         <div class="row">
-<?php echo $user = $_SESSION["u_user"];
-        $user->getWishlist(10);
-        ?>
+            <?php $user = $_SESSION["u_user"];
+            $user->getWishlist(10);
+            ?>
         </div>
     </section>
 </main>

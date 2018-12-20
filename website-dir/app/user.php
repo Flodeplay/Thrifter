@@ -8,7 +8,8 @@
 
 include 'interfaces/inter_update.php';
 
-class user implements inter_update {
+class user implements inter_update
+{
     public $u_id;
     public $u_username;
     public $u_forename;
@@ -46,7 +47,7 @@ class user implements inter_update {
     function getWishlist($count = 10)
     {
         $conn = establishDB();
-        $query = mysqli_query($conn, "SELECT * FROM f_favorites INNER JOIN p_post  on f_favorites.f_p_post = p_post.p_id INNER JOIN u_users on f_favorites.f_u_user = u_users.u_id WHERE u_id = " .$this->u_id ." LIMIT " .$count .";");
+        $query = mysqli_query($conn, "SELECT * FROM f_favorites INNER JOIN p_post  on f_favorites.f_p_post = p_post.p_id INNER JOIN u_users on f_favorites.f_u_user = u_users.u_id WHERE u_id = " . $this->u_id . " LIMIT " . $count . ";");
         if (mysqli_num_rows($query) > 0) {
             while ($row = mysqli_fetch_assoc($query)) {
                 printProduct($row);
@@ -56,13 +57,12 @@ class user implements inter_update {
             return false;
         }
     }
-    
-    /*
+
     function __toString()
     {
-        return $this->u_id;
+        return "" . $this->u_id;
     }
-    */
+
 
     /*
      * INTERFACE inter_update SECTION
@@ -70,7 +70,8 @@ class user implements inter_update {
      * All update functions are getting initialized here
      */
     //TODO PLS CHECK! -> only inter_u_email is throwing a exception and triggers the ajax error field!!
-    public function inter_u_email($email) {
+    public function inter_u_email($email)
+    {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $conn = establishDB();
             $queryUpdate = mysqli_query($conn, "UPDATE u_users SET u_email = '$email' WHERE u_id LIKE " . $this->u_id . ";");
@@ -81,7 +82,8 @@ class user implements inter_update {
         }
     }
 
-    public function inter_u_surname($surname) {
+    public function inter_u_surname($surname)
+    {
         if ($surname != null && strlen($surname) >= 2) {
             $conn = establishDB();
             $temp = mysqli_real_escape_string($conn, $surname);
@@ -93,7 +95,8 @@ class user implements inter_update {
         }
     }
 
-    public function inter_u_forename($forename) {
+    public function inter_u_forename($forename)
+    {
         if ($forename != null && strlen($forename) >= 2) {
             $conn = establishDB();
             $temp = mysqli_real_escape_string($conn, $forename);
@@ -105,11 +108,13 @@ class user implements inter_update {
         }
     }
 
-    public function inter_u_birthday() {
+    public function inter_u_birthday()
+    {
         // TODO: Implement inter_u_birthday() method.
     }
 
-    public function inter_u_zip($zipcode) {
+    public function inter_u_zip($zipcode)
+    {
         if (strlen($zipcode) > 2 && strlen($zipcode) < 11) {
             $conn = establishDB();
             $temp = mysqli_real_escape_string($conn, $zipcode);
@@ -121,11 +126,13 @@ class user implements inter_update {
         }
     }
 
-    public function inter_u_image() {
+    public function inter_u_image()
+    {
         // TODO: Implement inter_u_image() method.
     }
 
-    public function inter_u_phonenr($phonenr) {
+    public function inter_u_phonenr($phonenr)
+    {
         if (strlen($phonenr) > 3 && strlen($phonenr) < 20) {
             $conn = establishDB();
             $temp = mysqli_real_escape_string($conn, $phonenr);
@@ -137,7 +144,8 @@ class user implements inter_update {
         }
     }
 
-    public function inter_u_description($description) {
+    public function inter_u_description($description)
+    {
         $conn = establishDB();
         $temp = mysqli_real_escape_string($conn, $description);
         $queryUpdate = mysqli_query($conn, "UPDATE u_users SET u_description = '$temp' WHERE u_id LIKE " . $this->u_id . ";");
@@ -145,3 +153,4 @@ class user implements inter_update {
         mysqli_close($conn);
     }
 }
+?>

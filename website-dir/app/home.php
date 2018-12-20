@@ -1,9 +1,9 @@
 <?php
 require_once "funcs.inc.php";
-require_once "user.php";
+require "user.php";
 error_reporting(0);
 session_start();
-checkSession();
+//checkSession();
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -12,7 +12,7 @@ checkSession();
 
     <!-- Meta Tags-->
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
+    <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
 
     <!-- extern stylesheets-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
@@ -44,24 +44,40 @@ checkSession();
 <body>
 <?php
 echo file_get_contents('../html/navs.html');
+echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
     <span>Home</span>
-    <i class="fas fa-sliders-h fa-lg"></i>
 </header>
 <main class="main-header">
     <section class="my-3">
         <?php
 
-            echo "<h1 class='display-3'>Hallo,<br> " . $_SESSION["u_user"]->u_forename . "</h1>";
+        echo "<h1 class='display-3'>Hallo,<br> " . $_SESSION["u_user"]->u_forename . "</h1>";
         ?>
         <hr>
         <div class="row">
-            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-map-marker-alt fa-2x"></i>Map</div>
-            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-plus fa-2x"></i>Neu</div>
-            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-home fa-2x"></i>Home</div>
-            <a href="wishlist.php"><div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-list-ul fa-2x"></i>Merkliste</div></a>
-            <a href="profile.php"><div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white"><i class="fas fa-user fa-2x"></i>Konto</div></a>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
+                <i class="fas fa-map-marker-alt fa-2x"></i>Map
+            </div>
+            <a onclick="addnewPost()">
+                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
+                    <i class="fas fa-plus fa-2x"></i>Neu
+                </div>
+            </a>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
+                <i class="fas fa-home fa-2x"></i>Home
+            </div>
+            <a href="wishlist.php">
+                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
+                    <i class="fas fa-list-ul fa-2x"></i>Merkliste
+                </div>
+            </a>
+            <a href="profile.php">
+                <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
+                    <i class="fas fa-user fa-2x"></i>Konto
+                </div>
+            </a>
 
         </div>
     </section
@@ -69,7 +85,7 @@ echo file_get_contents('../html/navs.html');
         <div class="display-4">Merkliste</div>
         <hr>
         <div class="row">
-        <?php
+            <?php
             $_SESSION["u_user"]->getWishlist(2);
             ?>
 
@@ -77,11 +93,11 @@ echo file_get_contents('../html/navs.html');
         <a href="#"><h4 class="my-3 text-center">Mehr</h4></a>
     </section>
     <hr>
-    <section  class="my-3">
+    <section class="my-3">
         <div class="display-4">Meine Produkte</div>
         <hr>
         <?php
-            getPostsbyUser($_SESSION["u_user"]->u_id);
+        getPostsbyUser($_SESSION["u_user"]->u_id);
         ?>
     </section>
 
