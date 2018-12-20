@@ -5,6 +5,7 @@
  * Date: 11.12.2018
  * Time: 12:50
  */
+error_reporting(0);
 require_once 'funcs.inc.php';
 require_once 'user.php';
 session_start();
@@ -32,7 +33,7 @@ try {
             if (move_uploaded_file($tmp, $path)) {
                 $conn = establishDB();
                 $insert = mysqli_query($conn, "UPDATE u_users SET u_image = '$final_image' WHERE u_id LIKE " . $user->u_id . ";");
-
+                echo 'successful';
             } else {
                 throw new Exception('Fehler3');
             }

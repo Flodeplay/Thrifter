@@ -54,11 +54,20 @@ checkSession();
                     <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style=\"max-height: 150px;\">"; ?>
                     <input type="file" name="image" id="imageChange" style="display: none;" aria-label="Image" accept="image/*">
                 </label>
-                <span id="err_message" class="text-danger"></span>
-                <span id="suc_message" class="text-success"></span>
+                <br>
+                <div>
+                    <span id="suc" class="text-success"></span>
+                    <span id="err" class="text-danger"></span>
+                </div>
+
+                <!--<span id="err_message" class="text-danger"></span>
+                <span id="suc" class="text-success"></span>
+                <span id="err" class="text-danger"></span>-->
+
                 <script>
                     $(document).ready(function() {
-                        $('#imageChange').change(function(){
+                        $('#imageChange').change(function(e){
+                            e.preventDefault();
                             var file_data = $('#imageChange').prop('files')[0];
                             var form_data = new FormData();
                             form_data.append('image', file_data);
@@ -69,23 +78,23 @@ checkSession();
                                 contentType: false,
                                 cache: false,
                                 processData: false,
-                                //TODO succes doesn't work
+                                //TODO when limit exceeded, return better value
                                 success: function(data){
-                                    //window.location.reload();
-                                    /*
-                                    $('#err_message').html('haööp');
-                                    //window.location.reload();
-                                    if (data != 'success') {
-                                        $('#err_message').html(data);
-                                    } else {
-                                        //window.location.reload();
-
-                                        $('#suc_message').fadeIn().html('Änderungen vorgenommen');
+                                    if (data=='successful') {
+                                        //alert('Ging' + data);
+                                        $('#suc').fadeIn().html(data);
                                         setTimeout(function () {
-                                            $('#suc_message').fadeOut('Slow');
-                                        }, 20000);
+                                            $('#suc').fadeOut('Slow');
+                                            window.location.reload();
+                                        }, 800);
+                                        //window.location.reload();
+                                    } else {
+                                        //alert('Ging nicht' + data);
+                                        $('#err').fadeIn().html('<b>Fehler bei der Änderung des Profilbildes: </b>' + data);
                                     }
-                                    */
+                                },
+                                error: function (e) {
+                                    $('#err').fadeIn().html(e);
                                 }
                             });
                         });
@@ -103,7 +112,7 @@ checkSession();
 
                 <script>
                     $(document).ready(function (e) {
-                        $("#form").on('submit',(function(e) {
+                        $("#imageChange").change(function(e) {
                             e.preventDefault();
                             $.ajax({
                                 url: "image_upload.php",
@@ -115,28 +124,29 @@ checkSession();
                                 beforeSend : function()
                                 {
                                     //$("#preview").fadeOut();
-                                    $("#err").fadeOut();
+                                    $("#err_message").fadeOut();
                                 },
                                 success: function(data)
                                 {
                                     if(data=='invalid')
                                     {
                                         // invalid file format.
-                                        $("#err").html("Invalid File !").fadeIn();
+                                        $("#err_message").html("Invalid File !").fadeIn();
                                     }
                                     else
                                     {
+                                        window.location.reload();
                                         // view uploaded file.
-                                        $("#preview").html(data).fadeIn();
-                                        $("#form")[0].reset();
+                                        //$("#preview").html(data).fadeIn();
+                                        //$("#form")[0].reset();
                                     }
                                 },
                                 error: function(e)
                                 {
-                                    $("#err").html(e).fadeIn();
+                                    $("#err_message").html(e).fadeIn();
                                 }
                             });
-                        }));
+                        });
                     });
                 </script>
                 -->
