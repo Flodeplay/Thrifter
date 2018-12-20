@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Thrifter.</title>
+
+    <!-- Meta Tags-->
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
+
+    <!-- extern stylesheets-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- custom style-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!-- scripts-->
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <script src="../JS/popper.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/vh-fix.js"></script>
+    <script src="../JS/base.js"></script>
+
 </head>
 <body>
+<div class="post-upload-modal">
+    <div class="post-upload-inner p-3">
+        <div class="post-upload-head row d-flex justify-content-between">
+            <a onclick="cancelPost()"><i class="fas fa-times-circle"></i></a>
+            <a onclick="validatepost()">fertig</a>
+        </div>
+        <hr>
+        <div class="post-upload-body py-3">
+            <div class="form-outer">
+                <form name="newPost">
+                    <label>Bild</label>
+                    <input type="file" class="form-control-file">
 
+                    <label>Titel</label>
+                    <input id="titel" class="form-control" type="text">
+
+                    <label>Beschreibung</label>
+                    <input id="descriptiom" class="form-control" type="text">
+
+                    <label>Preis</label>
+                    <input id="price" type="number" class="form-control">
+
+                    <label for="input-1">Farbe</label>
+                    <input id="input-1" class="form-control" type="color">
+
+                    <label>Marke</label>
+                    <input type="checkbox" class="form-control">
+
+                    <label>Gender</label>
+                    <input type="radio" class="form-control">
+
+                    <label>Zustand</label>
+                    <input type="radio" class="form-control">
+
+                    <label>Kategorie</label>
+                    <input type="radio" class="form-control">
+
+                    <label>Größe</label>
+                    <input type="radio" class="form-control">
+                    <button type="submit" value="submit" class="btn btn-secondary rounded-0 w-100 my-1 login-input">
+                        Hochladen
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

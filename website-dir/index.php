@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-	<?php
+    <?php
     error_reporting(0);
     session_start();
     session_destroy();
     $_SESSION = array();
-	?>
-<title>Thrifter.</title>
+    ?>
+    <title>Thrifter.</title>
 
-<!-- Meta Tags-->
-<meta charset="UTF-8">
-<meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
+    <!-- Meta Tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
 
-<!-- extern stylesheets-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
-      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- custom style-->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/nav.css">
-<link rel="stylesheet" href="css/footer.css">
+    <!-- extern stylesheets-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom style-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
     <style>
-        #headpic{
-            background-image: url('assets/index/DSC_9514-4.JPG');background-position: right;
+        #headpic {
+            background-image: url('assets/index/DSC_9514-4.JPG');
+            background-position: right;
         }
+
         @media (max-width: 992px) {
-            #headpic{
-                background-image: url('assets/index/DSC_9662-7.JPG');background-position: top center;
+            #headpic {
+                background-image: url('assets/index/DSC_9662-7.JPG');
+                background-position: top center;
             }
         }
     </style>
-<!-- scripts-->
-<script src="JS/jquery-3.3.1.min.js"></script>
+    <!-- scripts-->
+    <script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/popper.min.js"></script>
     <script src="JS/bootstrap.min.js"></script>
     <script src="JS/vh-fix.js"></script>
-<script src="JS/base.js"></script>
-<!-- Favicons -->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-<link rel="manifest" href="assets/favicons/site.webmanifest">
-<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#ff6a79">
-<link rel="shortcut icon" href="assets/favicons/favicon.ico">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
+    <script src="JS/base.js"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#ff6a79">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 <body>
@@ -63,9 +66,10 @@
 
                 </ul>
                 <hr id="nav-link-4">
-                <div id="nav-link-5" class="row font-weight-bold justify-content-center mt-5"><i class="fab fa-instagram mx-3 fa-2x"></i><i
+                <div id="nav-link-5" class="row font-weight-bold justify-content-center mt-5"><i
+                            class="fab fa-instagram mx-3 fa-2x"></i><i
                             class="fab fa-facebook-f fa-2x mx-3"></i><i class="fab fa-twitter fa-2x mx-3"></i></div>
-                <div  id="nav-link-6" class="my-3 h4 text-center">office@Thrifter.at</div>
+                <div id="nav-link-6" class="my-3 h4 text-center">office@Thrifter.at</div>
                 <div class="sidemenu-close-btn text-white text-center"><i class="fas fa-chevron-up fa-2x"></i></div>
             </div>
         </div>
@@ -80,7 +84,8 @@
             <div class="content">
                 Hast du noch Platz im Kleiderschrank?
                 <div>
-                    <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#login-modal">
+                    <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal"
+                            data-target="#login-modal">
                         Anmelden!
                     </button>
                 </div>
@@ -90,7 +95,8 @@
     </section>
     <section class="full-height-section d-flex flex-column justify-content-center">
 
-        <h1 style="border-left: 4px #FF6A79 solid;padding-left: 10px" class="mb-3">Auf der Suche nach etwas neuem Alten?<br></h1>
+        <h1 style="border-left: 4px #FF6A79 solid;padding-left: 10px" class="mb-3">Auf der Suche nach etwas neuem Alten?<br>
+        </h1>
         <h2 style="border-left: 4px #8DB solid;padding-left: 10px">Starte noch heute mit Thrifter.</h2>
         <a class="btn btn-dark w-auto mt-3 text-white btn-lg" data-toggle="modal" data-target="#login-modal">
             Anmelden | Registrieren
@@ -107,7 +113,7 @@
                             <div class="h2" class="product-name">43€</div>
                         </div>
                         <div class="row justify-content-between align-items-center">
-                            <div class="h6" class="product-user" >Patryk</div>
+                            <div class="h6" class="product-user">Patryk</div>
                             <div class="h6" class="product-loc">Wien</div>
                         </div>
                     </div>
@@ -124,7 +130,7 @@
                             <div class="h2" class="product-name">43€</div>
                         </div>
                         <div class="row justify-content-between align-items-center">
-                            <div class="h6" class="product-user" >Patryk</div>
+                            <div class="h6" class="product-user">Patryk</div>
                             <div class="h6" class="product-loc">Wien</div>
                         </div>
                     </div>
@@ -162,37 +168,156 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="login">
-                <form action="app/login.php" method="post" class="login-input">
-                    <span>Nutzername</span>
-                    <input type="text" name="username" class="form-control" placeholder="ManuelTroll" aria-label="Username">
-                    <span>Passwort</span>
-                    <input  type="password" name="pwd" class="form-control" placeholder="*******" aria-label="Passwort">
-                    <hr>
-                    <button type="button" class="btn btn-success rounded-0 w-100 my-1 register-button">Brauchst du ein Konto?</button>
-                    <button type="submit" name="submit" value="login" class="btn btn-secondary rounded-0 w-100 my-1">Login</button>
-                </form>
-                <form action="app/login.php" method="post" class="w-100 register-input">
-                    <span>Nutzername</span>
-                    <input type="text" name="username" class="form-control" placeholder="ManuelTroll" aria-label="Username">
-                    <span>E-Mail</span>
-                    <input type="text" name="email" class="form-control" placeholder="Manuel@Thrifter.at" aria-label="Email">
-                    <span>Passwort</span>
-                    <input  type="password" name="pwd" class="form-control" placeholder="*******" aria-label="Passwort">
-                    <span>Vorname | Nachname</span>
-                    <div class="row">
-                    <input type="text" name="forename" class="form-control w-50" placeholder="Manuel" aria-label="Vorname">
-                    <input type="text" name="surname" class="form-control w-50" placeholder="Köllner" aria-label="Nachname">
-                    </div>
-                    <span>PLZ</span>
-                    <input type="text" name="zipcode" class="form-control" placeholder="Postal-Code / ZIP-Code" aria-label="Postal-code">
-                    <span>Telefonnummer</span>
-                    <input type="text" name="phonenr" class="form-control" placeholder="Telefon" aria-label="Telefon">
-                    <button type="button" class="btn btn-success rounded-0 w-100 my-1 login-button">Hast du ein Konto?</button>
-                    <button type="submit" name="submit" value="reg"  class="btn btn-secondary rounded-0 w-100 my-1">Registrieren</button>
-                </form>
+                <div class="form-outer">
+                    <div id="error-message"></div>
+                    <form name="login" action="app/login.php" method="post" onsubmit="return checkLogin()">
+                        <span id="username_text">Nutzername</span>
+                        <input type="text" name="username" class="form-control" placeholder="ManuelTroll"
+                               aria-label="Username">
+                        <span id="email_text" class="register-input">E-Mail</span>
+                        <input type="text" name="email" class="form-control register-input"
+                               placeholder="Manuel@Thrifter.at" aria-label="Email">
+                        <span id="password_text">Passwort</span>
+                        <input type="password" name="pwd" class="form-control" placeholder="*******"
+                               aria-label="Passwort">
+                        <span id="name_text" class="register-input">Vorname | Nachname</span>
+                        <div class="row">
+                            <input type="text" name="forename" class="form-control register-input w-50 "
+                                   placeholder="Manuel" aria-label="Vorname">
+                            <input type="text" name="surname" class="form-control register-input w-50"
+                                   placeholder="Köllner" aria-label="Nachname">
+                        </div>
+                        <span id="zip_text" class="register-input">PLZ</span>
+                        <input type="text" name="zipcode" class="form-control register-input"
+                               placeholder="Postal-Code / ZIP-Code"
+                               aria-label="Postal-code">
+                        <span id="phonenr_text" class="register-input">Telefonnummer</span>
+                        <input type="text" name="phonenr" class="form-control register-input" placeholder="Telefon"
+                               aria-label="Telefon">
+                        <hr>
+                        <button type="button"
+                                class="btn btn-success rounded-0 w-100 my-1 change-register-button login-input">Brauchst
+                            du ein Konto?
+                        </button>
+                        <button type="button"
+                                class="btn btn-success rounded-0 w-100 my-1 change-login-button register-input">Doch
+                            lieber anmelden?
+                        </button>
+                        <button type="submit" name="submit" value="login"
+                                class="btn btn-secondary rounded-0 w-100 my-1 login-input">
+                            Login
+                        </button>
+                        <button type="submit" name="submit" value="reg"
+                                class="btn btn-secondary rounded-0 w-100 my-1 register-input">
+                            Registrieren
+                        </button>
+                    </form>
+                    <script>
+                        var login = true;
+
+                        /*
+                           prüft die login felder
+                           @param: none
+                           @return: gibt zurück (true/false) ob die eingaben richtig waren
+                         */
+                        function checkLogin() {
+                            resetlogin();
+                            var ret = true;
+                            var errorstr = "";
+                            if (document.login.username.value.length === 0) {
+                                errorstr += "Username darf nicht leer sein! \n ";
+                                document.login.username.classList.add("input-wrong");
+                                document.getElementById("username_text").classList.add("input-wrong-text");
+                                ret = false;
+                            }
+                            if (document.login.pwd.value.length === 0) {
+                                errorstr += "Passwort darf nicht leer sein!";
+                                document.login.pwd.classList.add("input-wrong");
+                                document.getElementById("password_text").classList.add("input-wrong-text");
+                                ret = false;
+                            }
+                            if (!login) {
+                                if (document.login.email.value.length > 0) {
+                                    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                                    if (!re.test(email)) {
+                                        errorstr += "Bitte Richtiges Email-Format eingeben";
+                                        document.login.email.classList.add("input-wrong");
+                                        document.getElementById("email_text").classList.add("input-wrong-text");
+                                        ret = false;
+                                    }
+                                }
+                                else {
+                                    document.login.email.classList.add("input-wrong");
+                                    document.getElementById("email_text").classList.add("input-wrong-text");
+                                    errorstr += "Email darf nicht leer sein!";
+                                    ret = false;
+                                }
+                                if (document.login.forename.value.length < 3) {
+                                    document.login.forename.classList.add("input-wrong");
+                                    document.getElementById("name_text").classList.add("input-wrong-text");
+                                    errorstr += "Vorname darf nicht leer sein!";
+                                    ret = false;
+                                }
+                                if (document.login.surname.value.length < 3) {
+                                    document.login.surname.classList.add("input-wrong");
+                                    document.getElementById("name_text").classList.add("input-wrong-text");
+                                    errorstr += "Nachname darf nicht leer sein!";
+                                    ret = false;
+                                }
+                                if (document.login.zipcode.value.length === 0) {
+                                    document.login.zipcode.classList.add("input-wrong");
+                                    document.getElementById("zip_text").classList.add("input-wrong-text");
+                                    errorstr += "Postleitzahl darf nicht leer sein!";
+                                    ret = false;
+                                }
+                                if (document.login.phonenr.value.length === 0) {
+                                    document.login.phonenr.classList.add("input-wrong");
+                                    document.getElementById("phonenr_text").classList.add("input-wrong-text");
+                                    errorstr += "Telefonnummer darf nicht leer sein!";
+                                    ret = false;
+                                }
+                            }
+                            if (!ret) {
+                                $("#error-message").text(errorstr);
+                            }
+
+                            return ret;
+                        }
+
+                        function resetlogin() {
+                            try {
+                                var c = document.login.children;
+                                for (let i = 0; i < 13; i++) {
+                                    if (c[i].classList.contains("input-wrong") || c[i].classList.contains("input-wrong-text")) {
+                                        c[i].classList.remove("input-wrong");
+                                        c[i].classList.remove("input-wrong-text");
+                                    }
+                                    else {
+                                        var x = c[i].children;
+                                        for (let i = 0; i < x.length; x++) {
+                                            if (x[i].classList.contains("input-wrong") || x[i].classList.contains("input-wrong-text")) {
+                                                x[i].classList.remove("input-wrong");
+                                                x[i].classList.remove("input-wrong-text");
+                                            }
+                                        }
+                                    }
+                                }
+                                $("#error-message").text("");
+                            }
+                            catch (e) {
+                                console.log(e);
+                            }
+                        }
+
+                        $(".change-register-button,.change-login-button").click(function () {
+                            login = !login;
+                            resetlogin();
+                            $(".register-input").toggle();
+                            $(".login-input").toggle();
+                        });
+                    </script>
+                </div>
             </div>
-        </div>
         </div>
     </div>
 </div>

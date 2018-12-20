@@ -5,7 +5,7 @@ $(function () {
             $(".sidenav").addClass("sidemenu-open");
             $("body").addClass("sidemenu-body");
         }
-        else{
+        else {
             $(".sidenav").removeClass("sidemenu-open");
             $(".sidenav").addClass("sidemenu-close");
             $("body").removeClass("sidemenu-body");
