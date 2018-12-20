@@ -30,6 +30,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- custom style-->
+    <!-- this is one piece of a schaß -->
     <style>
         main{
             background: #ff6a79;
