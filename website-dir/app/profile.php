@@ -153,7 +153,9 @@ checkSession();
             </div>
             <div class="col-md-6">
                 <?php echo "<div class=\"display-4 text-center\">". $_SESSION['u_user']->u_forename . "<br>" . $_SESSION['u_user']->u_surname . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
+                <?php echo "<p>" . $_SESSION["u_user"]->u_description . "</p>" ?>
             </div>
+
         </div>
     </section>
     <hr>
