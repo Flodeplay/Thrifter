@@ -78,7 +78,7 @@
     </div>
 </nav>
 <main>
-    <section class="mw-100">
+    <section class="mw-100 p-0">
         <div class="back-img" id="headpic" style="height: calc(100vh - 60px)"></div>
         <div class="img-overlay text-white display-3 text-center">
             <div class="content">
@@ -93,17 +93,16 @@
         </div>
         <div class="scrolldown text-white hover-red"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="full-height-section p-3 d-flex flex-column justify-content-center">
-
-        <h1 style="border-left: 4px #FF6A79 solid;padding-left: 10px" class="mb-3">Auf der Suche nach etwas neuem Alten?<br>
-        </h1>
-        <h2 style="border-left: 4px #8DB solid;padding-left: 10px">Starte noch heute mit Thrifter.</h2>
-        <a class="btn btn-dark w-auto mt-3 text-white btn-lg" data-toggle="modal" data-target="#login-modal">
-            Anmelden | Registrieren
-        </a>
-        <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
+    <section class="row justify-content-center d-flex flex-column bg-danger" style="min-height: 80vh">
+        <div class="col-12 col-md-8 mx-auto">
+        <h1 class="my-5 text-center display-2 text-white">Was ist Thrifter?</h1>
+        <hr style="border-width: 5px; border-color: white;">
+        <p class="my-5 h2 text-center text-white">Thrifter ist eine Second Hand Plattform wo du Kleidung du altes zu neuem machen kannst.</p>
+        <p class="text-center"><a class="h3">Hier zeigen wir wie es geht!</a></p>
+        </div>
+            <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="mw-100 full-height-section">
+    <section class="mw-100 full-height-section p-0" >
         <div class="back-img" style="background-image: url('assets/index/_DSC1438-2.jpg'); height: 100vh"></div>
         <div class="img-overlay text-white display-4 text-center">
             <div class="content">
@@ -112,12 +111,58 @@
         </div>
         <div class="scrolldown text-white hover-red"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
+    <section class="row justify-content-center d-flex flex-column bg-danger" style="min-height: 80vh">
+        <div class="col-12 col-md-8 mx-auto">
+            <h1 class="my-5 text-center display-2 text-white">Anmelden & Registrieren</h1>
+            <hr style="border-width: 5px; border-color: white;">
+            <div class="form-outer my-5" style="max-width: 700px">
+                <div id="error-message"></div>
+                <form name="login" action="app/login.php" method="post" onsubmit="return checkLogin()">
+                    <input type="text" name="username" class="form-control" placeholder="Nutzername"
+                           aria-label="Username">
+                    <input type="text" name="email" class="form-control register-input"
+                           placeholder="E-Mail" aria-label="Email">
+                    <input type="password" name="pwd" class="form-control" placeholder="Passwort"
+                           aria-label="Passwort">
+                    <div class="row">
+                        <input type="text" name="forename" class="form-control register-input w-50 "
+                               placeholder="Vorname" aria-label="Vorname">
+                        <input type="text" name="surname" class="form-control register-input w-50"
+                               placeholder="Nachname" aria-label="Nachname">
+                    </div>
+                    <input type="text" name="zipcode" class="form-control register-input"
+                           placeholder="Postal-Code / ZIP-Code"
+                           aria-label="Postal-code">
+                    <input type="text" name="phonenr" class="form-control register-input" placeholder="Telefon"
+                           aria-label="Telefon">
+                    <hr>
+                    <button type="button"
+                            class="btn-login btn-success change-register-button login-input">Brauchst
+                        du ein Konto?
+                    </button>
+                    <button type="button"
+                            class="btn-login btn-success change-login-button register-input">Doch
+                        lieber anmelden?
+                    </button>
+                    <button type="submit" name="submit" value="login"
+                            class="btn-login btn-secondary login-input">
+                        Login
+                    </button>
+                    <button type="submit" name="submit" value="reg"
+                            class="btn-login btn-secondary register-input">
+                        Registrieren
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
+    </section>
     <section class="full-height-section p-3 d-flex align-items-center">
         <blockquote class="blockquote">
-            <p class="mb-0">Someone that religiously shops at Thrift Stores looking for bargains and often scores
+            <p class="mb-0 h1">Someone that religiously shops at Thrift Stores looking for bargains and often scores
                 amazing deals. Often dedicated to recycling and reuse of products to keep our planet "greener".
             </p>
-            <footer class="blockquote-footer">Urban Dictionary</footer>
+            <footer class="blockquote-footer h3">Urban Dictionary</footer>
         </blockquote>
         <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
@@ -132,7 +177,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="form-outer">
+                <div class="form-outer-modal">
                     <div id="error-message"></div>
                     <form name="login" action="app/login.php" method="post" onsubmit="return checkLogin()">
                         <span id="username_text">Nutzername</span>

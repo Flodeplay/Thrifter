@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
 ::-moz-selection {
     background-color: #8DB;
@@ -33,6 +33,7 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
@@ -59,8 +60,11 @@ main a {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4 {
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.4px;
 }
-
+.display-1, .display-2, .display-3, .display-4{
+    margin-bottom: 30px;
+}
 main {
     position: relative;
     margin-top: 60px;
@@ -79,12 +83,14 @@ main {
     }
 }
 
-main section {
-    position: relative !important;
+.app section {
     max-width: 1024px !important;
     margin: 0 auto;
 }
-
+main section{
+    padding: 60px 0;
+    position: relative !important;
+}
 main .full-height-section {
     min-height: 100vh;
 }
@@ -155,33 +161,55 @@ main article {
      background: linear-gradient(135deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6a79', endColorstr='#88ddbb', GradientType=1);
  }
-.form-outer {
+.form-outer{
+    width: 100%;
+    margin: 10px auto;
+}
+.form-outer > form > hr {
+    margin: 30px auto;
+    border-width: 5px;
+    border-color: white;
+}
+.form-outer-modal {
     width: 100%;
     max-width: 500px;
+    margin: 0 auto;
 }
-
-.form-outer > form {
+.form-outer > form input {
+    height: 60px;
+    background-color: f2f2f2;
+    border-radius: 0;
+    border: white 5px solid;
+    margin-bottom: 30px;
+}
+.form-outer > form > .btn-login{
+    height: 50px;
+    width: 100%;
+    border: none;
+    margin: 10px auto;
+    font-size: 120%;
+    font-family: 'Montserrat', sans-serif;
+}
+.form-outer-modal > form , .form-outer > form{
     margin: 10px auto;
     width: 100%;
 }
 
-.form-outer form span, .form-outer form label {
+.form-outer-modal form span, .form-outer-modal form label {
     margin: 5px;
     color: var(--main-dark);
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 80%;
     font-family: 'Montserrat', sans-serif;
-"
 }
 
-.form-outer > form > hr {
+.form-outer-modal > form > hr {
     margin: 30px auto;
 }
 
-.form-outer > form input {
-    padding: 20px 10px;
+.form-outer-modal > form input {
+    height: 40px;
     border-radius: 0;
     border: var(--main-dark) 1.5px solid;
     margin-bottom: 15px;
@@ -225,20 +253,20 @@ main article {
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
     width: 100%;
     z-index: 1050;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: rgba(108, 180, 149, 0.61);
     justify-content: center;
     justify-items: center;
     overflow: scroll;
+    animation: 700ms opacity-0-1 ease running both;
 }
 
 .post-upload-modal > .post-upload-inner {
     width: 100%;
-    max-width: 576px;
+    max-width: 667px;
     min-height: 90vh;
-    margin-top: 10vh;
+    margin: 10vh auto 0 auto;
     border-radius: 25px 25px 0 0;
     background-color: white;
 }

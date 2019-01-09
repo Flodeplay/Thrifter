@@ -9,9 +9,9 @@ INSERT INTO g_genders (g_name) VALUES ('Herren');
 INSERT INTO s_sizes (s_unittype, s_value) VALUES ('EU', 'M');
 INSERT INTO sca_sizecategories (s_sizes_s_id, ca_categories_ca_id) VALUES (1, 2);
 
-INSERT INTO p_post (p_title, p_price, p_image, p_u_user, p_col_color, p_b_brand, p_g_gender, p_con_condition, p_ca_category, s_sizes_s_id)
+INSERT INTO p_post (p_title, p_price, p_image, p_u_user, p_col_color, p_b_brand, p_g_gender, p_con_condition, p_ca_category, p_s_size)
 VALUES ('Hoodie', 30000, '1.png', 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO p_post (p_title, p_price, p_image, p_u_user, p_col_color, p_b_brand, p_g_gender, p_con_condition, p_ca_category, s_sizes_s_id)
+INSERT INTO p_post (p_title, p_price, p_image, p_u_user, p_col_color, p_b_brand, p_g_gender, p_con_condition, p_ca_category, p_s_size)
 VALUES ('T-Shirt', 20, '2.png', 1, 1, 1, 1, 1, 1, 1);
 
 INSERT INTO f_favorites (f_u_user, f_p_post) VALUES (1,1);

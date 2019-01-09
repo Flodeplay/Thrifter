@@ -1,6 +1,6 @@
 nav {
-    height: 60px;
-    background-color: var(--main-dark);
+    height: 80px;
+    background-color: #121212;
     width: 100%;
     display: flex;
     align-items: center;
@@ -34,9 +34,9 @@ nav .sidenav {
     visibility: hidden;
     position: fixed;
     z-index: 10;
-    top: 60px;
+    top: 80px;
     left: 0;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 130px);
     width: 100%;
 }
 
@@ -81,7 +81,7 @@ nav .content hr {
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
-    bottom: 20px;
+    bottom: 40px;
     transition-duration: 0.3s;
     transition-timing-function: ease;
 
@@ -140,7 +140,7 @@ nav .sidemenu-open .content #nav-link-6 {
         height: 0;
     }
     to {
-        height: calc(100vh - 60px);
+        height: calc(100vh - 130px);
         visibility: visible;
     }
 }
@@ -148,7 +148,7 @@ nav .sidemenu-open .content #nav-link-6 {
 @keyframes sidemenu-close {
     from {
         visibility: visible;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 130px);
     }
     to {
         visibility: hidden;
