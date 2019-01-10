@@ -5,16 +5,18 @@
     flex-direction: column;
     position: relative;
     padding: 80px 0 40px;
-    background-color: #E3E3E3;
+    background-color: #232323;
     text-align: center;
 }
-
+.footer *, .links *{
+    color: white;
+}
 .links li:first-child {
     border-left: none;
 }
 
 .links {
-    background-color: #d6d6d6;
+    background-color: #1f1f1f;
     min-height: 50vh;
     display: flex;
     justify-content: center;

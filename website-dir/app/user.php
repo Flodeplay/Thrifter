@@ -37,21 +37,24 @@ class user implements inter_update
         $this->u_zipcode = $u_zipcode;
     }
 
-    /*
- * Gibt die Wishlist eines Users zurück user
- *@param anzahl der favourites die zurück gegeben werden soll, standart 10
- *@Exception wirft eine Exception falls die conn nicht established werden konnte
- *@author: florian
- *@Date 10.12.2018
- */
+        /**
+     * Gibt die Wishlist eines Users zurück user
+     *@param $count int der favourites die zurück gegeben werden soll, standart 10
+     *@Exception wirft eine Exception falls die conn nicht established werden konnte
+     *@author: florian
+     *@Date 10.12.2018
+     */
     function getWishlist($count = 10)
     {
         $conn = establishDB();
         $query = mysqli_query($conn, "SELECT * FROM f_favorites INNER JOIN p_post  on f_favorites.f_p_post = p_post.p_id INNER JOIN u_users on f_favorites.f_u_user = u_users.u_id WHERE u_id = " . $this->u_id . " LIMIT " . $count . ";");
         if (mysqli_num_rows($query) > 0) {
+            $index = 0;
             while ($row = mysqli_fetch_assoc($query)) {
-                printProduct($row);
+                $posts[$index] = new post($row["p_id"],$row["p_title"],$row["p_price"],$row["p_image"],$row["p_creattime"],$row["u_username"],$row["p_col_color"],$row["p_b_brand"],$row["p_g_gender"],$row["p_ca_category"],$row["p_s_size"],$row["p_location"]);
+                $index++;
             }
+            printProduct($posts);
             mysqli_close($conn);
         } else {
             return false;

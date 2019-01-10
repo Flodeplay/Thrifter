@@ -1,9 +1,9 @@
 <?php
-require_once "funcs.inc.php";
-require "user.php";
+
+require "funcs.inc.php";
 error_reporting(0);
 session_start();
-//checkSession();
+checkSession();
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -86,7 +86,10 @@ echo file_get_contents('../html/bottommenu.html');
         <hr>
         <div class="row">
             <?php
-            $_SESSION["u_user"]->getWishlist(2);
+            /**
+             * @var user $_SESSION["u_user"]
+             */
+            $_SESSION["u_user"]->getWishlist(10);
             ?>
 
         </div>
