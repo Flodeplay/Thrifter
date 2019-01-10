@@ -98,7 +98,7 @@ class post
     /**
      * @param mixed $p_id
      */
-    public function setPId($p_id): void
+    public function setPId($p_id)
     {
         $this->p_id = $p_id;
     }
@@ -114,7 +114,7 @@ class post
     /**
      * @param mixed $p_title
      */
-    public function setPTitle($p_title): void
+    public function setPTitle($p_title)
     {
         $this->p_title = $p_title;
     }
@@ -130,7 +130,7 @@ class post
     /**
      * @param mixed $p_image
      */
-    public function setPImage($p_image): void
+    public function setPImage($p_image)
     {
         $this->p_image = $p_image;
     }
@@ -146,7 +146,7 @@ class post
     /**
      * @param mixed $p_creattime
      */
-    public function setPCreattime($p_creattime): void
+    public function setPCreattime($p_creattime)
     {
         $this->p_creattime = $p_creattime;
     }
@@ -162,7 +162,7 @@ class post
     /**
      * @param mixed $p_u_user
      */
-    public function setPUUser($p_u_user): void
+    public function setPUUser($p_u_user)
     {
         $this->p_u_user = $p_u_user;
     }
@@ -178,7 +178,7 @@ class post
     /**
      * @param mixed $p_col_color
      */
-    public function setPColColor($p_col_color): void
+    public function setPColColor($p_col_color)
     {
         $this->p_col_color = $p_col_color;
     }
@@ -194,7 +194,7 @@ class post
     /**
      * @param mixed $p_b_brand
      */
-    public function setPBBrand($p_b_brand): void
+    public function setPBBrand($p_b_brand)
     {
         $this->p_b_brand = $p_b_brand;
     }
@@ -210,7 +210,7 @@ class post
     /**
      * @param mixed $p_g_gender
      */
-    public function setPGGender($p_g_gender): void
+    public function setPGGender($p_g_gender)
     {
         $this->p_g_gender = $p_g_gender;
     }
@@ -226,7 +226,7 @@ class post
     /**
      * @param mixed $p_ca_category
      */
-    public function setPCaCategory($p_ca_category): void
+    public function setPCaCategory($p_ca_category)
     {
         $this->p_ca_category = $p_ca_category;
     }
@@ -242,7 +242,7 @@ class post
     /**
      * @param mixed $p_s_size
      */
-    public function setPSSize($p_s_size): void
+    public function setPSSize($p_s_size)
     {
         $this->p_s_size = $p_s_size;
     }
@@ -258,7 +258,7 @@ class post
     /**
      * @param mixed $p_price
      */
-    public function setPPrice($p_price): void
+    public function setPPrice($p_price)
     {
         $this->p_price = $p_price;
     }
@@ -274,7 +274,7 @@ class post
     /**
      * @param mixed $p_location
      */
-    public function setPLocation($p_location): void
+    public function setPLocation($p_location)
     {
         $this->p_location = $p_location;
     }
