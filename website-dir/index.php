@@ -54,23 +54,35 @@
 </head>
 <body>
 <nav id="nav" class="shadow">
-    <img src="assets/logo/Logo.svg">
-    <i class="fas fa-bars fa-lg menu-button"></i>
+    <picture>
+        <source media="(min-width: 720px)" srcset="assets/logo/Logo.svg">
+        <source media="(max-width: 720px)" srcset="assets/logo/Logo-short.svg">
+        <img src="assets/logo/Logo.svg" alt="Thrifter.">
+    </picture>
+    <div class="d-none d-lg-block">
+        <a>Home</a>
+        <a>How to?</a>
+        <a>Login & Registrieren</a>
+    </div>
+    <div>
+        <i class="fas fa-heart fa-2x text-success"></i>
+        <i class="fas fa-bars fa-2x menu-button"></i>
+    </div>
+
     <div class="sidenav">
         <div class="sidemenu col-md-12 col-lg-6 col-xl-3 shadow">
             <div class="content">
                 <ul class="p-0 m-0">
-                    <li id="nav-link-1">Home</li>
+                    <li id="nav-link-1"><a href="home.php">Home</a></li>
                     <li id="nav-link-2">Login</li>
                     <li id="nav-link-3">Impressum</li>
-
                 </ul>
-                <hr id="nav-link-4">
+                <hr>
                 <div id="nav-link-5" class="row font-weight-bold justify-content-center mt-5"><i
                             class="fab fa-instagram mx-3 fa-2x"></i><i
                             class="fab fa-facebook-f fa-2x mx-3"></i><i class="fab fa-twitter fa-2x mx-3"></i></div>
                 <div id="nav-link-6" class="my-3 h4 text-center">office@Thrifter.at</div>
-                <div class="sidemenu-close-btn text-white text-center"><i class="fas fa-chevron-up fa-2x"></i></div>
+                <div class="sidemenu-close-btn text-center"><i class="fas fa-chevron-up fa-2x"></i></div>
             </div>
         </div>
         <div class="sidemenu-spacing d-none d-lg-block col-lg-6 col-xl-9 order-first">
@@ -93,10 +105,10 @@
         </div>
         <div class="scrolldown text-white hover-red"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="row justify-content-center d-flex flex-column bg-danger" style="min-height: 80vh">
-        <div class="col-12 col-md-8 mx-auto">
+    <section class="full-height-section row justify-content-center d-flex flex-column bg-dark">
+        <div class="col-12 col-md-8 mx-auto text-white">
         <h1 class="my-5 text-center display-2 text-white">Was ist Thrifter?</h1>
-        <hr style="border-width: 5px; border-color: white;">
+        <hr style="border-width: 5px; border-color: var(--red);">
         <p class="my-5 h2 text-center text-white">Thrifter ist eine Second Hand Plattform wo du Kleidung du altes zu neuem machen kannst.</p>
         <p class="text-center"><a class="h3">Hier zeigen wir wie es geht!</a></p>
         </div>
@@ -106,12 +118,14 @@
         <div class="back-img" style="background-image: url('assets/index/_DSC1438-2.jpg'); height: 100vh"></div>
         <div class="img-overlay text-white display-4 text-center">
             <div class="content">
-                "Früher Deins, Heute Meins"
+                <h1 class="display-2">
+                    "Gestern Deins, Heute Meins"
+                </h1>
             </div>
         </div>
         <div class="scrolldown text-white hover-red"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="row justify-content-center d-flex flex-column bg-danger" style="min-height: 80vh">
+    <section class="full-height-section row justify-content-center d-flex flex-column bg-danger">
         <div class="col-12 col-md-8 mx-auto">
             <h1 class="my-5 text-center display-2 text-white">Anmelden & Registrieren</h1>
             <hr style="border-width: 5px; border-color: white;">
@@ -332,35 +346,37 @@
 </div>
 <section>
     <footer class="footer">
-        <img src="assets/logo/Logo.svg">
-        <div class="display-3">"Früher Deins,<br> Heute Meins"</div>
+        <div class="display-3">"Gestern Deins, Heute Meins"</div>
     </footer>
 </section>
-
 <div class="links">
-    <div class="scrollup text-white text-center"><i class="fas fa-chevron-up fa-2x"></i></div>
-    <div class="row">
-        <li class="col-md-3 col-sm-6">
-            <h1>Start</h1>
-            <a>link</a>
-        </li>
-        <li class="col-md-3 col-sm-6">
-            <h1>Konto</h1>
-            <a href="#">Anmelden</a>
-            <a href="#">Registrieren</a>
-            <a href="#">Konto löschen</a>
-        </li>
-        <li class="col-md-3 col-sm-6">
-            <h1>Hilfe</h1>
-            <a>link</a>
-        </li>
-        <li class="col-md-3 col-sm-6">
-            <h1>Hilfe</h1>
-            <a>link</a>
-        </li>
+    <div class="links-inner w-100">
+        <div class="row" style="margin-bottom: 100px">
+            <div class="col-12 col-sm-10">
+                <h1 class="text-success mb-3"><img src="assets/logo/Logo.svg" style="height: 3rem"> </h1>
+                <h5 class="mt-4 font-weight-bold" style="letter-spacing: 1.5px"><a class="mx-3">Link1</a><a class="mx-3">Link1</a><a class="mx-3">Link1</a><a class="mx-3">Link1</a></h5>
+            </div>
+            <div class="col-12 col-sm-2 justify-content-center align-content-end">
+                <i class="fas fa-heart fa-3x text-success"></i>
+            </div>
+        </div>
+        <div  style="padding-left: 15px" class="row">
+            <div class="col-sm-6">
+                <h1>Kontakt</h1>
+                <address style="padding-left: 15px">
+                    <p>Office@Thrifter.at<br>
+                        +43 600 4772855</p>
+                    <p>1140, Wien</p>
+                </address>
+            </div>
+            <div class="col-sm-6">
+                <h1>Links</h1>
+                <p>
+
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="row font-weight-bold justify-content-center mt-5"><i class="fab fa-instagram mx-3 fa-2x"></i><i
-                class="fab fa-facebook-f fa-2x mx-3"></i><i class="fab fa-twitter fa-2x mx-3"></i><span
-                class="seperator"></span><span class="mx-3 h3">office@Thrifter.at</span></div>
+    <div class="scrollup text-white text-center"><i class="fas fa-chevron-up fa-2x"></i></div>
 </div>
 </body>

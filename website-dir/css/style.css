@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Sarabun:500');
 ::-moz-selection {
     background-color: #8DB;
 }
@@ -7,15 +6,9 @@
 ::selection {
     background-color: #8DB;
 }
-
-:root {
-    --main-red: #FF6A79;
-    --main-green: #8DB;
-    --main-dark: #434343;
-}
-
 body {
     background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .row {
@@ -23,11 +16,11 @@ body {
 }
 
 .red {
-    color: var(--main-red);
+    color: var(--red);
 }
 
 .green {
-    color: var(--main-green);
+    color: var(--green);
 }
 
 a {
@@ -51,15 +44,15 @@ main a {
 }
 
 .hover-red:hover {
-    color: var(--main-red) !important;
+    color: var(--red) !important;
 }
 
 .hover-green:hover {
-    color: var(--main-green) !important;
+    color: var(--green) !important;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sarabun', sans-serif;
     letter-spacing: 1.4px;
 }
 .display-1, .display-2, .display-3, .display-4{
@@ -177,7 +170,7 @@ main article {
 }
 .form-outer > form input {
     height: 60px;
-    background-color: f2f2f2;
+    background-color: #f2f2f2;
     border-radius: 0;
     border: white 5px solid;
     margin-bottom: 30px;
@@ -197,7 +190,7 @@ main article {
 
 .form-outer-modal form span, .form-outer-modal form label {
     margin: 5px;
-    color: var(--main-dark);
+    color: var(--gray-dark);
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: bold;
@@ -211,22 +204,22 @@ main article {
 .form-outer-modal > form input {
     height: 40px;
     border-radius: 0;
-    border: var(--main-dark) 1.5px solid;
+    border: var(--gray-dark) 1.5px solid;
     margin-bottom: 15px;
 }
 
 .input-wrong {
-    border: var(--main-red) 1.5px solid !important;
-    color: var(--main-red) !important;
+    border: var(--gray-dark) 1.5px solid !important;
+    color: var(--gray-dark) !important;
 }
 
 .input-wrong-text {
-    color: var(--main-red) !important;
+    color: var(--gray-dark) !important;
 }
 
 @media (max-width: 720px) {
     .display-1, .display-2, .display-3, .display-4 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 }
 

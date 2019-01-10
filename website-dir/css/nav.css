@@ -1,31 +1,54 @@
 nav {
-    height: 80px;
+    height: 100px;
     background-color: #121212;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: white;
-    padding: 0 30px;
+    padding: 0 50px 0 30px;
     z-index: 10;
     position: fixed;
     top: 0;
 }
-
+@media (max-width: 576px) {
+    nav {
+        height: 70px;
+        position: relative;
+        padding: 0 20px 0 20px;
+    }
+}
+nav > div > a{
+    margin: 0 15px;
+    font-size: 140%;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: white !important;
+}
+nav i{
+    margin: 0 20px ;
+}
 nav img {
     opacity: 0;
-    height: 30px;
+    height: 35px;
     width: auto;
     animation: 700ms opacity-0-1 ease 500ms running both;
 }
 
+@media (max-width: 576px) {
+    nav i{
+        margin: 0 10px;
+    }
+    nav img{
+        height: 40px !important;
+    }
+}
 nav .menu-button {
     opacity: 0;
     animation: 700ms opacity-0-1 ease 700ms running both;
 }
 
 nav .menu-button {
-    color: var(--main-red) !important;
+    color: var(--red) !important;
 }
 
 nav .sidenav {
@@ -34,12 +57,15 @@ nav .sidenav {
     visibility: hidden;
     position: fixed;
     z-index: 10;
-    top: 80px;
+    top: 100px;
     left: 0;
-    height: calc(100vh - 130px);
     width: 100%;
 }
-
+@media (max-width: 576px) {
+    .sidenav{
+        top: 70px;
+    }
+}
 nav .sidenav .sidemenu-spacing {
     background-color: rgba(0, 0, 0, 0.31);
     height: 100%;
@@ -47,8 +73,9 @@ nav .sidenav .sidemenu-spacing {
 
 nav .sidemenu {
     height: 100%;
-    padding-top: 10px;
-    background-color: var(--main-dark);
+    color: white !important;
+    padding: 20px 0;
+    background-color: #121212;
 }
 
 nav .content li {
@@ -59,10 +86,6 @@ nav .content li {
     margin: 0px 30px;
     width: calc(100% - 60px);
     text-align: center;
-}
-
-nav a {
-    color: white !important;
 }
 
 nav .content li:last-child {
@@ -81,12 +104,16 @@ nav .content hr {
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
-    bottom: 40px;
+    bottom: 70px;
+    color: var(--green);
     transition-duration: 0.3s;
     transition-timing-function: ease;
 
 }
-
+.sidemenu .sidemenu-close-btn:hover {
+    bottom: 75px;
+    text-shadow: 2px 1px 6px rgba(0, 0, 0, 0.12);
+}
 .sidemenu-body {
     overflow: hidden;
     position: fixed;
@@ -140,7 +167,7 @@ nav .sidemenu-open .content #nav-link-6 {
         height: 0;
     }
     to {
-        height: calc(100vh - 130px);
+        height: calc(100vh - 70px);
         visibility: visible;
     }
 }
@@ -148,7 +175,7 @@ nav .sidemenu-open .content #nav-link-6 {
 @keyframes sidemenu-close {
     from {
         visibility: visible;
-        height: calc(100vh - 130px);
+        height: calc(100vh - 70px);
     }
     to {
         visibility: hidden;
@@ -162,30 +189,23 @@ header {
     padding: 5px 30px;
     height: 60px;
     position: fixed;
-    top: 60px;
+    top: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     z-index: 9;
 }
-
+@media (max-width: 576px) {
+ header{
+     position: sticky;
+     top: 0;
+ }
+}
 header span {
     font-size: 170%;
     font-weight: 600;
 }
-
-@media (max-width: 576px) {
-    nav {
-        position: relative;
-    }
-
-    header {
-        top: 0px;
-        position: sticky;
-    }
-}
-
 .bottommenu {
     animation: 700ms opacity-0-1 ease 700ms running both;
     height: 50px;
@@ -194,10 +214,16 @@ header span {
     bottom: 0;
     width: 100%;
     display: flex;
+    /*visibility: hidden;*/
     align-items: stretch;
     justify-content: stretch;
     z-index: 11;
 
+}
+@media (max-width: 576px) {
+    .bottommenu{
+        visibility: visible;
+    }
 }
 
 .bottommenu > a {
