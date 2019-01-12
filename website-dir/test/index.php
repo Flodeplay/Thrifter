@@ -60,7 +60,10 @@ echo file_get_contents('../html/bottommenu.html');
                 echo "<div class='p-3'>". $post->p_description."</div>";
                 echo "<hr><div class='card'><div class='card-body'><img style='max-height: 70px; width: auto' class='rounded-circle' src='../assets/users/".$user->u_image."'><span class='pl-3'>". $user->u_username."</span></div></div>";
                 echo "<hr><h3>Daten:</h3>";
-                echo "<div class='row'><div></div>";
+                echo "<div class='row'>
+                            <div class='col-6'></div>
+                            <div class='col-6'></div>
+</div>";
             }
             else{
                 echo "<section class='d-flex full-height-section align-items-center justify-content-center'><div>Fehler! <a href='../index.php'>Hier gehts zurück!</div></a></section>";

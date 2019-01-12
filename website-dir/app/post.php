@@ -301,7 +301,7 @@ class post
     /**
      * @param mixed $p_description
      */
-    public function setPDescription($p_description): void
+    public function setPDescription($p_description)
     {
         $this->p_description = $p_description;
     }
@@ -317,7 +317,7 @@ class post
     /**
      * @param mixed $p_con_condition
      */
-    public function setPConCondition($p_con_condition): void
+    public function setPConCondition($p_con_condition)
     {
         $this->p_con_condition = $p_con_condition;
     }

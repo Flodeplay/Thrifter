@@ -50,7 +50,7 @@ echo file_get_contents('../html/bottommenu.html');
     <span>Home</span>
 </header>
 <main class="main-header">
-    <section>
+    <section class="pt-0">
         <?php
 
         echo "<h1 class='display-3'>Hallo,<br> " . $_SESSION["u_user"]->u_forename . "</h1>";
