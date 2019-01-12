@@ -13,6 +13,7 @@ class post
     public $p_title;
     public $p_price;
     public $p_image;
+    public $p_description;
     public $p_createtime;
     public $p_u_user;
     public $p_col_color;
@@ -29,6 +30,7 @@ class post
      * @param $p_title
      * @param $p_price
      * @param $p_image
+     * @param $p_description
      * @param $p_createtime
      * @param $p_u_user
      * @param $p_col_color
@@ -39,12 +41,13 @@ class post
      * @param $p_s_size
      * @param $p_location
      */
-    public function __construct($p_id, $p_title, $p_price, $p_image, $p_createtime, $p_u_user, $p_col_color, $p_b_brand, $p_g_gender, $p_con_condition, $p_ca_category, $p_s_size, $p_location)
+    public function __construct($p_id, $p_title, $p_price, $p_image, $p_description, $p_createtime, $p_u_user, $p_col_color, $p_b_brand, $p_g_gender, $p_con_condition, $p_ca_category, $p_s_size, $p_location)
     {
         $this->p_id = $p_id;
         $this->p_title = $p_title;
         $this->p_price = $p_price;
         $this->p_image = $p_image;
+        $this->p_description = $p_description;
         $this->p_createtime = $p_createtime;
         $this->p_u_user = $p_u_user;
         $this->p_col_color = $p_col_color;
@@ -55,6 +58,7 @@ class post
         $this->p_s_size = $p_s_size;
         $this->p_location = $p_location;
     }
+
 
     public function __toString()
     {
@@ -69,7 +73,7 @@ class post
                                         <div class=\"h5\" class=\"product-name\">" . $this->p_price . "€</div>
                                     </div>
                                     <div class=\"row justify-content-between align-items-center\">
-                                        <div class=\"h5 product-user\">" . $this->p_u_user . "</div>
+                                        <div class=\"h5 product-user\">" . getUserbyID($this->p_u_user)->u_username . "</div>
                                         <div class=\"product-loc\">" . $this->p_location . "</div>
                                     </div>
                                 </div>
@@ -82,6 +86,7 @@ class post
         $this->p_title." " .
      $this->p_price." " .
      $this->p_image." " .
+     $this->p_description." " .
      $this->p_createtime." " .
      $this->p_u_user." " .
      $this->p_col_color." " .
@@ -285,5 +290,36 @@ class post
         $this->p_location = $p_location;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPDescription()
+    {
+        return $this->p_description;
+    }
+
+    /**
+     * @param mixed $p_description
+     */
+    public function setPDescription($p_description): void
+    {
+        $this->p_description = $p_description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPConCondition()
+    {
+        return $this->p_con_condition;
+    }
+
+    /**
+     * @param mixed $p_con_condition
+     */
+    public function setPConCondition($p_con_condition): void
+    {
+        $this->p_con_condition = $p_con_condition;
+    }
 
 }

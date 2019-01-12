@@ -52,13 +52,12 @@ echo file_get_contents('../html/bottommenu.html');
             if(isset($_GET["post"])){
                 $post = getPostbyID($_GET["post"]);
                 $user = getUserbyID($post->p_u_user);
-                echo  $post->__toString2();
                 echo "<div class='row'>";
                 echo "<div class='col-md-6 d-flex align-items-center justify-content-center'><img src='../assets/posts/". $post->getPImage() ."' class='rounded-circle img-fluid' style='max-height: 150px;'></div>";
                 echo "<div class='col-md-6 d-flex flex-column align-items-center justify-content-center pt-4'><h1>". $post->p_title."</h1><div class='row w-100 justify-content-around'><h3 class='col-6 text-left'>".$post->p_price."€</h3><h3  class='col-6 text-right'>$post->p_location</h3> </div></div>";
                 echo "</div>";
                 echo "<hr><h3>Description:</h3>";
-                echo "<div class='p-3'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea tak</div>";
+                echo "<div class='p-3'>". $post->p_description."</div>";
                 echo "<hr><div class='card'><div class='card-body'><img style='max-height: 70px; width: auto' class='rounded-circle' src='../assets/users/".$user->u_image."'><span class='pl-3'>". $user->u_username."</span></div></div>";
                 echo "<hr><h3>Daten:</h3>";
                 echo "<div class='row'><div></div>";
