@@ -8,6 +8,8 @@ interface inter_update
 
     public function inter_u_forename($forename);
 
+    public function inter_u_pwd($pwd);
+
     public function inter_u_birthday();
 
     public function inter_u_zip($zipcode);

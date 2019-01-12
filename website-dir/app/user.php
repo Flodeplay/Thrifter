@@ -111,6 +111,18 @@ class user implements inter_update
         }
     }
 
+    public function inter_u_pwd($pwd)
+    {
+        if ($pwd != null && strlen($pwd) >= 8) {
+            $conn = establishDB();
+            $temp = hash("sha384", $pwd, FALSE);
+            $queryUpdate = mysqli_query($conn, "UPDATE u_users SET u_pwd = '$temp' WHERE u_id LIKE " . $this->u_id . ";");
+            mysqli_close($conn);
+        } else {
+            throw new Exception("Passwort muss mindestens 8 Zeichen enthalten!");
+        }
+    }
+
     public function inter_u_birthday()
     {
         // TODO: Implement inter_u_birthday() method.

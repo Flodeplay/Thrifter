@@ -156,7 +156,7 @@ checkSession();
             </div>
             <div class="col-md-6">
                 <?php echo "<div class=\"display-4 text-center\">". $_SESSION['u_user']->u_forename . "<br>" . $_SESSION['u_user']->u_surname . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
-                <?php echo "<p>" . $_SESSION["u_user"]->u_description . "</p>" ?>
+                <?php echo "<blockquote class='h5 text-muted text-center'>" . $_SESSION["u_user"]->u_description . "</blockquote>" ?>
             </div>
 
         </div>
@@ -182,6 +182,10 @@ checkSession();
                             <input type="text" name="surname" id="surname" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_surname;?>" aria-label="Surname">
                             <label>Vorname</label>
                             <input type="text" name="forename" id="forename" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_forename;?>" aria-label="Forename">
+                            <label>Passwort</label>
+                            <input type="password" name="password1" id="password1" class="form-control" placeholder="**********" aria-label="Password">
+                            <label>Passwort wiederholen</label>
+                            <input type="password" name="password2" id="password2" class="form-control" placeholder="**********" aria-label="Password">
                             <label>Geburtstag</label>
                             <input type="text" name="birthdate" id="birthdate" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_birthdate;?>" aria-label="Birthdate">
                             <label>Postleitzahl</label>
@@ -194,30 +198,33 @@ checkSession();
 
 
                             <br />
-                            <input type="button" name="submit" id="submit" class="btn btn-secondary rounded-0 w-100 my-1" value="Submit" />
-                            <span id="error_message" class="text-danger"></span>
-                            <span id="success_message" class="text-success"></span>
+                            <input type="button" id="submit" class="btn btn-secondary rounded-0 w-100 my-1" value="Submit" />
+                            <div class="pt-3">
+                                <span id="error_message" class="text-danger"></span>
+                                <span id="success_message" class="text-success"></span>
+                            </div>
                         </form>
                         <script>
                             //TODO birtdate -> calendar field to choose
                             //TODO passsword -> 2 fields which gets compared if equal
-                            //TODO image -> option to upload new one (Button)
                             $(document).ready(function () {
                                 $('#submit').click(function () {
                                     var email  = $('#email').val();
                                     var surname = $('#surname').val();
                                     var forename = $('#forename').val();
+                                    var pwd1 = $('#password1').val();
+                                    var pwd2 = $('#password2').val();
                                     var birthdate = $('#birthdate').val();
                                     var zipcode = $('#zipcode').val();
                                     var phonenumber = $('#phonenumber').val();
                                     var description = $('#description').val();
-                                    if (email === '' && surname === '' && forename === '' && birthdate === '' && zipcode === '' && phonenumber === '' && description === '') {
+                                    if (email === '' && surname === '' && forename === '' && pwd1 === '' && pwd2 === '' && birthdate === '' && zipcode === '' && phonenumber === '' && description === '') {
                                         $('#error_message').html("Keine Änderungen vorgenommen!");
                                     } else {
                                         $.ajax({
                                             url: "reg.php",
                                             method: "POST",
-                                            data: {email:email, surname:surname, forename:forename, birthdate:birthdate, zipcode:zipcode, phonenumber:phonenumber, description:description},
+                                            data: {email:email, surname:surname, forename:forename, pwd1:pwd1, pwd2:pwd2, birthdate:birthdate, zipcode:zipcode, phonenumber:phonenumber, description:description},
                                             success:function (data) {
                                                 /*
                                                 if (data == 'error') {
@@ -268,7 +275,7 @@ checkSession();
                     <div class="card-body">
 
 
-                        
+
                     </div>
                 </div>
             </div>
@@ -284,7 +291,8 @@ checkSession();
                     <div class="card-body">
 
                         <div class="container mt-3 p-0">
-                            <form role="form" id="contact-form" class="contact-form">
+                            <div id="error-message"></div>
+                            <form role="form" id="contact-form" class="contact-form" name="FormQuestion"">
                                 <div class="row mb-3 p-0">
                                     <div class="col-md-2 align-self-center text-center">
                                         Betreff
@@ -304,14 +312,49 @@ checkSession();
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 pb-3 px-0">
-                                        <button type="submit" class="btn btn-secondary rounded-0 w-100 my-1">Frage stellen</button>
+                                        <input type="button" id="AskQuestion" class="btn btn-secondary rounded-0 w-100 my-1" value="Frage stellen"/>
+                                        <div class="pt-3">
+                                            <span id="errQue_message" class="text-danger mt-3"></span>
+                                            <span id="succQue_message" class="text-success mt-3"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
-
                     </div>
                 </div>
+
+                <script>
+                    $(document).ready(function () {
+                        $('#AskQuestion').click(function () {
+                            var subject  = $('#subject').val();
+                            var message = $('#Message').val();
+                            if (subject === '' || subject.trim().length === 0) {
+                                $('#errQue_message').html("Um was geht es konkret in deiner Frage?");
+                            } else if (message === "" || subject.trim().length === 0) {
+                                $('#errQue_message').html("Deine Nachricht fehlt noch :(");
+                            } else {
+                                $.ajax({
+                                    url: "ContactForm.php",
+                                    method: "POST",
+                                    data: {subject:subject, message:message},
+                                    success:function (data) {
+                                        if (data !== 'success')  {
+                                            $('#errQue_message').html(data);
+                                        } else {
+                                            $('form').trigger('reset');
+
+                                            $('#succQue_message').fadeIn().html('Änderungen vorgenommen');
+                                            setTimeout(function () {
+                                                $('#succQue_message').fadeOut('Slow');
+                                            }, 20000);
+                                        }
+                                    }
+                                });
+                            }
+                        });
+                    });
+                </script>
             </div>
         </div>
 

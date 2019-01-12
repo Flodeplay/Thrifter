@@ -16,6 +16,11 @@ try {
     if ($_POST['forename']) {
         $user->inter_u_forename($_POST['forename']);
     }
+    if ($_POST['pwd1'] == $_POST['pwd2']) {
+        $user->inter_u_pwd($_POST['pwd1']);
+    } else {
+        throw new Exception("Deine Passwörter müssen gleich sein!");
+    }
     if ($_POST['birthdate']) {
         $user->inter_u_birthdate($_POST['birthdate']);
     }
