@@ -62,7 +62,7 @@ class post
 
     public function __toString()
     {
-        return  "<div class=\"product-outer col-12 col-sm-6 col-md-4 col-xl-3\">
+        return  "<div class=\"product-outer col-12 col-sm-6 col-md-4 col-xl-3\"><a href='viewpost.php?post=". $this->p_id . "'>
                         <div class=\"card product\">
                             <div class=\"card-img-top\">
                                 <img src=\"../assets/posts/". $this->p_image. "\" class=\"img-fluid card-img-top \">
@@ -77,7 +77,7 @@ class post
                                         <div class=\"product-loc\">" . $this->p_location . "</div>
                                     </div>
                                 </div>
-                        </div>
+                        </div></a>
                         </div>";
     }
     public function __toString2(){
@@ -323,3 +323,4 @@ class post
     }
 
 }
+?>

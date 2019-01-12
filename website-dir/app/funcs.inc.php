@@ -100,7 +100,7 @@ function getPostsbyUser($user_id)
  */
 function getUserbyID($user_id)
 {
-    if (isset($user_id) || !isEmpty()) {
+    if (isset($user_id)) {
         $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_id = '$user_id ';");
         if (mysqli_num_rows($query) > 0) {
             $row = mysqli_fetch_assoc($query);
@@ -114,7 +114,28 @@ function getUserbyID($user_id)
     }
 }
 
-/*
+/**
+ * Gibt EINEN user zurück
+ *@param $user_id username
+ *@Exception wirft eine Exception falls die User_ID Null ist
+ *@author: florian
+ *@Date 19.11.2018
+ */
+function getUserbyName($u_username)
+{
+    if (isset($u_username)) {
+        $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_username = '$u_username ';");
+        if (mysqli_num_rows($query) > 0) {
+            $row = mysqli_fetch_assoc($query);
+            return new user($row["u_id"],$row["u_username"],$row["u_forename"], $row["u_surname"],$row["u_email"], $row["u_birthdate"],$row["u_createtime"], $row["u_description"], $row["u_image"], $row["u_phonenumber"], $row["u_zipcode"]);
+        } else {
+            throw new Exception("Kein User vorhanden!");
+        }
+    } else {
+        throw new Exception("Eingabe ist falsch!");
+    }
+}
+/**
  * Gibt zurück ob ein User vorhanden ist
  *@param user ID
  *@Exception wirft eine Exception falls die User_ID Null ist
@@ -147,7 +168,7 @@ function isUserbyName($username)
 function isUserbyEmail($email)
 {
     $email = mysqli_real_escape_string(establishDB(), $email);
-    if (isset($email) || !isEmpty()) {
+    if (isset($email)) {
         $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_email = '$email';");
         if (mysqli_num_rows($query) == 1) {
             return true;

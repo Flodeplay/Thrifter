@@ -21,7 +21,9 @@
     padding: 10px !important;
 
 }
-
+.product-outer a{
+    color: black !important;
+}
 .product {
     border-radius: 1rem !important;
     -webkit-box-shadow: 10px 10px 45px -25px rgba(0, 0, 0, 0.2);
