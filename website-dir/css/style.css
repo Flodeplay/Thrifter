@@ -264,6 +264,9 @@ main article {
     background-color: white;
 }
 
+.contact-form .textarea{ min-height:220px; resize:none;}
+.form-control{height:49px;}
+
 /*
 .btn_container {
     position: absolute;

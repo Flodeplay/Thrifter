@@ -16,6 +16,7 @@ checkSession();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+
     <!-- custom style-->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/nav.css">
@@ -27,6 +28,8 @@ checkSession();
     <script src="../JS/bootstrap.min.js"></script>
     <script src="../JS/vh-fix.js"></script>
     <script src="../JS/base.js"></script>
+
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
@@ -317,6 +320,33 @@ checkSession();
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">
+
+                        <div class="container mt-3 p-0">
+                            <form role="form" id="contact-form" class="contact-form">
+                                <div class="row mb-3 p-0">
+                                    <div class="col-md-2 align-self-center text-center">
+                                        Betreff
+                                    </div>
+                                    <div class="col-md-10 p-0">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="subject" autocomplete="off" id="subject" placeholder="ZB.: Fragen zu meinen gespeicherten Daten">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-12 p-0">
+                                        <div class="form-group">
+                                            <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Deine Nachricht"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pb-3 px-0">
+                                        <button type="submit" class="btn btn-secondary rounded-0 w-100 my-1">Frage stellen</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
 
                     </div>
                 </div>
