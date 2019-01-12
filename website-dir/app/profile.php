@@ -83,7 +83,7 @@ checkSession();
                                 processData: false,
                                 //TODO when limit exceeded, return better value
                                 success: function(data){
-                                    if (data=='successful') {
+                                    if (data === 'successful') {
                                         //alert('Ging' + data);
                                         $('#suc').fadeIn().html(data);
                                         setTimeout(function () {
@@ -211,7 +211,7 @@ checkSession();
                                     var zipcode = $('#zipcode').val();
                                     var phonenumber = $('#phonenumber').val();
                                     var description = $('#description').val();
-                                    if (email == '' && surname == '' && forename == '' && birthdate == '' && zipcode == '' && phonenumber == '' && description == '') {
+                                    if (email === '' && surname === '' && forename === '' && birthdate === '' && zipcode === '' && phonenumber === '' && description === '') {
                                         $('#error_message').html("Keine Änderungen vorgenommen!");
                                     } else {
                                         $.ajax({
@@ -234,7 +234,7 @@ checkSession();
                                                     }, 20000);
                                                 }
                                                 */
-                                                if (data != 'success')  {
+                                                if (data !== 'success')  {
                                                     $('#error_message').html(data);
                                                 } else {
                                                     $('form').trigger('reset');
@@ -266,47 +266,9 @@ checkSession();
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
-                        <label>Profilbild</label>
-                        <br>
-                        <label class="btn btn-default btn-file">
-                            <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style=\"max-height: 150px;\">"; ?>
-                            <input type="file" name="image" id="imageChange" style="display: none;" aria-label="Image" accept="image/*">
-                        </label>
-                        <span id="err_message" class="text-danger"></span>
-                        <span id="suc_message" class="text-success"></span>
 
-                        <script>
-                            $(document).ready(function() {
-                                $('#imageChange').change(function(){
-                                    var file_data = $('#imageChange').prop('files')[0];
-                                    var form_data = new FormData();
-                                    form_data.append('image', file_data);
-                                    $.ajax({
-                                        url: "image_upload.php",
-                                        type: "POST",
-                                        data: form_data,
-                                        contentType: false,
-                                        cache: false,
-                                        processData: false,
-                                        //TODO succes doesn't work
-                                        success: function(data){
-                                            $('#err_message').html('haööp');
-                                            //window.location.reload();
-                                            if (data != 'success') {
-                                                $('#err_message').html(data);
-                                            } else {
-                                                //window.location.reload();
 
-                                                $('#suc_message').fadeIn().html('Änderungen vorgenommen');
-                                                setTimeout(function () {
-                                                    $('#suc_message').fadeOut('Slow');
-                                                }, 20000);
-                                            }
-                                        }
-                                    });
-                                });
-                            });
-                        </script>
+                        
                     </div>
                 </div>
             </div>
