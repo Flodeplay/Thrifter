@@ -17,7 +17,9 @@ try {
         $user->inter_u_forename($_POST['forename']);
     }
     if ($_POST['pwd1'] == $_POST['pwd2']) {
-        $user->inter_u_pwd($_POST['pwd1']);
+        if ($_POST['pwd1'] != null) {
+            $user->inter_u_pwd($_POST['pwd1']);
+        }
     } else {
         throw new Exception("Deine Passwörter müssen gleich sein!");
     }
