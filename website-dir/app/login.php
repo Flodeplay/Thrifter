@@ -42,7 +42,8 @@
 <main class="login-main">
     <?php echo file_get_contents('../html/navs.html'); ?>
     <section class="d-flex flex-column align-items-center justify-content-center"
-             style="min-height: calc(100vh - 60px); padding: 20px;">
+             style="min-height: calc(100vh - 60px);">
+        <div style="background-color: #f2f2f2; border-radius: 20px; padding:30px" class="shadow-lg">
         <?php
         if (isset($_POST["submit"])) {
             try {
@@ -112,6 +113,7 @@
             exit(file_get_contents('../html/login.html'));
         }
         ?>
+        </div>
     </section>
 </main>
 </body>

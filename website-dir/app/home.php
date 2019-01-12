@@ -50,7 +50,7 @@ echo file_get_contents('../html/bottommenu.html');
     <span>Home</span>
 </header>
 <main class="main-header">
-    <section class="my-3">
+    <section>
         <?php
 
         echo "<h1 class='display-3'>Hallo,<br> " . $_SESSION["u_user"]->u_forename . "</h1>";
@@ -87,9 +87,10 @@ echo file_get_contents('../html/bottommenu.html');
         <div class="row">
             <?php
             /**
-             * @var user $_SESSION["u_user"]
+             * @var user $user
              */
-            $_SESSION["u_user"]->getWishlist(10);
+            $user = $_SESSION["u_user"];
+            $user->getWishlist(2);
             ?>
 
         </div>

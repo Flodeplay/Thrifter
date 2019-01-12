@@ -59,14 +59,15 @@
         <source media="(max-width: 720px)" srcset="assets/logo/Logo-short.svg">
         <img src="assets/logo/Logo.svg" alt="Thrifter.">
     </picture>
-    <div class="d-none d-lg-block">
+    <div class="d-none d-lg-block nav-links">
         <a>Home</a>
         <a>How to?</a>
         <a>Login & Registrieren</a>
     </div>
     <div>
-        <i class="fas fa-heart fa-2x text-success"></i>
-        <i class="fas fa-bars fa-2x menu-button"></i>
+        <a data-toggle="modal"
+           data-target="#socialMedia"><i class="fas fa-heart fa-2x text-success"></i></a>
+        <a><i class="fas fa-bars fa-2x menu-button"></i></a>
     </div>
 
     <div class="sidenav">
@@ -89,6 +90,26 @@
         </div>
     </div>
 </nav>
+<div class="modal fade" tabindex="-1" id="socialMedia" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 bg-transparent">
+            <div class="modal-header border-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i
+                                class="fas text-white fa-times fa-lg"></i></span> </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <a href="https://www.facebook.com/ethan.indra.1" target="_blank"><i class="fab fa-facebook-f fa-10x"></i></a>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <a href="https://www.instagram.com/ethan_indra" target="_blank"><i class="fab fa-instagram fa-10x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <main>
     <section class="mw-100 p-0">
         <div class="back-img" id="headpic" style="height: calc(100vh - 60px)"></div>
@@ -125,10 +146,10 @@
         </div>
         <div class="scrolldown text-white hover-red"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
-    <section class="full-height-section row justify-content-center d-flex flex-column bg-danger">
+    <section class="full-height-section row justify-content-center d-flex flex-column bg-dark">
         <div class="col-12 col-md-8 mx-auto">
-            <h1 class="my-5 text-center display-2 text-white">Anmelden & Registrieren</h1>
-            <hr style="border-width: 5px; border-color: white;">
+            <h1 class="my-5 text-center display-3 text-white">Anmelden & Registrieren</h1>
+            <hr style="border-width: 5px; border-color: var(--green);">
             <div class="form-outer my-5" style="max-width: 700px">
                 <div id="error-message"></div>
                 <form name="login" action="app/login.php" method="post" onsubmit="return checkLogin()">
@@ -149,7 +170,6 @@
                            aria-label="Postal-code">
                     <input type="text" name="phonenr" class="form-control register-input" placeholder="Telefon"
                            aria-label="Telefon">
-                    <hr>
                     <button type="button"
                             class="btn-login btn-success change-register-button login-input">Brauchst
                         du ein Konto?
@@ -169,10 +189,10 @@
                 </form>
             </div>
         </div>
-        <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
+        <div class="scrolldown hover-green text-white"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
     <section class="full-height-section p-3 d-flex align-items-center">
-        <blockquote class="blockquote">
+        <blockquote class="blockquote col-md-6 mx-auto">
             <p class="mb-0 h1">Someone that religiously shops at Thrift Stores looking for bargains and often scores
                 amazing deals. Often dedicated to recycling and reuse of products to keep our planet "greener".
             </p>
@@ -352,18 +372,22 @@
 <div class="links">
     <div class="links-inner w-100">
         <div class="row" style="margin-bottom: 100px">
-            <div class="col-12 col-sm-10">
+            <div class="col-9">
                 <h1 class="text-success mb-3"><img src="assets/logo/Logo.svg" style="height: 3rem"> </h1>
                 <h5 class="mt-4 font-weight-bold" style="letter-spacing: 1.5px"><a class="mx-3">Link1</a><a class="mx-3">Link1</a><a class="mx-3">Link1</a><a class="mx-3">Link1</a></h5>
             </div>
-            <div class="col-12 col-sm-2 justify-content-center align-content-end">
+            <div class="col-3 justify-content-center align-content-end">
+                <a data-toggle="modal"
+                   data-target="#socialMedia">
                 <i class="fas fa-heart fa-3x text-success"></i>
+                </a>
             </div>
         </div>
         <div  style="padding-left: 15px" class="row">
             <div class="col-sm-6">
                 <h1>Kontakt</h1>
                 <address style="padding-left: 15px">
+                    <p>Manuel Köllner</p>
                     <p>Office@Thrifter.at<br>
                         +43 600 4772855</p>
                     <p>1140, Wien</p>
@@ -372,7 +396,7 @@
             <div class="col-sm-6">
                 <h1>Links</h1>
                 <p>
-
+                    <a></a>
                 </p>
             </div>
         </div>

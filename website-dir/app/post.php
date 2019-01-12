@@ -8,15 +8,17 @@
 
 class post
 {
+
     public $p_id;
     public $p_title;
     public $p_price;
     public $p_image;
-    public $p_creattime;
+    public $p_createtime;
     public $p_u_user;
     public $p_col_color;
     public $p_b_brand;
     public $p_g_gender;
+    public $p_con_condition;
     public $p_ca_category;
     public $p_s_size;
     public $p_location;
@@ -27,26 +29,28 @@ class post
      * @param $p_title
      * @param $p_price
      * @param $p_image
-     * @param $p_creattime
+     * @param $p_createtime
      * @param $p_u_user
      * @param $p_col_color
      * @param $p_b_brand
      * @param $p_g_gender
+     * @param $p_con_condition
      * @param $p_ca_category
      * @param $p_s_size
      * @param $p_location
      */
-    public function __construct($p_id, $p_title, $p_price, $p_image, $p_creattime, $p_u_user, $p_col_color, $p_b_brand, $p_g_gender, $p_ca_category, $p_s_size, $p_location)
+    public function __construct($p_id, $p_title, $p_price, $p_image, $p_createtime, $p_u_user, $p_col_color, $p_b_brand, $p_g_gender, $p_con_condition, $p_ca_category, $p_s_size, $p_location)
     {
         $this->p_id = $p_id;
         $this->p_title = $p_title;
         $this->p_price = $p_price;
         $this->p_image = $p_image;
-        $this->p_creattime = $p_creattime;
+        $this->p_createtime = $p_createtime;
         $this->p_u_user = $p_u_user;
         $this->p_col_color = $p_col_color;
         $this->p_b_brand = $p_b_brand;
         $this->p_g_gender = $p_g_gender;
+        $this->p_con_condition = $p_con_condition;
         $this->p_ca_category = $p_ca_category;
         $this->p_s_size = $p_s_size;
         $this->p_location = $p_location;
@@ -73,17 +77,19 @@ class post
                         </div>";
     }
     public function __toString2(){
-        return  $this->p_id . " " .
-     $this->p_title . " " .
-     $this->p_price . " " .
-     $this->p_image . " " .
-     $this->p_creattime . " " .
-     $this->p_u_user . " " .
-     $this->p_col_color . " " .
-     $this->p_b_brand . " " .
-     $this->p_g_gender . " " .
-     $this->p_ca_category . " " .
-     $this->p_s_size . " " .
+        return  " " .
+            $this->p_id ." " .
+        $this->p_title." " .
+     $this->p_price." " .
+     $this->p_image." " .
+     $this->p_createtime." " .
+     $this->p_u_user." " .
+     $this->p_col_color." " .
+     $this->p_b_brand." " .
+     $this->p_g_gender." " .
+     $this->p_con_condition." " .
+     $this->p_ca_category." " .
+     $this->p_s_size." " .
      $this->p_location;
     }
 
@@ -138,17 +144,17 @@ class post
     /**
      * @return mixed
      */
-    public function getPCreattime()
+    public function getPCreatetime()
     {
-        return $this->p_creattime;
+        return $this->p_createtime;
     }
 
     /**
-     * @param mixed $p_creattime
+     * @param mixed $p_createtime
      */
-    public function setPCreattime($p_creattime)
+    public function setPCreatetime($p_createtime)
     {
-        $this->p_creattime = $p_creattime;
+        $this->p_createtime = $p_createtime;
     }
 
     /**

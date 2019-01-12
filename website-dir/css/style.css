@@ -93,7 +93,14 @@ main article {
     padding: 20px 30px 5px;
 
 }
-
+.freezePage{
+    overflow: hidden !important;
+    position: relative;
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: scroll !important;
+}
 .img_container {
     position: relative;
 }
@@ -161,7 +168,7 @@ main article {
 .form-outer > form > hr {
     margin: 30px auto;
     border-width: 5px;
-    border-color: white;
+    border-color: var(--red);
 }
 .form-outer-modal {
     width: 100%;
@@ -169,11 +176,11 @@ main article {
     margin: 0 auto;
 }
 .form-outer > form input {
-    height: 60px;
-    background-color: #f2f2f2;
+    height: 55px;
+    background-color: transparent;
     border-radius: 0;
-    border: white 5px solid;
-    margin-bottom: 30px;
+    border: #f2f2f2 3.5px solid;
+    margin-bottom: 20px;
 }
 .form-outer > form > .btn-login{
     height: 50px;
@@ -209,17 +216,17 @@ main article {
 }
 
 .input-wrong {
-    border: var(--gray-dark) 1.5px solid !important;
-    color: var(--gray-dark) !important;
+    border: var(--red) 1.5px solid !important;
+    color: var(--red) !important;
 }
 
 .input-wrong-text {
-    color: var(--gray-dark) !important;
+    color: var(--red) !important;
 }
 
 @media (max-width: 720px) {
     .display-1, .display-2, .display-3, .display-4 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 }
 
