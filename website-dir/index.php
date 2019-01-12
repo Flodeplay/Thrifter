@@ -74,7 +74,7 @@
         <div class="sidemenu col-md-12 col-lg-6 col-xl-3 shadow">
             <div class="content">
                 <ul class="p-0 m-0">
-                    <li id="nav-link-1"><a href="home.php">Home</a></li>
+                    <li id="nav-link-1"><a href="app/home.php">Home</a></li>
                     <li id="nav-link-2">Login</li>
                     <li id="nav-link-3">Impressum</li>
                 </ul>
