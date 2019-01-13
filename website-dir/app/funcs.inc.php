@@ -231,7 +231,7 @@ function getPostbyID($post_id){
 /**
  *
  */
-function getPoststime($post_id, $count = 10, $start){
+function getPoststimeline($post_id, $count = 10, $start){
 
 }
 /** @var post[] $posts */

@@ -43,7 +43,7 @@ echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
     <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
-    <span><?php if (isset($post)){echo $user->u_username;}else{echo "Fehler";}?></span>
+    <span><?php if (isset($user)){echo $user->u_username;}else{echo "Fehler";}?></span>
     <i></i>
 </header>
 <main class="main-header">
