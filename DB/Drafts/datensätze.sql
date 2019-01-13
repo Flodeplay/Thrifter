@@ -1,4 +1,4 @@
-INSERT INTO u_users (u_username, u_email, u_pwd, u_surname, u_forename, u_birthdate, u_zipcode, u_image, u_phonenumber, u_description) VALUES ('admin', 'manu.koellner@aon.at', '7ed8c2c790aa83d6c3e404b5368f6832c18d46a0e98b9c7a7a5e3ef823e2c9f0e310abbf6f7ea9d9d883ccb64ec2736a', 'Koellner', 'Manuel', NOW(), '1200', 'defaultUser.png', '+436763084990', 'das bin ich');
+INSERT INTO u_users (u_username, u_email, u_pwd, u_surname, u_forename, u_zipcode, u_image, u_phonenumber, u_description) VALUES ('admin', 'manu.koellner@aon.at', '7ed8c2c790aa83d6c3e404b5368f6832c18d46a0e98b9c7a7a5e3ef823e2c9f0e310abbf6f7ea9d9d883ccb64ec2736a', 'Koellner', 'Manuel', '1200', 'defaultUser.png', '+436763084990', 'das bin ich');
 
 INSERT INTO b_brands (b_name) VALUES ('Nike');
 INSERT INTO ca_categories (ca_name) VALUES ('Hoodie');
