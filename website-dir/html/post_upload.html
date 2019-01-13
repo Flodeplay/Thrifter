@@ -41,10 +41,10 @@
                     <label id="title_text" for="titel">Titel</label>
                     <input id="titel" class="form-control" name="title" type="text">
 
-                    <label for="description">Beschreibung</label>
+                    <label id="description_text" for="description">Beschreibung</label>
                     <input id="description" class="form-control" name="description" type="text">
 
-                    <label for="price">Preis</label>
+                    <label id="price_text" for="price">Preis</label>
                     <input id="price" type="number" name="price" class="form-control">
 
                     <label for="color">Farbe</label>
@@ -67,9 +67,6 @@
                     <button type="submit" value="submit" class="btn btn-secondary rounded-0 w-100 my-1 login-input">
                         Hochladen
                     </button>
-                    <script>$(function () {
-                       validatepost_input();
-                    });</script>
                 </form>
                 <script>
                     function validatepost_input() {
@@ -85,9 +82,17 @@
                         if(document.newPost.description.value.length === 0){
                             errorstring += "Beschreibung darf nicht leer sein!";
                             document.newPost.description.classList.add("input-wrong");
-                            document.getElementById("title_text").classList.add("input-wrong-text");
+                            document.getElementById("description_text").classList.add("input-wrong-text");
                             validate = false;
                         }
+                        if(document.newPost.price.value.length === 0){
+                            errorstring += "Beschreibung darf nicht leer sein!";
+                            document.newPost.price.classList.add("input-wrong");
+                            document.getElementById("price_text").classList.add("input-wrong-text");
+                            validate = false;
+                        }
+                        //Todo imprelement restliche checks
+
                         if (!validate) {
                             $("#postupload-error-message").text(errorstring);
                         }
