@@ -161,11 +161,11 @@ main article {
      background: linear-gradient(135deg, #ff6a79 0%, #ff6a79 21%, #88ddbb 70%, #88ddbb 100%);
      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6a79', endColorstr='#88ddbb', GradientType=1);
  }
-.form-outer{
+.form-outer-index{
     width: 100%;
     margin: 10px auto;
 }
-.form-outer > form > hr {
+.form-outer-index > form > hr {
     margin: 30px auto;
     border-width: 5px;
     border-color: var(--red);
@@ -175,14 +175,27 @@ main article {
     max-width: 500px;
     margin: 0 auto;
 }
-.form-outer > form input {
+.form-outer-index > form input {
     height: 55px;
     background-color: transparent;
     border-radius: 0;
     border: #f2f2f2 3.5px solid;
     margin-bottom: 20px;
+    color: white !important;
 }
-.form-outer > form > .btn-login{
+.form-outer-index > form input:focus,.form-outer-index > form input:active{
+    background-color: transparent!important;
+    border: var(--green) 3.5px solid;
+}
+.form-outer-index form span, .form-outer-index form label {
+    padding: 10px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.form-outer form > .btn-login{
     height: 50px;
     width: 100%;
     border: none;
@@ -190,32 +203,32 @@ main article {
     font-size: 120%;
     font-family: 'Montserrat', sans-serif;
 }
-.form-outer-modal > form , .form-outer > form{
+.form-outer form{
     margin: 10px auto;
     width: 100%;
 }
 
-.form-outer-modal form span, .form-outer-modal form label {
+.form-outer form span, form label {
     margin: 5px;
     color: var(--gray-dark);
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
 }
 
-.form-outer-modal > form > hr {
+.form-outer form > hr {
     margin: 30px auto;
 }
 
-.form-outer-modal > form input {
+.form-outer form input {
     height: 40px;
     border-radius: 0;
-    border: var(--gray-dark) 1.5px solid;
+    border: #575757 1px solid;
     margin-bottom: 15px;
 }
-
-.input-wrong {
+.form-outer > form input:focus,.form-outer > form input:active{
+    border: var(--green) 1px solid;
+}
+ .input-wrong {
     border: var(--red) 1.5px solid !important;
     color: var(--red) !important;
 }

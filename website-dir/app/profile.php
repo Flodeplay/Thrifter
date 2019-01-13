@@ -174,6 +174,7 @@ checkSession();
 
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
+                        <div class="form-outer">
                         <form class="login-input" id="submit_form">
                             <label>E-Mail Adresse</label>
                             <input type="text" name="email" id="email" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_email;?>" aria-label="EMail">
@@ -203,6 +204,7 @@ checkSession();
                                 <span id="success_message" class="text-success"></span>
                             </div>
                         </form>
+                        </div>
                         <script>
                             //TODO birtdate -> calendar field to choose
                             //TODO passsword -> 2 fields which gets compared if equal
@@ -290,6 +292,7 @@ checkSession();
                     <div class="card-body">
 
                         <div class="container mt-3 p-0">
+                            <div class="form-outer">
                             <div id="error-message"></div>
                             <form role="form" id="contact-form" class="contact-form" name="FormQuestion"">
                                 <div class="row mb-3 p-0">
@@ -319,6 +322,7 @@ checkSession();
                                     </div>
                                 </div>
                             </form>
+                        </div>
                         </div>
                     </div>
                 </div>

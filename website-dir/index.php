@@ -117,10 +117,9 @@
             <div class="content">
                 Hast du noch Platz im Kleiderschrank?
                 <div>
-                    <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal"
-                            data-target="#login-modal">
+                    <a class="btn btn-lg btn-outline-light" href="app/login.php">
                         Anmelden!
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -150,69 +149,8 @@
         <div class="col-12 col-md-8 mx-auto">
             <h1 class="my-5 text-center display-3 text-white">Anmelden & Registrieren</h1>
             <hr style="border-width: 5px; border-color: var(--green);">
-            <div class="form-outer my-5" style="max-width: 700px">
-                <div id="error-message"></div>
-                <form name="login" action="app/login.php" method="post" onsubmit="return checkLogin()">
-                    <input type="text" name="username" class="form-control" placeholder="Nutzername"
-                           aria-label="Username">
-                    <input type="text" name="email" class="form-control register-input"
-                           placeholder="E-Mail" aria-label="Email">
-                    <input type="password" name="pwd" class="form-control" placeholder="Passwort"
-                           aria-label="Passwort">
-                    <div class="row">
-                        <input type="text" name="forename" class="form-control register-input w-50 "
-                               placeholder="Vorname" aria-label="Vorname">
-                        <input type="text" name="surname" class="form-control register-input w-50"
-                               placeholder="Nachname" aria-label="Nachname">
-                    </div>
-                    <input type="text" name="zipcode" class="form-control register-input"
-                           placeholder="Postal-Code / ZIP-Code"
-                           aria-label="Postal-code">
-                    <input type="text" name="phonenr" class="form-control register-input" placeholder="Telefon"
-                           aria-label="Telefon">
-                    <button type="button"
-                            class="btn-login btn-success change-register-button login-input">Brauchst
-                        du ein Konto?
-                    </button>
-                    <button type="button"
-                            class="btn-login btn-success change-login-button register-input">Doch
-                        lieber anmelden?
-                    </button>
-                    <button type="submit" name="submit" value="login"
-                            class="btn-login btn-secondary login-input">
-                        Login
-                    </button>
-                    <button type="submit" name="submit" value="reg"
-                            class="btn-login btn-secondary register-input">
-                        Registrieren
-                    </button>
-                </form>
-            </div>
-        </div>
-        <div class="scrolldown hover-green text-white"><i class="fas fa-chevron-down fa-2x"></i></div>
-    </section>
-    <section class="full-height-section p-3 d-flex align-items-center">
-        <blockquote class="blockquote col-md-6 mx-auto">
-            <p class="mb-0 h1">Someone that religiously shops at Thrift Stores looking for bargains and often scores
-                amazing deals. Often dedicated to recycling and reuse of products to keep our planet "greener".
-            </p>
-            <footer class="blockquote-footer h3">Urban Dictionary</footer>
-        </blockquote>
-        <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
-    </section>
-</main>
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-success p-4">
-                <h4 class="modal-title text-center" id="Login-title"><i class="fas fa-lock mr-3"></i>Login</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-outer-modal">
-                    <div id="error-message"></div>
+            <div class="form-outer-index my-5" style="max-width: 700px">
+                    <div id="error-message" class="text-danger my-3"></div>
                     <form name="login" action="app/login.php" method="post" onsubmit="return checkLogin()">
                         <span id="username_text">Nutzername</span>
                         <input type="text" name="username" class="form-control" placeholder="ManuelTroll"
@@ -359,11 +297,20 @@
                             $(".login-input").toggle();
                         });
                     </script>
-                </div>
             </div>
         </div>
-    </div>
-</div>
+        <div class="scrolldown hover-green text-white"><i class="fas fa-chevron-down fa-2x"></i></div>
+    </section>
+    <section class="full-height-section p-3 d-flex align-items-center">
+        <blockquote class="blockquote col-md-6 mx-auto">
+            <p class="mb-0 h1">Someone that religiously shops at Thrift Stores looking for bargains and often scores
+                amazing deals. Often dedicated to recycling and reuse of products to keep our planet "greener".
+            </p>
+            <footer class="blockquote-footer h3">Urban Dictionary</footer>
+        </blockquote>
+        <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
+    </section>
+</main>
 <section>
     <footer class="footer">
         <div class="display-3">"Gestern Deins, Heute Meins"</div>

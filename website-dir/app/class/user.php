@@ -15,7 +15,6 @@ class user implements inter_update
     public $u_forename;
     public $u_surname;
     public $u_email;
-    public $u_birthdate;
     public $u_createtime;
     public $u_description;
     public $u_image;
@@ -36,14 +35,13 @@ class user implements inter_update
      * @param $u_phonenumber
      * @param $u_zipcode
      */
-    public function __construct($u_id, $u_username, $u_forename, $u_surname, $u_email, $u_birthdate, $u_createtime, $u_description, $u_image, $u_phonenumber, $u_zipcode)
+    public function __construct($u_id, $u_username, $u_forename, $u_surname, $u_email, $u_createtime, $u_description, $u_image, $u_phonenumber, $u_zipcode)
     {
         $this->u_id = $u_id;
         $this->u_username = $u_username;
         $this->u_forename = $u_forename;
         $this->u_surname = $u_surname;
         $this->u_email = $u_email;
-        $this->u_birthdate = $u_birthdate;
         $this->u_createtime = $u_createtime;
         $this->u_description = $u_description;
         $this->u_image = $u_image;
@@ -139,11 +137,6 @@ class user implements inter_update
         }
     }
 
-    public function inter_u_birthday()
-    {
-        // TODO: Implement inter_u_birthday() method.
-    }
-
     public function inter_u_zip($zipcode)
     {
         if (strlen($zipcode) > 2 && strlen($zipcode) < 11) {
@@ -182,6 +175,11 @@ class user implements inter_update
         $queryUpdate = mysqli_query($conn, "UPDATE u_users SET u_description = '$temp' WHERE u_id LIKE " . $this->u_id . ";");
         $this->u_description = $temp;
         mysqli_close($conn);
+    }
+
+    public function inter_u_birthday()
+    {
+        // TODO: Implement inter_u_birthday() method.
     }
 }
 ?>

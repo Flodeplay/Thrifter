@@ -40,9 +40,6 @@ session_start();
                 echo $e->getMessage();
             }
             if ($conn) {
-                foreach ($_POST as $id => $value) {
-                    echo $value;
-                }
                 switch ($_POST["submit"]) {
                     case "login":
                         $username = mysqli_real_escape_string($conn, $_POST["username"]);
@@ -50,7 +47,7 @@ session_start();
                         $query = mysqli_query($conn, "SELECT * FROM u_users WHERE u_username = '$username' AND u_pwd LIKE '$pwd';");
                         if (mysqli_num_rows($query) == 1) {
                             $data = mysqli_fetch_assoc($query);
-                            $user = new user($data["u_id"], $data["u_username"], $data["u_forename"], $data["u_surname"], $data["u_email"], $data["u_birthdate"], $data["u_createtime"], $data["u_description"], $data["u_image"], $data["u_phonenumber"], $data["u_zipcode"]);
+                            $user = new user($data["u_id"], $data["u_username"], $data["u_forename"], $data["u_surname"], $data["u_email"], $data["u_createtime"], $data["u_description"], $data["u_image"], $data["u_phonenumber"], $data["u_zipcode"]);
                             $_SESSION["u_user"] = $user;
                             header("Location: home.php");
                         } else {
@@ -73,15 +70,11 @@ session_start();
                                 throw new Exception("Username or Email existiert bereits");
                             }
 
-                            // TODO concat all birthday fields(yyyy-MM-dd) and check if valid -> insert the right way into DB
-                            // INSERT INTO u_users (u_birthdate) VALUE (STR_TO_DATE($birthdate['20010501'], '%Y%m%d'));
-                            $birthdate = null;
-
-                            mysqli_query($conn, "INSERT INTO u_users (u_username, u_email, u_pwd, u_surname, u_forename, u_birthdate, u_zipcode, u_phonenumber) VALUES ('$username','$email','$pwd','$surname','$forename','$birthdate','$zipcode','$phonenr');");
+                            mysqli_query($conn, "INSERT INTO u_users (u_username, u_email, u_pwd, u_surname, u_forename, u_zipcode, u_phonenumber) VALUES ('$username','$email','$pwd','$surname','$forename','$zipcode','$phonenr');");
                             $query = mysqli_query($conn, "SELECT * FROM u_users WHERE u_username = '$username' AND u_pwd LIKE '$pwd';");
                             if (mysqli_num_rows($query) == 1) {
                                 $data = mysqli_fetch_assoc($query);
-                                $user = new user($data["u_id"], $data["u_username"], $data["u_forename"], $data["u_surname"], $data["u_email"], $data["u_birthdate"], $data["u_createtime"], $data["u_description"], $data["u_image"], $data["u_phonenumber"], $data["u_zipcode"]);
+                                $user = new user($data["u_id"], $data["u_username"], $data["u_forename"], $data["u_surname"], $data["u_email"], $data["u_createtime"], $data["u_description"], $data["u_image"], $data["u_phonenumber"], $data["u_zipcode"]);
                                 $_SESSION["u_user"] = $user;
                                 header("Location: home.php");
                             }

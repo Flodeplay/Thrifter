@@ -104,7 +104,7 @@ function getUserbyID($user_id)
         $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_id = '$user_id ';");
         if (mysqli_num_rows($query) > 0) {
             $row = mysqli_fetch_assoc($query);
-            return new user($row["u_id"],$row["u_username"],$row["u_forename"], $row["u_surname"],$row["u_email"], $row["u_birthdate"],$row["u_createtime"], $row["u_description"], $row["u_image"], $row["u_phonenumber"], $row["u_zipcode"]);
+            return new user($row["u_id"],$row["u_username"],$row["u_forename"], $row["u_surname"],$row["u_email"],$row["u_createtime"], $row["u_description"], $row["u_image"], $row["u_phonenumber"], $row["u_zipcode"]);
         } else {
             return false;
         }
@@ -127,7 +127,7 @@ function getUserbyName($u_username)
         $query = mysqli_query(establishDB(), "SELECT * FROM u_users WHERE u_username = '$u_username ';");
         if (mysqli_num_rows($query) > 0) {
             $row = mysqli_fetch_assoc($query);
-            return new user($row["u_id"],$row["u_username"],$row["u_forename"], $row["u_surname"],$row["u_email"], $row["u_birthdate"],$row["u_createtime"], $row["u_description"], $row["u_image"], $row["u_phonenumber"], $row["u_zipcode"]);
+            return new user($row["u_id"],$row["u_username"],$row["u_forename"], $row["u_surname"],$row["u_email"],$row["u_createtime"], $row["u_description"], $row["u_image"], $row["u_phonenumber"], $row["u_zipcode"]);
         } else {
             throw new Exception("Kein User vorhanden!");
         }
