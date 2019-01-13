@@ -22,7 +22,21 @@ class user implements inter_update
     public $u_phonenumber;
     public $u_zipcode;
 
-    function __construct($u_id, $u_username, $u_forename, $u_surname, $u_email, $u_birthdate, $u_createtime, $u_description, $u_image, $u_phonenumber, $u_zipcode)
+    /**
+     * user constructor.
+     * @param $u_id
+     * @param $u_username
+     * @param $u_forename
+     * @param $u_surname
+     * @param $u_email
+     * @param $u_birthdate
+     * @param $u_createtime
+     * @param $u_description
+     * @param $u_image
+     * @param $u_phonenumber
+     * @param $u_zipcode
+     */
+    public function __construct($u_id, $u_username, $u_forename, $u_surname, $u_email, $u_birthdate, $u_createtime, $u_description, $u_image, $u_phonenumber, $u_zipcode)
     {
         $this->u_id = $u_id;
         $this->u_username = $u_username;
@@ -36,6 +50,7 @@ class user implements inter_update
         $this->u_phonenumber = $u_phonenumber;
         $this->u_zipcode = $u_zipcode;
     }
+
 
     /**
      * Gibt die Wishlist eines Users zurück user

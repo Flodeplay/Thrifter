@@ -5,7 +5,7 @@ require_once "user.php";
 session_start();
 if(isset($_GET["post"])) {
     try{
-        $post = getPostbyID($_GET["post"]);
+        $post = getPostbyID(mysqli_real_escape_string($_GET["post"]));
         $user = getUserbyID($post->p_u_user);
     }catch (Exception $e){
 
@@ -53,8 +53,6 @@ echo file_get_contents('../html/bottommenu.html');
     <section class="bg-light shadow mt-5 px-4">
         <?php
         if(isset($post)){
-            $post = getPostbyID($_GET["post"]);
-            $user = getUserbyID($post->p_u_user);
             echo "<div class='row'>";
             echo "<div class='col-md-6 d-flex align-items-center justify-content-center'><img src='../assets/posts/". $post->getPImage() ."' class='rounded-circle img-fluid' style='max-height: 150px;'></div>";
             echo "<div class='col-md-6 d-flex flex-column align-items-center justify-content-center pt-4'><h1>". $post->p_title."</h1><div class='row w-100 justify-content-around'><h3 class='col-6 text-left'>".$post->p_price."€</h3><h3  class='col-6 text-right'>$post->p_location</h3> </div></div>";

@@ -47,7 +47,7 @@
             var ret = true;
             var errorstr = "";
             if (document.login.username.value.length === 0) {
-                errorstr += "Username darf nicht leer sein! \n ";
+                errorstr += "Username darf nicht leer sein!";
                 document.login.username.classList.add("input-wrong");
                 document.getElementById("username_text").classList.add("input-wrong-text");
                 ret = false;
@@ -86,10 +86,16 @@
                     errorstr += "Nachname darf nicht leer sein!";
                     ret = false;
                 }
-                if (document.login.zipcode.value.length === 0) {
+                if (document.login.zipcode.value.length < 4) {
                     document.login.zipcode.classList.add("input-wrong");
                     document.getElementById("zip_text").classList.add("input-wrong-text");
-                    errorstr += "Postleitzahl darf nicht leer sein!";
+                    errorstr += "Postleitzahl darf nicht leer  oder unter 4 Zeichen sein!";
+                    ret = false;
+                }
+                if(document.login.zipcode.value.length > 10){
+                    document.login.zipcode.classList.add("input-wrong");
+                    document.getElementById("zip_text").classList.add("input-wrong-text");
+                    errorstr += "Postleitzahl darf nicht länger als 10 Zeichen Sein!";
                     ret = false;
                 }
                 if (document.login.phonenr.value.length === 0) {
