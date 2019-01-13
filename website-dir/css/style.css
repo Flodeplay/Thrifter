@@ -280,10 +280,16 @@ main article {
     max-width: 667px;
     min-height: 90vh;
     margin: 10vh auto 0 auto;
+}
+.post-upload-inner .post-upload-head{
+    padding: 20px 30px;
     border-radius: 25px 25px 0 0;
+    background-color: #f3f3f3;
+}
+.post-upload-body{
+    padding: 20px 30px;
     background-color: white;
 }
-
 .contact-form .textarea{ min-height:220px; resize:none;}
 .form-control{height:49px;}
 

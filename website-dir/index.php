@@ -117,7 +117,7 @@
             <div class="content">
                 Hast du noch Platz im Kleiderschrank?
                 <div>
-                    <a class="btn btn-lg btn-outline-light" href="app/login.php">
+                    <a class="btn btn-lg btn-outline-light text-white" href="app/login.php">
                         Anmelden!
                     </a>
                 </div>

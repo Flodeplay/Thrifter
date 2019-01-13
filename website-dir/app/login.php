@@ -1,30 +1,43 @@
-<?php
-require_once 'funcs.inc.php';
-error_reporting(0);
-session_destroy();
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <title>Login - Thrifter.</title>
+
     <!-- Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
-    <!-- external stylesheets-->
+
+    <!-- extern stylesheets-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- custom style-->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <!-- scripts-->
     <script src="../JS/jquery-3.3.1.min.js"></script>
     <script src="../JS/popper.min.js"></script>
     <script src="../JS/bootstrap.min.js"></script>
     <script src="../JS/vh-fix.js"></script>
     <script src="../JS/base.js"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="../assets/favicons/safari-pinned-tab.svg" color="#ff6a79">
+    <link rel="shortcut icon" href="../assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>Login - Thrifter.</title>
+    <?php
+    require_once 'funcs.inc.php';
+    error_reporting(0);
+    session_start();
+    ?>
 </head>
 <body>
 <main class="login-main">
@@ -49,7 +62,10 @@ session_start();
                             $data = mysqli_fetch_assoc($query);
                             $user = new user($data["u_id"], $data["u_username"], $data["u_forename"], $data["u_surname"], $data["u_email"], $data["u_createtime"], $data["u_description"], $data["u_image"], $data["u_phonenumber"], $data["u_zipcode"]);
                             $_SESSION["u_user"] = $user;
-                            header("Location: home.php");
+                            echo /** @lang javascript */
+                            "<script type='text/javascript'>
+                                window.location.href = 'http://localhost/WS-P1-Thrifter/website-dir/app/home.php';
+                                </script>";
                         } else {
                             echo "<h4 class='mb-3 text-danger'>Passwort Oder Benutzername ist Falsch!</h4>";
                             exit(file_get_contents('../html/login.html'));
@@ -76,7 +92,10 @@ session_start();
                                 $data = mysqli_fetch_assoc($query);
                                 $user = new user($data["u_id"], $data["u_username"], $data["u_forename"], $data["u_surname"], $data["u_email"], $data["u_createtime"], $data["u_description"], $data["u_image"], $data["u_phonenumber"], $data["u_zipcode"]);
                                 $_SESSION["u_user"] = $user;
-                                header("Location: home.php");
+                                echo /** @lang javascript */
+                                "<script type='text/javascript'>
+                                window.location.href = 'http://localhost/WS-P1-Thrifter/website-dir/app/home.php';
+                                </script>";
                             }
                         } catch (Exception $e) {
                             echo "<h4 class='mb-3 text-danger'>" . $e->getMessage() . " Please register again!</h4>";

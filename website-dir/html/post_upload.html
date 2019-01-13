@@ -26,49 +26,89 @@
 </head>
 <body>
 <div class="post-upload-modal">
-    <div class="post-upload-inner p-3">
-        <div class="post-upload-head row d-flex justify-content-between bg-light">
+    <div class="post-upload-inner">
+        <div class="post-upload-head row d-flex justify-content-between ">
             <a onclick="closePost()"><i class="fas fa-times fa-lg"></i></a>
             <a onclick="validatepost()" class="text-primary">fertig</a>
         </div>
-        <hr>
         <div class="post-upload-body py-3">
             <div class="form-outer">
-                <form name="newPost">
+                <div id="postupload-error-message" class="my-3 text-danger"></div>
+                <form name="newPost" onsubmit="return validatepost_input()">
                     <label for="picture">Bild</label>
-                    <input id="picture" type="file" class="form-control-file">
+                    <input id="picture" type="file" name="picture" class="form-control-file">
 
-                    <label for="titel">Titel</label>
-                    <input id="titel" class="form-control" type="text">
+                    <label id="title_text" for="titel">Titel</label>
+                    <input id="titel" class="form-control" name="title" type="text">
 
                     <label for="description">Beschreibung</label>
-                    <input id="description" class="form-control" type="text">
+                    <input id="description" class="form-control" name="description" type="text">
 
-                    <label>Preis</label>
-                    <input id="price" type="number" class="form-control">
+                    <label for="price">Preis</label>
+                    <input id="price" type="number" name="price" class="form-control">
 
-                    <label for="input-1">Farbe</label>
-                    <input id="input-1" class="form-control" type="color">
+                    <label for="color">Farbe</label>
+                    <input id="color" class="form-control" name="color" type="color">
 
-                    <label>Marke</label>
-                    <input type="checkbox" class="form-control">
+                    <label for="brand">Marke</label>
+                    <input id="brand" type="text" name="brand" class="form-control">
 
-                    <label>Gender</label>
-                    <input type="radio" class="form-control">
+                    <label for="gender">Gender</label>
+                    <input id="gender" type="text" name="gender" class="form-control">
 
-                    <label>Zustand</label>
-                    <input type="radio" class="form-control">
+                    <label for="zustand">Zustand</label>
+                    <input id="zustand" type="text" name="condition" class="form-control">
 
-                    <label>Kategorie</label>
-                    <input type="radio" class="form-control">
+                    <label for="category">Kategorie</label>
+                    <input id="category" type="text" name="category" class="form-control">
 
-                    <label>Größe</label>
-                    <input type="radio" class="form-control">
+                    <label for="size">Größe</label>
+                    <input id="size" type="text" name="size" class="form-control">
                     <button type="submit" value="submit" class="btn btn-secondary rounded-0 w-100 my-1 login-input">
                         Hochladen
                     </button>
-
+                    <script>$(function () {
+                       validatepost_input();
+                    });</script>
                 </form>
+                <script>
+                    function validatepost_input() {
+                        resetpostupload();
+                        var validate = true;
+                        var errorstring = "";
+                        if(document.newPost.title.value.length === 0){
+                            errorstring += "Titel darf nicht leer sein!";
+                            document.newPost.title.classList.add("input-wrong");
+                            document.getElementById("title_text").classList.add("input-wrong-text");
+                            validate = false;
+                        }
+                        if(document.newPost.description.value.length === 0){
+                            errorstring += "Beschreibung darf nicht leer sein!";
+                            document.newPost.description.classList.add("input-wrong");
+                            document.getElementById("title_text").classList.add("input-wrong-text");
+                            validate = false;
+                        }
+                        if (!validate) {
+                            $("#postupload-error-message").text(errorstring);
+                        }
+                        return validate;
+                    }
+                    function resetpostupload() {
+                        try {
+                            var c = document.newPost.children;
+                            for (let i = 0; i < c.length; i++) {
+                                if (c[i].classList.contains("input-wrong") || c[i].classList.contains("input-wrong-text")) {
+                                    c[i].classList.remove("input-wrong");
+                                    c[i].classList.remove("input-wrong-text");
+                                }
+                            }
+                            $("#error-message").text("");
+                        }
+                        catch (e) {
+                            console.log(e);
+                        }
+                    }
+                </script>
             </div>
         </div>
     </div>
