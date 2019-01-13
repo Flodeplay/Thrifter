@@ -1,7 +1,6 @@
 <?php
 error_reporting(0);
 require_once 'funcs.inc.php';
-require_once 'user.php';
 session_start();
 
 try {

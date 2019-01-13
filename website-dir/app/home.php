@@ -1,5 +1,4 @@
 <?php
-
 require "funcs.inc.php";
 error_reporting(0);
 session_start();
@@ -84,24 +83,22 @@ echo file_get_contents('../html/bottommenu.html');
     <section class="my-3">
         <div class="display-4">Merkliste</div>
         <hr>
-        <div class="row">
             <?php
             /**
              * @var user $user
              */
             $user = $_SESSION["u_user"];
             $user->getWishlist(2);
+            echo "<a href='wishlist.php'><h4 class='my-3 text-center'>Mehr</h4></a>";
             ?>
-
-        </div>
-        <a href="#"><h4 class="my-3 text-center">Mehr</h4></a>
     </section>
     <hr>
     <section class="my-3">
         <div class="display-4">Meine Produkte</div>
         <hr>
         <?php
-        getPostsbyUser($_SESSION["u_user"]->u_id);
+            getPostsbyUser($_SESSION["u_user"]->u_id, 2);
+            echo "<a href='meineProdukte.php'><h4 class='my-3 text-center'>Mehr</h4></a>";
         ?>
     </section>
 

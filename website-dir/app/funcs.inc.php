@@ -1,6 +1,6 @@
 <?php
-require 'post.php';
-require 'user.php';
+require 'class/post.php';
+require 'class/user.php';
 /**
  * Checks if user is logged in
  * @param void
@@ -59,10 +59,10 @@ function establishDB()
  * @date: 19.11.2018
  *
  */
-function getPostsbyUser($user_id)
+function getPostsbyUser($user_id, $count = 10)
 {
     if (isset($user_id)) {
-        $posts =  array();
+        $posts = array();
         $query = mysqli_query(establishDB(), "select p_post.p_id,p_post.p_title,p_post.p_price, p_post.p_image,p_post.p_description,p_post.p_createtime, p_post.p_u_user,col_colors.col_name as p_col_color, b_brands.b_name as p_b_brand,g_genders.g_name as p_g_gender,con_conditions.con_description as p_con_condition,ca_categories.ca_name as p_ca_category,s_sizes.s_unittype as p_s_size_type,s_sizes.s_value as p_s_size_value, u_zipcode from p_post
                                                     inner join u_users on p_u_user = u_id
                                                     inner join col_colors on p_post.p_col_color = col_colors.col_id
@@ -71,11 +71,11 @@ function getPostsbyUser($user_id)
                                                     inner join con_conditions on p_post.p_con_condition = con_conditions.con_id
                                                     inner join ca_categories on p_post.p_ca_category = ca_categories.ca_id
                                                     inner join s_sizes on p_post.p_s_size = s_sizes.s_id
-                                                    WHERE p_u_user = " . $user_id . ";");
+                                                    WHERE p_u_user = " . $user_id . " LIMIT " . $count . ";");
         if (mysqli_num_rows($query) > 0) {
             $index = 0;
             while ($row = mysqli_fetch_assoc($query)) {
-                $posts[$index] = new post($row["p_id"],$row["p_title"],$row["p_price"],$row["p_image"],$row["p_description"],$row["p_createtime"],$row["p_u_user"],$row["p_col_color"],$row["p_b_brand"],$row["p_g_gender"],$row["p_con_condition"], $row["p_ca_category"], ($row["p_s_size_value"] . " (" . $row["p_s_size_type"] . ")" ),$row["u_zipcode"]);
+                $posts[$index] = new post($row["p_id"], $row["p_title"], $row["p_price"], $row["p_image"], $row["p_description"], $row["p_createtime"], $row["p_u_user"], $row["p_col_color"], $row["p_b_brand"], $row["p_g_gender"], $row["p_con_condition"], $row["p_ca_category"], ($row["p_s_size_value"] . " (" . $row["p_s_size_type"] . ")"), $row["u_zipcode"]);
                 $index++;
             }
             printProduct($posts);

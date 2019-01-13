@@ -1,7 +1,6 @@
 <?php
 //header('Content-type: text/plain; charset=utf-8');
 require_once 'funcs.inc.php';
-require_once 'user.php';
 session_start();
 
 

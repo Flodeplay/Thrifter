@@ -1,7 +1,6 @@
 <?php
 error_reporting(0);
 require_once "funcs.inc.php";
-require_once "user.php";
 session_start();
 try{
     $user = getUserbyName(mysqli_real_escape_string(establishDB(),$_GET["username"]));
@@ -42,7 +41,9 @@ echo file_get_contents('../html/navs.html');
 echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
-    <span>User</span>
+    <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
+    <span><?php if (isset($post)){echo $user->u_username;}else{echo "Fehler";}?></span>
+    <i></i>
 </header>
 <main class="main-header">
     <section class="bg-light shadow mt-lg-5 px-4">

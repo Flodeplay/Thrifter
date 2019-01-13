@@ -1,16 +1,15 @@
 <?php
 error_reporting(0);
 require_once "funcs.inc.php";
-require_once "user.php";
 session_start();
 if(isset($_GET["post"])) {
     try{
         $post = getPostbyID(mysqli_real_escape_string(establishDB(),$_GET["post"]));
         $user = getUserbyID($post->p_u_user);
     }catch (Exception $e){
-        echo $e->getMessage();
+        unset($post);
+        unset($user);
     }
-
 }
 ?>
 <!DOCTYPE html>
@@ -46,7 +45,7 @@ echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
     <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
-    <span><?php echo $post->p_title;?></span>
+    <span><?php if (isset($post)){echo $post->p_title;}else{echo "Fehler";}?></span>
     <i></i>
 </header>
 <main class="main-header">

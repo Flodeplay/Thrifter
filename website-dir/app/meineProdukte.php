@@ -50,14 +50,16 @@ checkSession();
 <?php echo file_get_contents('../html/navs.html'); ?>
 <header class="shadow">
     <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
-    <span>Merkliste</span>
-    <i class="fas fa-sliders-h fa-lg"></i>
+    <span>Meine Produkte</span>
+    <i></i>
 </header>
 <main class="main-header">
     <section>
-            <?php $user = $_SESSION["u_user"];
-            $user->getWishlist(10);
-            ?>
+        <?php
+        /** @var  $user user*/
+        $user = $_SESSION["u_user"];
+        getPostsbyUser($user->u_id);
+        ?>
     </section>
 </main>
 </body>

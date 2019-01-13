@@ -52,6 +52,7 @@ class user implements inter_update
     }
 
 
+
     /**
      * Gibt die Wishlist eines Users zurück user
      *@param $count int der favourites die zurück gegeben werden soll, standart 10
@@ -62,7 +63,7 @@ class user implements inter_update
     function getWishlist($count = 10)
     {
         $conn = establishDB();
-        $query = mysqli_query($conn, "SELECT p_post.p_id FROM f_favorites INNER JOIN p_post  on f_favorites.f_p_post = p_post.p_id WHERE u_id = " . $this->u_id . " LIMIT " . $count . ";");
+        $query = mysqli_query($conn, "SELECT p_post.p_id FROM f_favorites INNER JOIN p_post  on f_favorites.f_p_post = p_post.p_id WHERE f_u_user = " . $this->u_id . " LIMIT " . $count . ";");
         if (mysqli_num_rows($query) > 0) {
             $index = 0;
             while ($row = mysqli_fetch_assoc($query)) {
@@ -72,7 +73,7 @@ class user implements inter_update
             printProduct($posts);
             mysqli_close($conn);
         } else {
-            return false;
+            echo "Merkliste ist leer!";
         }
     }
 
