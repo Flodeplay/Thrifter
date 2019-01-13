@@ -139,30 +139,6 @@ nav .sidemenu-open .content li, nav .sidemenu-open .content hr, nav .sidemenu-op
     animation: 300ms opacity-0-1 ease-in 100ms running both;
 }
 
-nav .sidemenu-open .content #nav-link-1 {
-    animation-delay: 100ms;
-}
-
-nav .sidemenu-open .content #nav-link-2 {
-    animation-delay: 150ms;
-}
-
-nav .sidemenu-open .content #nav-link-3 {
-    animation-delay: 200ms;
-}
-
-nav .sidemenu-open .content #nav-link-4 {
-    animation-delay: 250ms;
-}
-
-nav .sidemenu-open .content #nav-link-5 {
-    animation-delay: 300ms;
-}
-
-nav .sidemenu-open .content #nav-link-6 {
-    animation-delay: 350ms;
-}
-
 @keyframes sidemenu-open {
     from {
         visibility: hidden;
