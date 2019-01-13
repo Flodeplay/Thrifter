@@ -64,9 +64,6 @@ echo file_get_contents('../html/bottommenu.html');
                     <i class="fas fa-plus fa-2x"></i>Neu
                 </div>
             </a>
-            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
-                <i class="fas fa-home fa-2x"></i>Home
-            </div>
             <a href="wishlist.php">
                 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
                     <i class="fas fa-list-ul fa-2x"></i>Merkliste

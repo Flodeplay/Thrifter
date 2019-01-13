@@ -51,6 +51,9 @@ echo file_get_contents('../html/bottommenu.html');
     <i></i>
 </header>
 <main class="main-header">
+    <?php
+
+        ?>
     <section class="my-3">
     </section>
 </main>

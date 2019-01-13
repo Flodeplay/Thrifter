@@ -227,6 +227,13 @@ function getPostbyID($post_id){
         throw new Exception("Parameter darf nicht 0 sein");
     }
 }
+
+/**
+ *
+ */
+function getPoststime($post_id, $count = 10, $start){
+
+}
 /** @var post[] $posts */
 function printProduct($posts)
 {
