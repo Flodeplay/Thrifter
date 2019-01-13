@@ -5,10 +5,10 @@ require_once "user.php";
 session_start();
 if(isset($_GET["post"])) {
     try{
-        $post = getPostbyID(mysqli_real_escape_string($_GET["post"]));
+        $post = getPostbyID(mysqli_real_escape_string(establishDB(),$_GET["post"]));
         $user = getUserbyID($post->p_u_user);
     }catch (Exception $e){
-
+        echo $e->getMessage();
     }
 
 }

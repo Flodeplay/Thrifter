@@ -43,20 +43,20 @@ class post
      */
     public function __construct($p_id, $p_title, $p_price, $p_image, $p_description, $p_createtime, $p_u_user, $p_col_color, $p_b_brand, $p_g_gender, $p_con_condition, $p_ca_category, $p_s_size, $p_location)
     {
-        $this->p_id = $p_id;
-        $this->p_title = $p_title;
-        $this->p_price = $p_price;
-        $this->p_image = $p_image;
-        $this->p_description = $p_description;
-        $this->p_createtime = $p_createtime;
-        $this->p_u_user = $p_u_user;
-        $this->p_col_color = $p_col_color;
-        $this->p_b_brand = $p_b_brand;
-        $this->p_g_gender = $p_g_gender;
-        $this->p_con_condition = $p_con_condition;
-        $this->p_ca_category = $p_ca_category;
-        $this->p_s_size = $p_s_size;
-        $this->p_location = $p_location;
+        $this->setPId($p_id);
+        $this->setPTitle($p_title);
+        $this->setPPrice($p_price);
+        $this->setPImage($p_image);
+        $this->setPDescription($p_description);
+        $this->setPCreatetime($p_createtime);
+        $this->setPUUser($p_u_user);
+        $this->setPColColor($p_col_color);
+        $this->setPBBrand($p_b_brand);
+        $this->setPGGender($p_g_gender);
+        $this->setPConCondition($p_con_condition);
+        $this->setPCaCategory($p_ca_category);
+        $this->setPSSize($p_s_size);
+        $this->setPLocation($p_location);
     }
 
 

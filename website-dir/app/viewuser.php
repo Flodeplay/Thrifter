@@ -3,6 +3,12 @@ error_reporting(0);
 require_once "funcs.inc.php";
 require_once "user.php";
 session_start();
+try{
+    $user = getUserbyName(mysqli_real_escape_string(establishDB(),$_GET["username"]));
+}catch (Exception $e){
+    unset($user);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +47,8 @@ echo file_get_contents('../html/bottommenu.html');
 <main class="main-header">
     <section class="bg-light shadow mt-lg-5 px-4">
         <?php
-        if (isset($_GET["username"])) {
+        if (isset($user)) {
             try {
-                $user = getUserbyName($_GET["username"]);
                 echo "<div class='row'>
                     <div class='col-md-6 d-flex justify-content-center'>
                             <img src='../assets/users/" . $user->u_image . "' class='rounded-circle img-fluid' style ='max-height: 150px;'>
