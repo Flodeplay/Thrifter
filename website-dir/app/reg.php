@@ -22,9 +22,6 @@ try {
     } else {
         throw new Exception("Deine Passwörter müssen gleich sein!");
     }
-    if ($_POST['birthdate']) {
-        $user->inter_u_birthdate($_POST['birthdate']);
-    }
     if ($_POST['zipcode']) {
         $user->inter_u_zip($_POST['zipcode']);
     }

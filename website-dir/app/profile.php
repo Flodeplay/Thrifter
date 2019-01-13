@@ -186,8 +186,6 @@ checkSession();
                             <input type="password" name="password1" id="password1" class="form-control" placeholder="**********" aria-label="Password">
                             <label>Passwort wiederholen</label>
                             <input type="password" name="password2" id="password2" class="form-control" placeholder="**********" aria-label="Password">
-                            <label>Geburtstag</label>
-                            <input type="text" name="birthdate" id="birthdate" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_birthdate;?>" aria-label="Birthdate">
                             <label>Postleitzahl</label>
                             <input type="text" name="zipcode" id="zipcode" class="form-control" placeholder="<?php echo $_SESSION['u_user']->u_zipcode;?>" aria-label="Zipcode">
                             <label>Telefonnummer</label>
@@ -215,17 +213,16 @@ checkSession();
                                     var forename = $('#forename').val();
                                     var pwd1 = $('#password1').val();
                                     var pwd2 = $('#password2').val();
-                                    var birthdate = $('#birthdate').val();
                                     var zipcode = $('#zipcode').val();
                                     var phonenumber = $('#phonenumber').val();
                                     var description = $('#description').val();
-                                    if (email === '' && surname === '' && forename === '' && pwd1 === '' && pwd2 === '' && birthdate === '' && zipcode === '' && phonenumber === '' && description === '') {
+                                    if (email === '' && surname === '' && forename === '' && pwd1 === '' && pwd2 === '' && zipcode === '' && phonenumber === '' && description === '') {
                                         $('#error_message').html("Keine Änderungen vorgenommen!");
                                     } else {
                                         $.ajax({
                                             url: "reg.php",
                                             method: "POST",
-                                            data: {email:email, surname:surname, forename:forename, pwd1:pwd1, pwd2:pwd2, birthdate:birthdate, zipcode:zipcode, phonenumber:phonenumber, description:description},
+                                            data: {email:email, surname:surname, forename:forename, pwd1:pwd1, pwd2:pwd2, zipcode:zipcode, phonenumber:phonenumber, description:description},
                                             success:function (data) {
                                                 /*
                                                 if (data == 'error') {
