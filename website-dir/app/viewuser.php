@@ -2,6 +2,7 @@
 error_reporting(0);
 require_once "funcs.inc.php";
 session_start();
+checkSession();
 try{
     $user = getUserbyName(mysqli_real_escape_string(establishDB(),$_GET["username"]));
 }catch (Exception $e){

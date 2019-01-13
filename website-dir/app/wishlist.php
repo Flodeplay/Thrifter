@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * user: flori
- * Date: 20.11.2018
- * Time: 20:50
- */
 require_once "funcs.inc.php";
 error_reporting(0);
 session_start();

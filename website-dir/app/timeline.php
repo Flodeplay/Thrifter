@@ -2,7 +2,7 @@
 require_once "funcs.inc.php";
 error_reporting(0);
 session_start();
-//checkSession();
+checkSession();
 ?>
 <!DOCTYPE html>
 <html lang="de">
