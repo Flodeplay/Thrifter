@@ -79,3 +79,6 @@ $(document).scroll(function () {
     }
 })
 });
+function postliken(p_id,) {
+    //Todo methode schreiben
+}
