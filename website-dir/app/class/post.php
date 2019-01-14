@@ -80,6 +80,29 @@ class post
                         </div></a>
                         </div>";
     }
+
+    /**
+     * @return string
+     */
+    public function timeline_post()
+    {
+        $user = getUserbyID($this->p_u_user);
+        return "<div class=\"timeline-product\">
+                    <div class=\"timeline-product-head\">
+                        <a href='viewuser.php?username=$user->u_usernames'</a>
+                            <div class='timeline-product-head-inner'>
+                                <img class='rounded-circle' src='../assets/users/$user->u_image'>
+                                <div><span>$user->u_username</span><span>$user->u_zipcode</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <img src=\"../assets/posts/$this->p_image\">
+                    <div class=\"timeline-product-body\"><h3>$this->p_title</h3><i
+                                class=\"fas fa-heart fa-2x text-success\"></i></div>
+                    <div class=\"timeline-product-footer\"><h4>$this->p_price</h4><a href='viewpost.php?post=$this->p_id'><h4>Mehr</h4></a></div>
+                </div>";
+    }
     public function __toString2(){
         return  " " .
             $this->p_id ." " .

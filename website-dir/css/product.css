@@ -27,3 +27,45 @@
 .card-img-top {
     border-radius: 1rem 1rem 0 0;
 }
+
+.timeline-product{
+    border-bottom: 1px;
+    max-width: 700px;
+    background-color: white;
+}
+.timeline-product .timeline-product-head{
+    margin: 0 5px;
+}
+.timeline-product .timeline-product-head .timeline-product-head-inner{
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+.timeline-product-head-inner div{
+    display: flex;
+    flex-direction: column;
+}
+.timeline-product-head-inner span{
+    margin-left: 10px;
+}
+.timeline-product-head-inner img{
+    max-height: 40px;
+    width: auto
+}
+.timeline-product > img{
+    width: 100%; height: auto; max-width: 700px
+}
+.timeline-product .timeline-product-body{
+    margin: 10px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.timeline-product .timeline-product-footer{
+    margin: 0 10px;padding: 0  10px 10px;
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+}

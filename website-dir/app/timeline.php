@@ -42,7 +42,7 @@ checkSession();
 </head>
 <body>
 <?php
-/*echo file_get_contents('../html/navs.html');*/
+echo file_get_contents('../html/navs.html');
 echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
@@ -61,14 +61,23 @@ echo file_get_contents('../html/bottommenu.html');
         <div id="search-result" >
         </div>
     </div>
-    <section id="timeline" class="d-flex">
-        <div class="timeline-product" style="background-color: white; border-bottom: 1px; border-color: #4e555b; max-width: 700px">
-            <div style="background-color: white;margin: 0 5px"><a href='viewuser.php?username="franz"'><div class='card-body d-flex flex-row' style="font-size: 85%;"><img style='max-height: 40px; width: auto' class='rounded-circle' src='../assets/users/Bild_Manu.jpg'><div class="d-flex flex-column"><span class='pl-3'>Manuel</span><span class='pl-3'>1120</span></div></div></a></div>
-            <img src="../assets/posts/1.png" style="width: 100%; height: auto; max-width: 700px">
-            <div style="background-color: white; margin: 10px 20px 0" class="d-flex justify-content-between align-items-center"><h3>Hoodie</h3><i class="fas fa-heart fa-2x text-success"></i></div>
-            <div style="background-color: white; margin: 0 10px;padding: 0  10px 10px; border-bottom: 1px solid black; " class="d-flex justify-content-between align-items-center"><h4>100€</h4><a><h4>Mehr</h4></a></div>
-        </div>
+    <section id="timeline" class="d-flex flex-column">
     </section>
+    <script>
+            var result = $("#timeline");
+            $.get("compute-timeline.php", {}).done(function (data) {
+                result.html(data + result.html());
+            });
+        $(document).scroll(function () {
+            if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                var result = $("#timeline");
+                    $.get("compute-timeline.php", {}).done(function (data) {
+                        result.html(data + result.html());
+                    });
+                }
+            });
+
+    </script>
 </main>
 </body>
 </html>

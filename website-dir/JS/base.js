@@ -43,6 +43,8 @@ $(function () {
 $(document).ready(function() {
     $('#search').click(function () {
         $("#search-box").show();
+        $('html').addClass('freezePage');
+        $('body').addClass('freezePage');
         $('#search-box input[type="text"]').on("keyup input", function () {
             /* Get input value on change */
             var inputVal = $(this).val();
@@ -58,6 +60,8 @@ $(document).ready(function() {
         });
         $("#search-cancel").click(function () {
             $("#search-box").hide();
+            $('html').removeClass('freezePage');
+            $('body').removeClass('freezePage');
         })
     });
 });
