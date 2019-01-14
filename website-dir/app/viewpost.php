@@ -45,12 +45,12 @@ echo file_get_contents('../html/navs.html');
 echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
-    <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
+    <a onclick="window.history.back();"><i class="fa fa-chevron-left fa-lg"></i></a>
     <span><?php if (isset($post)){echo $post->p_title;}else{echo "Fehler";}?></span>
     <i></i>
 </header>
 <main class="main-header">
-    <section class="bg-light shadow mt-5 px-4">
+    <section class="bg-light shadow px-4">
         <?php
         if(isset($post)){
             echo "<div class='row'>";

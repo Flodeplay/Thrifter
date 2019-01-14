@@ -42,7 +42,7 @@ echo file_get_contents('../html/navs.html');
 echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
-    <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
+    <a onclick="window.history.back();"><i class="fa fa-chevron-left fa-lg"></i></a>
     <span><?php if (isset($user)){echo $user->u_username;}else{echo "Fehler";}?></span>
     <i></i>
 </header>

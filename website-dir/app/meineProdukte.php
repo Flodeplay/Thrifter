@@ -49,7 +49,7 @@ checkSession();
 <body>
 <?php echo file_get_contents('../html/navs.html'); ?>
 <header class="shadow">
-    <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
+    <a onclick="window.history.back();"><i class="fa fa-chevron-left fa-lg"></i></a>
     <span>Meine Produkte</span>
     <i></i>
 </header>

@@ -65,3 +65,17 @@ $(document).ready(function() {
         })
     });
 });
+$(document).ready(function() {
+var result = $("#timeline");
+$.get("compute-timeline.php", {}).done(function (data) {
+    result.html(data + result.html());
+});
+$(document).scroll(function () {
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        var result = $("#timeline");
+        $.get("compute-timeline.php", {}).done(function (data) {
+            result.html(data + result.html());
+        });
+    }
+})
+});

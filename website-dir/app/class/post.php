@@ -89,7 +89,7 @@ class post
         $user = getUserbyID($this->p_u_user);
         return "<div class=\"timeline-product\">
                     <div class=\"timeline-product-head\">
-                        <a href='viewuser.php?username=$user->u_usernames'</a>
+                        <a href='viewuser.php?username=$user->u_username'</a>
                             <div class='timeline-product-head-inner'>
                                 <img class='rounded-circle' src='../assets/users/$user->u_image'>
                                 <div><span>$user->u_username</span><span>$user->u_zipcode</span>

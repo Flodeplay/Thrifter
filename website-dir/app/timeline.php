@@ -46,7 +46,7 @@ echo file_get_contents('../html/navs.html');
 echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
-    <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
+    <a onclick="window.history.back();"><i class="fa fa-chevron-left fa-lg"></i></a>
     <span>Entdecken</span>
     <i id="search" class="fas fa-search fa-lg"></i>
 </header>
@@ -63,21 +63,6 @@ echo file_get_contents('../html/bottommenu.html');
     </div>
     <section id="timeline" class="d-flex flex-column">
     </section>
-    <script>
-            var result = $("#timeline");
-            $.get("compute-timeline.php", {}).done(function (data) {
-                result.html(data + result.html());
-            });
-        $(document).scroll(function () {
-            if($(window).scrollTop() + $(window).height() == $(document).height()) {
-                var result = $("#timeline");
-                    $.get("compute-timeline.php", {}).done(function (data) {
-                        result.html(data + result.html());
-                    });
-                }
-            });
-
-    </script>
 </main>
 </body>
 </html>
