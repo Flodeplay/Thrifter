@@ -293,6 +293,27 @@ main article {
 .contact-form .textarea{ min-height:220px; resize:none;}
 .form-control{height:49px;}
 
+/*Search*/
+#search-box{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    top: 85px;
+    left: 0;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 15px;
+}
+#search-box #search-cancel{
+    font-size: 120%;
+}
+@media (max-width: 576px) {
+    #search-box{
+        top: 69px !important;
+    }
+}
 /*
 .btn_container {
     position: absolute;

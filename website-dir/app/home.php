@@ -46,9 +46,21 @@ echo file_get_contents('../html/navs.html');
 echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
+    <i></i>
     <span>Home</span>
+    <i id="search" class="fas fa-search fa-lg"></i>
 </header>
 <main class="main-header">
+    <div id="search-box">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-10">
+                <input type="text" autocomplete="off" class="form-control" placeholder="Suchen">
+            </div>
+            <div id="search-cancel" class="text-primary" style="cursor: pointer">fertig</div>
+        </div>
+        <div id="search-result" >
+        </div>
+    </div>
     <section class="pt-0">
         <?php
 

@@ -48,12 +48,19 @@ echo file_get_contents('../html/bottommenu.html');
 <header class="shadow">
     <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
     <span>Entdecken</span>
-    <i></i>
+    <i id="search" class="fas fa-search fa-lg"></i>
 </header>
 <main class="main-header">
-    <?php
-
-        ?>
+    <div id="search-box">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-10">
+                <input type="text" autocomplete="off" class="form-control" placeholder="Suchen">
+            </div>
+            <div id="search-cancel" class="text-primary" style="cursor: pointer">fertig</div>
+        </div>
+        <div id="search-result" >
+        </div>
+    </div>
     <section class="my-3">
     </section>
 </main>

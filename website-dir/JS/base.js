@@ -40,3 +40,24 @@ $(function () {
         $('body').removeClass('freezePage');
     });
 });
+$(document).ready(function() {
+    $('#search').click(function () {
+        $("#search-box").show();
+        $('#search-box input[type="text"]').on("keyup input", function () {
+            /* Get input value on change */
+            var inputVal = $(this).val();
+            var result = $(this).parents(".row").siblings("#search-result");
+            if (inputVal.length) {
+                console.log(inputVal);
+                $.get("compute-search.php", {term: inputVal}).done(function (data) {
+                    result.html(data);
+                });
+            } else {
+                result.empty();
+            }
+        });
+        $("#search-cancel").click(function () {
+            $("#search-box").hide();
+        })
+    });
+});
