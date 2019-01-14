@@ -342,8 +342,8 @@
             </div>
             <div class="col-sm-6">
                 <h1>Links</h1>
-                <p>
-                    <a></a>
+                <p style="padding-left: 15px">
+                    <a href="html/impressum.html">impressum</a>
                 </p>
             </div>
         </div>

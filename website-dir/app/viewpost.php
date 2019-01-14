@@ -50,7 +50,7 @@ echo file_get_contents('../html/bottommenu.html');
     <i></i>
 </header>
 <main class="main-header">
-    <section class="bg-light shadow px-4">
+    <section class="bg-light shadow px-4 mt-lg-5 px-4">
         <?php
         if(isset($post)){
             echo "<div class='row'>";

@@ -1,10 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
+    <title>Thrifter.</title>
+
+    <!-- Meta Tags-->
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
+
+    <!-- extern stylesheets-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- custom style-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!-- scripts-->
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <script src="../JS/popper.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/vh-fix.js"></script>
+    <script src="../JS/base.js"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="../assets/favicons/safari-pinned-tab.svg" color="#ff6a79">
+    <link rel="shortcut icon" href="../assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
-
+<nav id="nav" class="shadow">
+    <picture>
+        <source media="(min-width: 720px)" srcset="../assets/logo/Logo.svg">
+        <source media="(max-width: 720px)" srcset="../assets/logo/Logo-short.svg">
+        <img src="../assets/logo/Logo.svg" alt="Thrifter.">
+    </picture>
+    <div>
+        <a data-toggle="modal"
+           data-target="#socialMedia"><i class="fas fa-heart fa-2x text-success"></i></a>
+        <i class="fas fa-bars fa-2x menu-button"></i>
+    </div>
+    <div class="sidenav">
+        <div class="sidemenu col-md-12 col-lg-6 col-xl-3 shadow">
+            <div class="content">
+                <ul class="p-0 m-0">
+                    <li style="animation-delay: 100ms;"><a href="home.php">Home</a></li>
+                    <li style="animation-delay: 130ms;"><a href="../index.php">Abmelden</a></li>
+                    <li style="animation-delay: 190ms;"><a href="../html/help.html">Hilfe</a></li>
+                    <li style="animation-delay: 220ms;"><a href="../html/impressum.html">Impressum</a></li>
+                </ul>
+                <hr style="animation-delay: 250ms;">
+                <div style="animation-delay: 280ms;" class="row font-weight-bold justify-content-center mt-5"><i
+                        class="fab fa-instagram mx-3 fa-2x"></i><i
+                        class="fab fa-facebook-f fa-2x mx-3"></i><i class="fab fa-twitter fa-2x mx-3"></i></div>
+                <div style="animation-delay: 310ms;" class="my-3 h4 text-center">office@Thrifter.at</div>
+                <div style="animation-delay: 340ms;" class="sidemenu-close-btn text-center"><i class="fas fa-chevron-up fa-2x"></i></div>
+            </div>
+        </div>
+        <div style="animation-delay: 370ms;" class="sidemenu-spacing d-none d-lg-block col-lg-6 col-xl-9 order-first">
+        </div>
+    </div>
+</nav>
+<div class="modal fade" tabindex="-1" id="socialMedia" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 bg-transparent">
+            <div class="modal-header border-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i
+                        class="fas text-white fa-times fa-lg"></i></span> </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 d-flex text-white justify-content-center">
+                        <a href="https://www.twitter.com/AtThrifter" target="_blank"><i class="fab fa-twitter fa-10x"></i></a>
+                    </div>
+                    <div class="col-md-6 d-flex text-white justify-content-center">
+                        <a href="https://www.instagram.com/thrifter.at" target="_blank"><i class="fab fa-instagram fa-10x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="shadow">
+    <a onclick="window.history.back();"><i class="fa fa-chevron-left fa-lg"></i></a>
+    <span>Impressum</span>
+    <i></i>
+</header>
+<main class="main-header">
+    <h1 class='display-3'>Impressum</h1>
+    <p>Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
+    <p>    Thrifter</p>
+     <address>  Köllner Manuel, Parfuss Florian, Bruckner Maximilian, Czipke Michael
+         E-Mail: office@thrifter.at
+        Spengergasse 5, HTL Spengergasse
+        1050 Wien,
+        Österreich</address>
+    <p>Unternehmensgegenstand: Second-hand online plattform</p>
+    <p class="text-danger" style="white-space: pre-wrap;      /* CSS3 */
+   white-space: -moz-pre-wrap; /* Firefox */
+   white-space: -o-pre-wrap;   /* Opera 7 */
+   word-wrap: break-word;      /* IE */">Projekt im Rahmen eines Schulprojektes des Projektmanagment Unterrichts<br>
+        <a href="http://www.spengergasse.at/content/impressum"> http://www.spengergasse.at/content/impressum</a></p>
+</main>
 </body>
-</html>
