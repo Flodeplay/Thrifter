@@ -50,7 +50,7 @@ echo file_get_contents('../html/bottommenu.html');
     <span>Entdecken</span>
     <i id="search" class="fas fa-search fa-lg"></i>
 </header>
-<main class="main-header">
+<main class="main-header p-0">
     <div id="search-box">
         <div class="row align-items-center justify-content-center">
             <div class="col-10">
@@ -61,7 +61,11 @@ echo file_get_contents('../html/bottommenu.html');
         <div id="search-result" >
         </div>
     </div>
-    <section class="my-3">
+    <section id="timeline" class="d-flex">
+        <div class="timeline-product" style="background-color: white; border-bottom: 1px; border-color: #4e555b; max-width: 700px">
+            <div style="background-color: white; border-bottom: 1px solid black; margin: 0 5px"><a href='viewuser.php?username="franz"'><div class='card-body'><img style='max-height: 40px; width: auto' class='rounded-circle' src='../assets/users/Bild_Manu.jpg'><span class='pl-3'>Manuel</span></div></a></div>
+            <img src="../assets/posts/1.png" style="width: 100%; height: auto; max-width: 700px">
+        </div>
     </section>
 </main>
 </body>

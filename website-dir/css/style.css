@@ -314,6 +314,13 @@ main article {
         top: 69px !important;
     }
 }
+/*timeline*/
+#timeline{
+    padding: 0;
+}
+#timeline .post{
+
+}
 /*
 .btn_container {
     position: absolute;
