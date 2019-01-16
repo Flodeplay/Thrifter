@@ -14,7 +14,7 @@ interface inter_update
 
     public function inter_u_zip($zipcode);
 
-    public function inter_u_image();
+    public function inter_u_image($image);
 
     public function inter_u_phonenr($phonenr);
 

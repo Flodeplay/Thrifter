@@ -150,9 +150,9 @@ class user implements inter_update
         }
     }
 
-    public function inter_u_image()
+    public function inter_u_image($image)
     {
-        // TODO: Implement inter_u_image() method.
+        $this->u_image = $image;
     }
 
     public function inter_u_phonenr($phonenr)

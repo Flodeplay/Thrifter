@@ -32,6 +32,7 @@ try {
             if (move_uploaded_file($tmp, $path)) {
                 $conn = establishDB();
                 $insert = mysqli_query($conn, "UPDATE u_users SET u_image = '$final_image' WHERE u_id LIKE " . $user->u_id . ";");
+                $user->inter_u_image($final_image);
                 echo 'successful';
             } else {
                 throw new Exception('Fehler3');

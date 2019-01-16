@@ -343,8 +343,8 @@ checkSession();
                                             $('#errQue_message').html(data);
                                         } else {
                                             $('form').trigger('reset');
-
-                                            $('#succQue_message').fadeIn().html('Änderungen vorgenommen');
+                                            $('#errQue_message').fadeOut();
+                                            $('#succQue_message').fadeIn().html('Frage gestellt. Wir werden so rasch wie möglich antworten.');
                                             setTimeout(function () {
                                                 $('#succQue_message').fadeOut('Slow');
                                             }, 20000);
