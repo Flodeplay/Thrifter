@@ -49,7 +49,7 @@ checkSession();
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center">
                 <label class="btn btn-default btn-file">
-                    <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid profile-img\">"; ?>
+                    <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style='height: 250px;width: 250px;object-fit: cover;object-position: center'>"; ?>
                     <input type="file" name="image" id="imageChange" style="display: none;" aria-label="Image" accept="image/*">
                 </label>
                 <br>
@@ -150,7 +150,7 @@ checkSession();
                 -->
             </div>
             <div class="col-md-6">
-                <?php echo "<div class=\"display-4 text-center\">". $_SESSION['u_user']->u_forename . "<br>" . $_SESSION['u_user']->u_surname . "</div><h2>" . $_SESSION["u_username"] ."</h2>" ?>
+                <?php echo "<div class=\"display-4 text-center\">".$_SESSION["u_user"]->u_username."</div>" ?>
                 <?php echo "<blockquote class='h5 text-muted text-center'>" . $_SESSION["u_user"]->u_description . "</blockquote>" ?>
             </div>
 

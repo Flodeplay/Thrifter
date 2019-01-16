@@ -99,7 +99,7 @@ function postlike_thrifter(p_id, like = false){
     if(like){
         $.ajax({
             type: "POST",
-            url: "../app/post-like.php",
+            url: "post-like.php",
             data: {p_id: p_id, method: "like"},
             success: function(){
                 var result = $("#thrift-it");
@@ -110,7 +110,7 @@ function postlike_thrifter(p_id, like = false){
         });
     }else {
         var result = $("#thrift-it");
-        $.get("../app/compute-timeline.php", {count: 1, method: "thrift-it"}).done(function (data) {
+        $.get("compute-timeline.php", {count: 1, method: "thrift-it"}).done(function (data) {
             result.html(data);
         });
     }
