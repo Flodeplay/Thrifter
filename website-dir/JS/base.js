@@ -67,25 +67,11 @@ $(document).ready(function() {
         })
     });
 });
-$(document).ready(function() {
-var result = $("#timeline");
-$.get("compute-timeline.php", {}).done(function (data) {
-    result.html(data + result.html());
-});
-$(document).scroll(function () {
-    if($(window).scrollTop() + $(window).height() >= ($(document).height() - 100)) {
-        var result = $("#timeline");
-        $.get("compute-timeline.php", {}).done(function (data) {
-            result.append(data);
-        });
-    }
-})
-});
 function postlike(p_id, method, element) {
     if(method === "like"){
         $.ajax({
             type: "POST",
-            url: "post-like.php",
+            url: "../app/post-like.php",
             data: {p_id: p_id, method: "like"},
             success: function(){
                 $(element).html("<i class=\"fas fa-heart fa-2x text-danger\">");
@@ -98,7 +84,7 @@ function postlike(p_id, method, element) {
     else if(method === "dislike"){
         $.ajax({
             type: "POST",
-            url: "post-like.php",
+            url: "../app/post-like.php",
             data: {p_id: p_id, method: "dislike"},
             success: function(){
                 $(element).html("<i class=\"fa-2x far fa-heart text-success\"></i>");
@@ -106,6 +92,26 @@ function postlike(p_id, method, element) {
                     postlike(p_id,"like",this);
                 }
             }
+        });
+    }
+}
+function postlike_thrifter(p_id, like = false){
+    if(like){
+        $.ajax({
+            type: "POST",
+            url: "../app/post-like.php",
+            data: {p_id: p_id, method: "like"},
+            success: function(){
+                var result = $("#thrift-it");
+                $.get("compute-timeline.php", {count: 1, method: "thrift-it"}).done(function (data) {
+                    result.html(data);
+                });
+            }
+        });
+    }else {
+        var result = $("#thrift-it");
+        $.get("../app/compute-timeline.php", {count: 1, method: "thrift-it"}).done(function (data) {
+            result.html(data);
         });
     }
 }

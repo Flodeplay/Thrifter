@@ -38,7 +38,7 @@ checkSession();
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-<?php echo file_get_contents('../html/navs.html'); ?>
+<?php echo file_get_contents('../html/navs.html');echo file_get_contents('../html/bottommenu.html'); ?>
 <header class="shadow">
     <a onclick="window.history.back();"><i class="fa fa-chevron-left fa-lg"></i></a>
     <span>Merkliste</span>

@@ -8,11 +8,9 @@
     $_SESSION = array();
     ?>
     <title>Thrifter.</title>
-
     <!-- Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
-
     <!-- extern stylesheets-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
@@ -38,7 +36,6 @@
     <script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/popper.min.js"></script>
     <script src="JS/bootstrap.min.js"></script>
-    <script src="JS/vh-fix.js"></script>
     <script src="JS/base.js"></script>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
