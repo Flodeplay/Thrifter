@@ -30,6 +30,16 @@ if(isset($_REQUEST["term"])){
     else{
         echo "keine User mit dem Namen vorhanden";
     }
+    $query = mysqli_query(establishDB(), "SELECT * FROM ca_categories WHERE LOWER(ca_name) LIKE '".strtolower($term)."%'");
+    echo "<div class='my-3 font-weight-bold h5'>Kategorien:</div>";
+    if (mysqli_num_rows($query) > 0) {
+        while($row = mysqli_fetch_assoc($query)){
+            echo "<div class='card'><a href='viewuser.php?username=".$row["ca_name"]."'><div class='card-body'><img style='max-height: 70px; width: auto' class='rounded-circle' src='../assets/users/".$row["ca_name"]."'><span class='pl-3'>".$row["ca_name"]."</span></div></a></div>";
+        }
+    }
+    else{
+        echo "keine User mit dem Namen vorhanden";
+    }
 }
 else{
     echo "bitte einloggen!";

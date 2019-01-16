@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="XAMPP Apache" uploadOnCheckin="af4db263-1154-4884-8121-7845e1ff1ecd">
     <serverData>
-      <paths name="Easyname - Florian - Trifter">
+      <paths name="Thrifter - Easyname">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />

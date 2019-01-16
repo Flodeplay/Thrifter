@@ -41,7 +41,7 @@ function isSession()
  */
 function establishDB()
 {
-    require_once 'config.php';
+    require_once 'config-local.php';
     $conn = new mysqli(DB_HOST, DB_USER, DB_PWD, DB_NAME);
     if ($conn) {
         return $conn;
@@ -203,6 +203,28 @@ function isUserbyID($user_id)
     }
 }
 
+/**
+ * @param $p_id post id
+ * @param $u_id user id
+ * @return bool
+ * @throws Exception
+ * @var $_Session["u_user"] user
+ */
+function checkPostLiked($p_id){
+    $user = $_SESSION["u_user"]->u_id;
+    if(isset($p_id)){
+        $query = mysqli_query(establishDB(), "SELECT * FROM f_favorites where f_u_user = $user && f_p_post = $p_id;");
+        if(mysqli_num_rows($query) == 1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else {
+        throw new Exception("Parameter darf nicht 0 sein");
+    }
+}
 /**
  * @param $post_id
  *

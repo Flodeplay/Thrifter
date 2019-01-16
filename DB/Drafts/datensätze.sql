@@ -7,7 +7,7 @@ INSERT INTO col_colors (col_name) VALUES ('Schwarz');
 INSERT INTO con_conditions (con_description) VALUES ('Wie neu');
 INSERT INTO g_genders (g_name) VALUES ('Herren');
 INSERT INTO s_sizes (s_unittype, s_value, s_g_genders) VALUES ('EU', 'M', 1);
-INSERT INTO sca_sizecategories (s_sizes_s_id, ca_categories_ca_id) VALUES (1, 2);
+INSERT INTO sca_SizeCategories (s_sizes_s_id, ca_categories_ca_id) VALUES (1, 2);
 
 INSERT INTO p_post (p_title, p_price, p_image, p_description, p_u_user, p_col_color, p_b_brand, p_g_gender, p_con_condition, p_ca_category, p_s_size)
 VALUES ('Hoodie', 30000, '1.png', 'Hier ist die Beschreibung!', 1, 1, 1, 1, 1, 1, 1);

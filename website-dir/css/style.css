@@ -1,3 +1,4 @@
+/*noinspection CssUnknownTarget*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Sarabun:500');
 ::-moz-selection {
     background-color: #8DB;
@@ -13,10 +14,6 @@ body {
 
 .row {
     margin: 0;
-}
-
-.red {
-    color: var(--red);
 }
 
 .green {
@@ -60,13 +57,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .d
 }
 main {
     position: relative;
-    margin-top: 60px;
 }
 
 .main-header {
     position: relative !important;
     max-width: 1024px;
-    margin: 180px auto 60px;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -123,7 +119,6 @@ main article {
     right: 0;
     height: 100%;
     width: 100%;
-    position: absolute;
 }
 
 .img-overlay .content {
@@ -170,8 +165,7 @@ main article {
 }
 .form-outer-index > form > hr {
     margin: 30px auto;
-    border-width: 5px;
-    border-color: var(--red);
+    border: 5px var(--red);
 }
 .form-outer-modal {
     width: 100%;
@@ -302,12 +296,15 @@ main article {
     flex-direction: column;
     position: fixed;
     z-index: 10;
-    top: 85px;
+    top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
     background-color: #f2f2f2;
     width: 100%;
-    height: 100vh;
-    padding: 20px 15px;
+    height: 110vh;
+    padding: 100px 15px 0px;
 }
 #search-result{
     max-width: 1024px;

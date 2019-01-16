@@ -41,7 +41,9 @@ $(function () {
     });
 });
 $(document).ready(function() {
+
     $('#search').click(function () {
+
         $("#search-box").show();
         $('html').addClass('freezePage');
         $('body').addClass('freezePage');
@@ -71,14 +73,39 @@ $.get("compute-timeline.php", {}).done(function (data) {
     result.html(data + result.html());
 });
 $(document).scroll(function () {
-    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    if($(window).scrollTop() + $(window).height() >= ($(document).height() - 100)) {
         var result = $("#timeline");
         $.get("compute-timeline.php", {}).done(function (data) {
-            result.html(data + result.html());
+            result.append(data);
         });
     }
 })
 });
-function postliken(p_id,) {
-    //Todo methode schreiben
+function postlike(p_id, method, element) {
+    if(method === "like"){
+        $.ajax({
+            type: "POST",
+            url: "post-like.php",
+            data: {p_id: p_id, method: "like"},
+            success: function(){
+                $(element).html("<i class=\"fas fa-heart fa-2x text-danger\">");
+                element.onclick = function () {
+                    postlike(p_id,"dislike",this);
+                }
+            }
+        });
+    }
+    else if(method === "dislike"){
+        $.ajax({
+            type: "POST",
+            url: "post-like.php",
+            data: {p_id: p_id, method: "dislike"},
+            success: function(){
+                $(element).html("<i class=\"fa-2x far fa-heart text-success\"></i>");
+                element.onclick = function () {
+                    postlike(p_id,"like",this);
+                }
+            }
+        });
+    }
 }

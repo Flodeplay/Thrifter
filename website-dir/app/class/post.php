@@ -59,26 +59,31 @@ class post
         $this->setPLocation($p_location);
     }
 
-
     public function __toString()
     {
-        return  "<div class=\"product-outer col-12 col-sm-6 col-md-4 col-xl-3\"><a href='viewpost.php?post=". $this->p_id . "'>
-                        <div class=\"card product\">
-                            <div class=\"card-img-top\">
-                                <img src=\"../assets/posts/". $this->p_image. "\" class=\"img-fluid card-img-top \">
-                            </div>
-                                <div class=\"card-body\">
-                                    <div class=\"row justify-content-between align-items-center\">
-                                        <div class=\"h2\" class=\"product-name\">" . $this->p_title . "</div>
-                                        <div class=\"h5\" class=\"product-name\">" . $this->p_price . "€</div>
-                                    </div>
-                                    <div class=\"row justify-content-between align-items-center\">
-                                        <div class=\"h5 product-user\">" . getUserbyID($this->p_u_user)->u_username . "</div>
-                                        <div class=\"product-loc\">" . $this->p_location . "</div>
-                                    </div>
+        $user = getUserbyID($this->p_u_user);
+        $string = "<div class='product-outer col-12 col-sm-6 col-md-4 col-xl-3'><div class=\"product\">
+                    <div class=\"product-head\">
+                        <a href='viewuser.php?username=$user->u_username'</a>
+                            <div class='product-head-inner'>
+                                <img class='rounded-circle' src='../assets/users/$user->u_image'>
+                                <div><span>$user->u_username</span><span>$user->u_zipcode</span>
                                 </div>
-                        </div></a>
-                        </div>";
+                            </div>
+                        </a>
+                    </div>
+                    <a href='viewpost.php?post=$this->p_id'>
+                    <img src=\"../assets/posts/$this->p_image\">
+                    </a>
+                    <div class=\"product-body\"><h5>$this->p_title</h5>";
+        if(checkPostLiked($this->p_id) == true){
+            $string .= "<a onclick=\"postlike($this->p_id, 'dislike', this)\"><i class=\"fas fa-heart fa-2x text-danger\"></i></a></div>";
+        }
+        else{
+            $string .= "<a onclick=\"postlike($this->p_id, 'like', this)\"><i class=\"fa-2x far fa-heart text-success\"></i></a></div>";
+        }
+        $string .= "<div class='product-footer'><h6>$this->p_price</h6></div></div></div>";
+        return $string;
     }
 
     /**
@@ -87,7 +92,7 @@ class post
     public function timeline_post()
     {
         $user = getUserbyID($this->p_u_user);
-        return "<div class=\"timeline-product\">
+        $string =  "<div class=\"timeline-product\">
                     <div class=\"timeline-product-head\">
                         <a href='viewuser.php?username=$user->u_username'</a>
                             <div class='timeline-product-head-inner'>
@@ -97,11 +102,18 @@ class post
                             </div>
                         </a>
                     </div>
+                    <a href='viewpost.php?post=$this->p_id'>
                     <img src=\"../assets/posts/$this->p_image\">
-                    <div class=\"timeline-product-body\"><h3>$this->p_title</h3><i
-                                class=\"fas fa-heart fa-2x text-success\"></i></div>
-                    <div class=\"timeline-product-footer\"><h4>$this->p_price</h4><a href='viewpost.php?post=$this->p_id'><h4>Mehr</h4></a></div>
-                </div>";
+                    </a>
+                    <div class=\"timeline-product-body\"><h5>$this->p_title</h5>";
+        if(checkPostLiked($this->p_id) == true){
+            $string .= "<a onclick=\"postlike($this->p_id, 'dislike', this)\"><i class=\"fas fa-heart fa-2x text-danger\"></i></div></a>";
+        }
+        else{
+            $string .= "<a onclick=\"postlike($this->p_id, 'like', this)\"><i class=\"fa-2x far fa-heart text-success\"></i></div></a>";
+        }
+        $string .= "<div class='timeline-product-footer'><h6>$this->p_price</h6></div></div>";
+        return $string;
     }
     public function __toString2(){
         return  " " .
@@ -345,5 +357,20 @@ class post
         $this->p_con_condition = $p_con_condition;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPLiked()
+    {
+        return $this->p_liked;
+    }
+
+    /**
+     * @param mixed $p_liked
+     */
+    public function setPLiked($p_liked): void
+    {
+        $this->p_liked = $p_liked;
+    }
 }
 ?>
