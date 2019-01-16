@@ -1,5 +1,5 @@
 <?php
-require_once "funcs.inc.php";
+require "funcs.inc.php";
 error_reporting(0);
 session_start();
 checkSession();
@@ -7,7 +7,7 @@ checkSession();
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Thrifter.</title>
+    <title>Thrift-it.</title>
     <!-- Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
@@ -38,44 +38,28 @@ checkSession();
     <meta name="theme-color" content="#ffffff">
     <script>
         $(document).ready(function() {
-            var result = $("#timeline");
-            $.get("compute-timeline.php", {}).done(function (data) {
-                result.html(data + result.html());
+            var result = $("#thrift-it");
+            $.get("compute-timeline.php", {count: 1, method: "thrift-it"}).done(function (data) {
+                result.html(data);
             });
-            $(document).scroll(function () {
-                if($(window).scrollTop() + $(window).height() >= ($(document).height() - 100)) {
-                    var result = $("#timeline");
-                    $.get("compute-timeline.php", {}).done(function (data) {
-                        result.append(data);
-                    });
-                }
-            })
         });
     </script>
 </head>
-<body>
+<body style="overflow: hidden; background-color: #a9a9a9">
 <?php
 echo file_get_contents('../html/navs.html');
 echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
     <a onclick="window.history.back();"><i class="fa fa-chevron-left fa-lg"></i></a>
-    <span>Entdecken</span>
-    <i id="search" class="fas fa-search fa-lg"></i>
+    <span>Thrift-it</span>
+    <span></span>
 </header>
-<main class="main-header">
-    <div id="search-box">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-10">
-                <input type="text" autocomplete="off" class="form-control" placeholder="Suchen">
-            </div>
-            <div id="search-cancel" class="text-primary" style="cursor: pointer">fertig</div>
-        </div>
-        <div id="search-result" >
-        </div>
-    </div>
-    <section id="timeline" class="d-flex justify-content-center flex-wrap">
+<main>
+    <section id="thrift-it" class="p-0 px-3">
+
     </section>
 </main>
+
 </body>
 </html>

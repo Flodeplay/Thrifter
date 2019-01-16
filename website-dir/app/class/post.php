@@ -76,61 +76,55 @@ class post
                     <img src=\"../assets/posts/$this->p_image\">
                     </a>
                     <div class=\"product-body\"><h5>$this->p_title</h5>";
-        if(checkPostLiked($this->p_id) == true){
+        if (checkPostLiked($this->p_id) == true) {
             $string .= "<a onclick=\"postlike($this->p_id, 'dislike', this)\"><i class=\"fas fa-heart fa-2x text-danger\"></i></a></div>";
-        }
-        else{
+        } else {
             $string .= "<a onclick=\"postlike($this->p_id, 'like', this)\"><i class=\"fa-2x far fa-heart text-success\"></i></a></div>";
         }
         $string .= "<div class='product-footer'><h6>$this->p_price</h6></div></div></div>";
         return $string;
     }
 
+    public function thriftit()
+    {
+        $user = getUserbyID($this->p_u_user);
+        $string = "<div class=\"thrift-it\">
+                        <img src=\"../assets/posts/1.png\">
+                        <div class=\"thrift-it-footer\">
+                            <div class=\"d-flex align-items-center justify-content-between\"><h4>$this->p_title</h4><h5>".$this->p_price."€</h5></div>
+                            <div class=\"d-flex align-items-center justify-content-between\"><span>$user->u_username</span><span>$user->u_zipcode</span></div>
+                        </div>
+                        <div class=\"btn_container\">";
+        $string .= "<div class=\"btnDislike\" onclick='postlike_thrifter($this->p_id)'>
+                                <i class=\"fas fa-times fa-4x text-white-50\"></i>
+                            </div>";
+        $string .= "<div class=\"btnLike\" onclick='postlike_thrifter($this->p_id,true)'>
+                                <i class=\"fas fa-check fa-4x text-white-50\"></i>
+                            </div>";
+        $string .= "</div></div>";
+        return $string;
+    }
+
     /**
      * @return string
      */
-    public function timeline_post()
+    public function __toString2()
     {
-        $user = getUserbyID($this->p_u_user);
-        $string =  "<div class=\"timeline-product\">
-                    <div class=\"timeline-product-head\">
-                        <a href='viewuser.php?username=$user->u_username'</a>
-                            <div class='timeline-product-head-inner'>
-                                <img class='rounded-circle' src='../assets/users/$user->u_image'>
-                                <div><span>$user->u_username</span><span>$user->u_zipcode</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <a href='viewpost.php?post=$this->p_id'>
-                    <img src=\"../assets/posts/$this->p_image\">
-                    </a>
-                    <div class=\"timeline-product-body\"><h5>$this->p_title</h5>";
-        if(checkPostLiked($this->p_id) == true){
-            $string .= "<a onclick=\"postlike($this->p_id, 'dislike', this)\"><i class=\"fas fa-heart fa-2x text-danger\"></i></div></a>";
-        }
-        else{
-            $string .= "<a onclick=\"postlike($this->p_id, 'like', this)\"><i class=\"fa-2x far fa-heart text-success\"></i></div></a>";
-        }
-        $string .= "<div class='timeline-product-footer'><h6>$this->p_price</h6></div></div>";
-        return $string;
-    }
-    public function __toString2(){
-        return  " " .
-            $this->p_id ." " .
-        $this->p_title." " .
-     $this->p_price." " .
-     $this->p_image." " .
-     $this->p_description." " .
-     $this->p_createtime." " .
-     $this->p_u_user." " .
-     $this->p_col_color." " .
-     $this->p_b_brand." " .
-     $this->p_g_gender." " .
-     $this->p_con_condition." " .
-     $this->p_ca_category." " .
-     $this->p_s_size." " .
-     $this->p_location;
+        return " " .
+            $this->p_id . " " .
+            $this->p_title . " " .
+            $this->p_price . " " .
+            $this->p_image . " " .
+            $this->p_description . " " .
+            $this->p_createtime . " " .
+            $this->p_u_user . " " .
+            $this->p_col_color . " " .
+            $this->p_b_brand . " " .
+            $this->p_g_gender . " " .
+            $this->p_con_condition . " " .
+            $this->p_ca_category . " " .
+            $this->p_s_size . " " .
+            $this->p_location;
     }
 
     /**
@@ -373,4 +367,5 @@ class post
         $this->p_liked = $p_liked;
     }
 }
+
 ?>

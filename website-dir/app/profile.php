@@ -38,7 +38,7 @@ checkSession();
     <title>Profil - Thrifter.</title>
 </head>
 <body>
-<?php echo file_get_contents('../html/navs.html'); ?>
+<?php echo file_get_contents('../html/navs.html');echo file_get_contents('../html/bottommenu.html'); ?>
 <header class="shadow">
         <a onclick="window.history.back();"><i class="fa fa-chevron-left fa-lg"></i></a>
         <span>Profil</span>
@@ -49,7 +49,7 @@ checkSession();
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center">
                 <label class="btn btn-default btn-file">
-                    <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid\" style=\"max-height: 150px;\">"; ?>
+                    <?php echo "<img src=\"../assets/users/".$_SESSION['u_user']->u_image."\" class=\"rounded-circle img-fluid profile-img\">"; ?>
                     <input type="file" name="image" id="imageChange" style="display: none;" aria-label="Image" accept="image/*">
                 </label>
                 <br>
