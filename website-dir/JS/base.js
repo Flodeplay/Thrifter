@@ -40,3 +40,72 @@ $(function () {
         $('body').removeClass('freezePage');
     });
 });
+$(document).ready(function() {
+
+    $('#search').click(function () {
+
+        $("#search-box").show();
+        $('html').addClass('freezePage');
+        $('body').addClass('freezePage');
+        $('#search-box input[type="text"]').on("keyup input", function () {
+            /* Get input value on change */
+            var inputVal = $(this).val();
+            var result = $(this).parents(".row").siblings("#search-result");
+            if (inputVal.length) {
+                console.log(inputVal);
+                $.get("compute-search.php", {term: inputVal}).done(function (data) {
+                    result.html(data);
+                });
+            } else {
+                result.empty();
+            }
+        });
+        $("#search-cancel").click(function () {
+            $("#search-box").hide();
+            $('html').removeClass('freezePage');
+            $('body').removeClass('freezePage');
+        })
+    });
+});
+$(document).ready(function() {
+var result = $("#timeline");
+$.get("compute-timeline.php", {}).done(function (data) {
+    result.html(data + result.html());
+});
+$(document).scroll(function () {
+    if($(window).scrollTop() + $(window).height() >= ($(document).height() - 100)) {
+        var result = $("#timeline");
+        $.get("compute-timeline.php", {}).done(function (data) {
+            result.append(data);
+        });
+    }
+})
+});
+function postlike(p_id, method, element) {
+    if(method === "like"){
+        $.ajax({
+            type: "POST",
+            url: "post-like.php",
+            data: {p_id: p_id, method: "like"},
+            success: function(){
+                $(element).html("<i class=\"fas fa-heart fa-2x text-danger\">");
+                element.onclick = function () {
+                    postlike(p_id,"dislike",this);
+                }
+            }
+        });
+    }
+    else if(method === "dislike"){
+        $.ajax({
+            type: "POST",
+            url: "post-like.php",
+            data: {p_id: p_id, method: "dislike"},
+            success: function(){
+                $(element).html("<i class=\"fa-2x far fa-heart text-success\"></i>");
+                element.onclick = function () {
+                    postlike(p_id,"like",this);
+                }
+            }
+        });
+    }
+}

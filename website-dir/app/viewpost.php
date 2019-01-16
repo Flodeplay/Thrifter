@@ -17,7 +17,6 @@ if(isset($_GET["post"])) {
 <html lang="en">
 <head>
     <title>Thrifter.</title>
-
     <!-- Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
@@ -32,12 +31,20 @@ if(isset($_GET["post"])) {
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/footer.css">
     <!-- scripts-->
-    <script src="../JS/jquery-3.3.1.min.js"></script>
-    <script src="../JS/popper.min.js"></script>
-    <script src="../JS/bootstrap.min.js"></script>
-    <script src="../JS/vh-fix.js"></script>
-    <script src="../JS/base.js"></script>
-
+    <script type="text/javascript" src="../JS/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../JS/popper.min.js"></script>
+    <script type="text/javascript" src="../JS/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../JS/base.js"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="../assets/favicons/safari-pinned-tab.svg" color="#ff6a79">
+    <link rel="shortcut icon" href="../assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <?php
@@ -45,12 +52,12 @@ echo file_get_contents('../html/navs.html');
 echo file_get_contents('../html/bottommenu.html');
 ?>
 <header class="shadow">
-    <a href="home.php"><i class="fa fa-chevron-left fa-lg"></i></a>
+    <a onclick="window.history.back();"><i class="fa fa-chevron-left fa-lg"></i></a>
     <span><?php if (isset($post)){echo $post->p_title;}else{echo "Fehler";}?></span>
     <i></i>
 </header>
 <main class="main-header">
-    <section class="bg-light shadow mt-5 px-4">
+    <section class="bg-light shadow px-4 mt-lg-5 px-4">
         <?php
         if(isset($post)){
             echo "<div class='row'>";
@@ -63,8 +70,7 @@ echo file_get_contents('../html/bottommenu.html');
             echo "<hr><h3>Daten:</h3>";
             echo "<div class='row'>
                             <div class='col-4'><p>Kategorie:<br>Größe:<br>Zustand:<br>Farbe:<br>Marke:<br>Geschlecht:</p></div>
-                            <div class='col-8'><p>$post->p_ca_category<br>$post->p_s_size<br>$post->p_con_condition<br>$post->p_col_color<br>$post->p_b_brand<br>$post->p_g_gender</p></div>
-</div>";
+                            <div class='col-8'><p>$post->p_ca_category<br>$post->p_s_size<br>$post->p_con_condition<br>$post->p_col_color<br>$post->p_b_brand<br>$post->p_g_gender</p></div></div>";
         }
         else{
             echo "<section class='d-flex full-height-section align-items-center justify-content-center'><div>Fehler! <a href='../index.php'>Hier gehts zurück!</div></a></section>";

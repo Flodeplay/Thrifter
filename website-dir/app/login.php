@@ -17,11 +17,10 @@
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/footer.css">
     <!-- scripts-->
-    <script src="../JS/jquery-3.3.1.min.js"></script>
-    <script src="../JS/popper.min.js"></script>
-    <script src="../JS/bootstrap.min.js"></script>
-    <script src="../JS/vh-fix.js"></script>
-    <script src="../JS/base.js"></script>
+    <script type="text/javascript" src="../JS/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../JS/popper.min.js"></script>
+    <script type="text/javascript" src="../JS/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../JS/base.js"></script>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
@@ -62,10 +61,13 @@
                             $data = mysqli_fetch_assoc($query);
                             $user = new user($data["u_id"], $data["u_username"], $data["u_forename"], $data["u_surname"], $data["u_email"], $data["u_createtime"], $data["u_description"], $data["u_image"], $data["u_phonenumber"], $data["u_zipcode"]);
                             $_SESSION["u_user"] = $user;
-                            echo /** @lang javascript */
+                            echo "<div class='w-100 d-flex flex-column align-items-center justify-content-center'>";
+                            echo "<div class='mx-auto my-3'><i class=\"fas fa-spinner fa-spin fa-4x\"></i></div>";
+                            echo "<div>Sie werden gleich weitergeleitet</div>";
+                            echo
                             "<script type='text/javascript'>
-                                window.location.href = 'http://localhost/WS-P1-Thrifter/website-dir/app/home.php';
-                                </script>";
+                                window.location.href = 'home.php';
+                                </script></div>";
                         } else {
                             echo "<h4 class='mb-3 text-danger'>Passwort Oder Benutzername ist Falsch!</h4>";
                             exit(file_get_contents('../html/login.html'));
@@ -92,10 +94,13 @@
                                 $data = mysqli_fetch_assoc($query);
                                 $user = new user($data["u_id"], $data["u_username"], $data["u_forename"], $data["u_surname"], $data["u_email"], $data["u_createtime"], $data["u_description"], $data["u_image"], $data["u_phonenumber"], $data["u_zipcode"]);
                                 $_SESSION["u_user"] = $user;
+                                echo "<div class='w-100 d-flex flex-column align-items-center justify-content-center'>";
+                                echo "<div class='mx-auto my-3'><i class=\"fas fa-spinner fa-spin fa-4x\"></i></div>";
+                                echo "<div>Sie werden gleich weitergeleitet</div>";
                                 echo /** @lang javascript */
                                 "<script type='text/javascript'>
-                                window.location.href = 'http://localhost/WS-P1-Thrifter/website-dir/app/home.php';
-                                </script>";
+                                window.location.href = 'home.php';
+                                </script></div>";
                             }
                         } catch (Exception $e) {
                             echo "<h4 class='mb-3 text-danger'>" . $e->getMessage() . " Please register again!</h4>";

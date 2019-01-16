@@ -52,8 +52,8 @@
     <meta name="theme-color" content="#ffffff">
 
 </head>
-<body>
-<nav id="nav" class="shadow">
+<body style="margin-top: 70px">
+<nav id="nav" class="shadow" style="position: fixed; top: 0;">
     <picture>
         <source media="(min-width: 720px)" srcset="assets/logo/Logo.svg">
         <source media="(max-width: 720px)" srcset="assets/logo/Logo-short.svg">
@@ -74,19 +74,20 @@
         <div class="sidemenu col-md-12 col-lg-6 col-xl-3 shadow">
             <div class="content">
                 <ul class="p-0 m-0">
-                    <li id="nav-link-1"><a href="app/home.php">Home</a></li>
-                    <li id="nav-link-2">Login</li>
-                    <li id="nav-link-3">Impressum</li>
+                    <li style="animation-delay: 100ms;"><a href="app/home.php">Home</a></li>
+                    <li style="animation-delay: 130ms;"><a href="app/login.php">Login</a></li>
+                    <li style="animation-delay: 190ms;"><a href="html/help.html">Hilfe</a></li>
+                    <li style="animation-delay: 220ms;"><a href="html/impressum.html">Impressum</a></li>
                 </ul>
-                <hr>
-                <div id="nav-link-5" class="row font-weight-bold justify-content-center mt-5"><i
+                <hr style="animation-delay: 250ms;">
+                <div style="animation-delay: 280ms;" class="row font-weight-bold justify-content-center mt-5"><i
                             class="fab fa-instagram mx-3 fa-2x"></i><i
                             class="fab fa-facebook-f fa-2x mx-3"></i><i class="fab fa-twitter fa-2x mx-3"></i></div>
-                <div id="nav-link-6" class="my-3 h4 text-center">office@Thrifter.at</div>
-                <div class="sidemenu-close-btn text-center"><i class="fas fa-chevron-up fa-2x"></i></div>
+                <div style="animation-delay: 310ms;" class="my-3 h4 text-center">office@Thrifter.at</div>
+                <div style="animation-delay: 340ms;" class="sidemenu-close-btn text-center"><i class="fas fa-chevron-up fa-2x"></i></div>
             </div>
         </div>
-        <div class="sidemenu-spacing d-none d-lg-block col-lg-6 col-xl-9 order-first">
+        <div style="animation-delay: 370ms;" class="sidemenu-spacing d-none d-lg-block col-lg-6 col-xl-9 order-first">
         </div>
     </div>
 </nav>
@@ -128,7 +129,7 @@
     <section class="full-height-section row justify-content-center d-flex flex-column bg-dark">
         <div class="col-12 col-md-8 mx-auto text-white">
         <h1 class="my-5 text-center display-2 text-white">Was ist Thrifter?</h1>
-        <hr style="border-width: 5px; border-color: var(--red);">
+        <hr style="border: 5px var(--red);">
         <p class="my-5 h2 text-center text-white">Thrifter ist eine Second Hand Plattform wo du Kleidung du altes zu neuem machen kannst.</p>
         <p class="text-center"><a class="h3">Hier zeigen wir wie es geht!</a></p>
         </div>
@@ -148,7 +149,7 @@
     <section class="full-height-section row justify-content-center d-flex flex-column bg-dark">
         <div class="col-12 col-md-8 mx-auto">
             <h1 class="my-5 text-center display-3 text-white">Anmelden & Registrieren</h1>
-            <hr style="border-width: 5px; border-color: var(--green);">
+            <hr style="border: 5px var(--green);">
             <div class="form-outer-index my-5" style="max-width: 700px">
                     <div id="error-message" class="text-danger my-3"></div>
                     <form name="login" action="app/login.php" method="post" onsubmit="return checkLogin()">
@@ -342,9 +343,10 @@
             </div>
             <div class="col-sm-6">
                 <h1>Links</h1>
-                <p>
-                    <a></a>
-                </p>
+                <ul style="list-style: none">
+                    <li><a href="html/impressum.html">Impressum</a></li>
+                    <li><a href="html/help.html">Hilfe</a></li>
+                </ul>
             </div>
         </div>
     </div>
