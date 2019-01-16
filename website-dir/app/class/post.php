@@ -368,7 +368,7 @@ class post
     /**
      * @param mixed $p_liked
      */
-    public function setPLiked($p_liked): void
+    public function setPLiked($p_liked)
     {
         $this->p_liked = $p_liked;
     }

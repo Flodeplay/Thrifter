@@ -1,7 +1,7 @@
 function addnewPost() {
     var newPostCOntainer = $("#new_post-container");
     newPostCOntainer.hide();
-    newPostCOntainer.load("../html/post_upload.html");
+    newPostCOntainer.load("../html/post_upload.php");
     $("body").addClass("sidemenu-body");
     newPostCOntainer.fadeIn();
 }
