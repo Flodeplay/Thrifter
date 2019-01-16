@@ -2,16 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="af4db263-1154-4884-8121-7845e1ff1ecd" name="XAMPP Apache" url="http://localhost/WS-P1-Thrifter">
-        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\WS-P1-Thrifter" accessType="MOUNT" />
-      </webServer>
-      <webServer id="933281bf-fbe0-4ef7-844f-db4c974ba567" name="Thrifter - Easyname" url="http://e104036-ftp.services.easyname.eu">
-        <fileTransfer host="e104036-ftp.services.easyname.eu" port="21">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
-          </advancedOptions>
-          <option name="port" value="21" />
-        </fileTransfer>
+      <webServer id="02608cf5-e934-4cb8-9752-052ab1f381af" name="Apache" url="http://localhost/WS-P1-Thrifter">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\WS-P1-Thrifter\website-dir" accessType="MOUNT" />
       </webServer>
     </option>
   </component>
