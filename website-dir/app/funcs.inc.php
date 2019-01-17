@@ -42,7 +42,7 @@ function isSession()
  */
 function establishDB()
 {
-        require_once 'config-local.php';
+        require_once 'config-server.php';
         $conn = new mysqli(DB_HOST, DB_USER, DB_PWD, DB_NAME);
         if ($conn) {
             return $conn;

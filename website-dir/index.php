@@ -56,11 +56,6 @@
         <source media="(max-width: 720px)" srcset="assets/logo/Logo-short.svg">
         <img src="assets/logo/Logo.svg" alt="Thrifter.">
     </picture>
-    <div class="d-none d-lg-block nav-links">
-        <a>Home</a>
-        <a>How to?</a>
-        <a>Login & Registrieren</a>
-    </div>
     <div>
         <a data-toggle="modal"
            data-target="#socialMedia"><i class="fas fa-heart fa-2x text-success"></i></a>
@@ -133,7 +128,7 @@
             <div class="scrolldown hover-green"><i class="fas fa-chevron-down fa-2x"></i></div>
     </section>
     <section class="mw-100 full-height-section p-0" >
-        <div class="back-img" style="background-image: url('assets/index/_DSC1438-2.jpg'); height: 100vh"></div>
+        <div class="back-img" style="background-image: url('assets/index/_DSC1438-2.JPG'); height: 100vh"></div>
         <div class="img-overlay text-white display-4 text-center">
             <div class="content">
                 <h1 class="display-2">
@@ -340,9 +335,9 @@
             </div>
             <div class="col-sm-6">
                 <h1>Links</h1>
-                <ul style="list-style: none">
-                    <li><a href="html/impressum.html">Impressum</a></li>
-                    <li><a href="html/help.html">Hilfe</a></li>
+                <ul style="list-style: none;padding: 0;margin: 0">
+                    <li style="padding-left: 15px"><a href="html/impressum.html">Impressum</a></li>
+                    <li style="padding-left: 15px"><a href="html/help.html">Hilfe</a></li>
                 </ul>
             </div>
         </div>

@@ -29,8 +29,9 @@
     font-size: 80%;
 }
 .product-head-inner img{
-    max-height: 40px;
-    width: auto
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
 }
 .product >a> img{
     width: 100%;

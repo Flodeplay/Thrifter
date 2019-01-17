@@ -60,7 +60,7 @@ echo file_get_contents('../html/bottommenu.html');
             try {
                 echo "<div class='row'>
                     <div class='col-md-6 d-flex justify-content-center'>
-                            <img src='../assets/users/" . $user->u_image . "' class='rounded-circle img-fluid' style ='max-height: 150px;'>
+                            <img src='../assets/users/" . $user->u_image . "' class='rounded-circle img-fluid' style ='height: 200px;width: 200px;object-fit: cover;object-position: center'>
                     </div>
                     <div class='col-md-6'>
                             <div class='display-4 text-center'>" . $user->u_username . "</h2>

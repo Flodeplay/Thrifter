@@ -10,14 +10,15 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES,NO_ZERO_
 -- -----------------------------------------------------
 -- Schema Thrifter
 -- -----------------------------------------------------
-
+Create schema if not exists `Thrifter`;
+use `Thrifter`;
 -- -----------------------------------------------------
 -- Schema Thrifter
 -- -----------------------------------------------------
 -- -----------------------------------------------------
 -- Table `Thrifter`.`u_users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`u_users` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`u_users` (
   `u_id` INT NOT NULL AUTO_INCREMENT,
   `u_username` VARCHAR(16) NOT NULL,
   `u_email` VARCHAR(255) NOT NULL,
@@ -38,7 +39,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`col_colors`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`col_colors` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`col_colors` (
   `col_id` INT NOT NULL AUTO_INCREMENT,
   `col_name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`col_id`))
@@ -48,7 +49,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`b_brands`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`b_brands` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`b_brands` (
   `b_id` INT NOT NULL AUTO_INCREMENT,
   `b_name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`b_id`))
@@ -58,7 +59,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`g_genders`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`g_genders` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`g_genders` (
   `g_id` INT NOT NULL AUTO_INCREMENT,
   `g_name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`g_id`))
@@ -68,7 +69,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`ca_categories`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`ca_categories` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`ca_categories` (
   `ca_id` INT NOT NULL AUTO_INCREMENT,
   `ca_name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`ca_id`))
@@ -78,7 +79,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`con_conditions`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`con_conditions` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`con_conditions` (
   `con_id` INT NOT NULL AUTO_INCREMENT,
   `con_description` VARCHAR(45) NULL,
   PRIMARY KEY (`con_id`))
@@ -88,7 +89,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`s_sizes`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`s_sizes` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`s_sizes` (
   `s_id` INT NOT NULL AUTO_INCREMENT,
   `s_unittype` VARCHAR(45) NULL,
   `s_value` VARCHAR(45) NULL,
@@ -97,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `u164197db1`.`s_sizes` (
   INDEX `fk_s_sizes_g_genders1_idx` (`s_g_genders` ASC),
   CONSTRAINT `fk_s_sizes_g_genders1`
     FOREIGN KEY (`s_g_genders`)
-    REFERENCES `u164197db1`.`g_genders` (`g_id`)
+    REFERENCES `Thrifter`.`g_genders` (`g_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -106,7 +107,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`p_post`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`p_post` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`p_post` (
   `p_id` INT NOT NULL AUTO_INCREMENT,
   `p_title` VARCHAR(40) NOT NULL,
   `p_price` SMALLINT(5) NOT NULL,
@@ -130,37 +131,37 @@ CREATE TABLE IF NOT EXISTS `u164197db1`.`p_post` (
   INDEX `fk_p_post_s_sizes1_idx` (`p_s_size` ASC),
   CONSTRAINT `fk_p_u_user`
     FOREIGN KEY (`p_u_user`)
-    REFERENCES `u164197db1`.`u_users` (`u_id`)
+    REFERENCES `Thrifter`.`u_users` (`u_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_p_post_co_color1`
     FOREIGN KEY (`p_col_color`)
-    REFERENCES `u164197db1`.`col_colors` (`col_id`)
+    REFERENCES `Thrifter`.`col_colors` (`col_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_p_post_b_brands1`
     FOREIGN KEY (`p_b_brand`)
-    REFERENCES `u164197db1`.`b_brands` (`b_id`)
+    REFERENCES `Thrifter`.`b_brands` (`b_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_p_post_g_genders1`
     FOREIGN KEY (`p_g_gender`)
-    REFERENCES `u164197db1`.`g_genders` (`g_id`)
+    REFERENCES `Thrifter`.`g_genders` (`g_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_p_post_ca_categories1`
     FOREIGN KEY (`p_ca_category`)
-    REFERENCES `u164197db1`.`ca_categories` (`ca_id`)
+    REFERENCES `Thrifter`.`ca_categories` (`ca_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_p_post_con_condition1`
     FOREIGN KEY (`p_con_condition`)
-    REFERENCES `u164197db1`.`con_conditions` (`con_id`)
+    REFERENCES `Thrifter`.`con_conditions` (`con_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_p_post_s_sizes1`
     FOREIGN KEY (`p_s_size`)
-    REFERENCES `u164197db1`.`s_sizes` (`s_id`)
+    REFERENCES `Thrifter`.`s_sizes` (`s_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -169,7 +170,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`sca_SizeCategories`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`sca_SizeCategories` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`sca_SizeCategories` (
   `s_sizes_s_id` INT NOT NULL,
   `ca_categories_ca_id` INT NOT NULL,
   PRIMARY KEY (`s_sizes_s_id`, `ca_categories_ca_id`),
@@ -177,12 +178,12 @@ CREATE TABLE IF NOT EXISTS `u164197db1`.`sca_SizeCategories` (
   INDEX `fk_s_sizes_has_ca_categories_s_sizes1_idx` (`s_sizes_s_id` ASC),
   CONSTRAINT `fk_s_sizes_has_ca_categories_s_sizes1`
     FOREIGN KEY (`s_sizes_s_id`)
-    REFERENCES `u164197db1`.`s_sizes` (`s_id`)
+    REFERENCES `Thrifter`.`s_sizes` (`s_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_s_sizes_has_ca_categories_ca_categories1`
     FOREIGN KEY (`ca_categories_ca_id`)
-    REFERENCES `u164197db1`.`ca_categories` (`ca_id`)
+    REFERENCES `Thrifter`.`ca_categories` (`ca_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -191,14 +192,14 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`a_assets`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`a_assets` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`a_assets` (
   `a_id` INT NOT NULL,
   `a_p_post` INT NOT NULL,
   PRIMARY KEY (`a_id`),
   INDEX `fk_a_assets_p_post1_idx` (`a_p_post` ASC),
   CONSTRAINT `fk_a_assets_p_post1`
     FOREIGN KEY (`a_p_post`)
-    REFERENCES `u164197db1`.`p_post` (`p_id`)
+    REFERENCES `Thrifter`.`p_post` (`p_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -207,7 +208,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `Thrifter`.`f_favorites`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `u164197db1`.`f_favorites` (
+CREATE TABLE IF NOT EXISTS `Thrifter`.`f_favorites` (
   `f_u_user` INT NOT NULL,
   `f_p_post` INT NOT NULL,
   PRIMARY KEY (`f_u_user`, `f_p_post`),
@@ -215,12 +216,12 @@ CREATE TABLE IF NOT EXISTS `u164197db1`.`f_favorites` (
   INDEX `fk_u_users_has_p_post_u_users1_idx` (`f_u_user` ASC),
   CONSTRAINT `fk_u_users_has_p_post_u_users1`
     FOREIGN KEY (`f_u_user`)
-    REFERENCES `u164197db1`.`u_users` (`u_id`)
+    REFERENCES `Thrifter`.`u_users` (`u_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_u_users_has_p_post_p_post1`
     FOREIGN KEY (`f_p_post`)
-    REFERENCES `u164197db1`.`p_post` (`p_id`)
+    REFERENCES `Thrifter`.`p_post` (`p_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

@@ -47,17 +47,18 @@ echo file_get_contents('../html/bottommenu.html');
     <span>Home</span>
     <i id="search" class="fas fa-search fa-lg"></i>
 </header>
-<main class="main-header">
-    <div id="search-box">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-10">
-                <input type="text" autocomplete="off" class="form-control" placeholder="Suchen">
-            </div>
-            <div id="search-cancel" class="text-primary" style="cursor: pointer">fertig</div>
+<div id="search-box">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-10">
+            <input type="text" autocomplete="off" class="form-control" placeholder="Suchen">
         </div>
-        <div id="search-result" >
-        </div>
+        <div id="search-cancel" class="text-primary" style="cursor: pointer">fertig</div>
     </div>
+    <div id="search-result" >
+    </div>
+</div>
+<main class="main-header">
+
     <section class="pt-0">
         <?php
 
@@ -65,9 +66,16 @@ echo file_get_contents('../html/bottommenu.html');
         ?>
         <hr>
         <div class="row">
+            <a href="timeline.php">
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
-                <i class="fas fa-map-marker-alt fa-2x"></i>Map
+                <i class="fas fa-grip-vertical fa-2x"></i>Entdecken
             </div>
+            </a>
+            <a href="thrift-it.php">
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
+                <i class="fas fa-hand-pointer fa-2x"></i>Thrift-it
+            </div>
+            </a>
             <a onclick="addnewPost()">
                 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 10px;width: 90px;height: 90px; background-color: #434343; color: white">
                     <i class="fas fa-plus fa-2x"></i>Neu
