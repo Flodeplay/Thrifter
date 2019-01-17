@@ -155,7 +155,7 @@ checkSession();
                                 data.append('sizeT', size);
 
                                 $.ajax({
-                                    url: '../app/postUpload.php',
+                                    url: '../app/PostUpload.php',
                                     method: 'POST',
                                     type: 'POST',
                                     enctype: 'multipart/form-data',
