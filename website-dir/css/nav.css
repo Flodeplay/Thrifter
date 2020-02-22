@@ -64,8 +64,7 @@ nav .sidenav .sidemenu-spacing {
 
 nav .sidemenu {
     height: 100%;
-    color: white !important;
-    padding: 20px 0;
+    color: black !important;
     background-color: #121212;
 }
 
@@ -84,7 +83,6 @@ nav .content li:last-child {
 }
 
 nav .content hr {
-    margin: 30px auto 40px;
     border-bottom: white solid 0.1px;
     width: calc(100% - 60px);
 }

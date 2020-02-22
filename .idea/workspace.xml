@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/../Bonkers/app/kontakt.php" description="&lt;head&gt;" line="2" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="35ee4956-575a-4de5-b9fd-ebf4b1c56d5c" name="Default Changelist" comment="style changes | fixes">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/110f198c-1200-4e54-b37c-f2e0a10df070.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/110f198c-1200-4e54-b37c-f2e0a10df070.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/712a5abe-d558-4e82-873f-1ab51c6bf2cb/storage_v2/_src_/schema/sp_2chif.EqPscw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/712a5abe-d558-4e82-873f-1ab51c6bf2cb/storage_v2/_src_/schema/spital.cxKZyg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/712a5abe-d558-4e82-873f-1ab51c6bf2cb/storage_v2/_src_/schema/stundenplan_2chif.MWTQ6A.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/712a5abe-d558-4e82-873f-1ab51c6bf2cb/storage_v2/_src_/schema/wordpress.ebP8NQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/Drafts/Thrifter-DB_V1.mwb.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/JS/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/JS/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/ContactForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/PostUpload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/class/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/app/class/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/compute-timeline.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/app/compute-timeline.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/config-server.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/app/config-server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/funcs.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/app/funcs.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/app/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/app/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/app/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/reg.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/viewpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/app/viewpost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/app/viewuser.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/app/viewuser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/css/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website-dir/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/website-dir/index.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - u164197db1@e104036-mysql.services.easyname.eu" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="thrifter@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website-dir/html/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website-dir/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/website-dir/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="841">
+              <caret line="147" column="66" selection-start-line="147" selection-start-column="66" selection-end-line="147" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website-dir/app/image_upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website-dir/html/post_upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="841">
+              <caret line="121" column="56" selection-start-line="121" selection-start-column="56" selection-end-line="121" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website-dir/app/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="969">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website-dir/app/funcs.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3162">
+              <caret line="186" column="5" selection-start-line="176" selection-start-column="4" selection-end-line="186" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website-dir/html/navs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SS-T5-PicknMix/website-dir/app/login/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website-dir/css/nav.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1156">
+              <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>login</find>
+      <find>fa</find>
+      <find>getUIm</find>
+      <find>getUF</find>
+      <find>;</find>
+      <find>form-control</find>
+      <find>form-c</find>
+      <find>main-h</find>
+      <find>a{</find>
+      <find>print</find>
+      <find>printProduct(</find>
+      <find>post-upload-modal</find>
+      <find>form-out</find>
+      <find>modal</find>
+      <find>bg-succes</find>
+      <find>bg-danger</find>
+      <find>opacity-0-1</find>
+      <find>sidemenu-clo</find>
+      <find>form-</find>
+      <find>form</find>
+      <find>close</find>
+      <find>text-suc</find>
+      <find>scroll</find>
+      <find>bg-dark</find>
+      <find>modal-back</find>
+      <find>get</find>
+      <find>bir</find>
+      <find>birthdate</find>
+      <find>post</find>
+      <find>f</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>,</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\OneDrive - HTL Spengergasse\Dokumente\Websites\WS-P1-Thrifter\website-dir</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/website-dir/test/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/website-dir/css/bootstrap.min.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../SS-T5-PicknMix/website-dir/app/login/login.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/website-dir/JS/bottommenu.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/website-dir/test/insert.html" />
+        <option value="$PROJECT_DIR$/website-dir/app/bottommenu.js" />
+        <option value="$PROJECT_DIR$/website-dir/JS/bottommenu.js" />
+        <option value="$PROJECT_DIR$/website-dir/html/footer.html" />
+        <option value="$PROJECT_DIR$/website-dir/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/website-dir/test/index.html" />
+        <option value="$PROJECT_DIR$/website-dir/test/index.php" />
+        <option value="$PROJECT_DIR$/website-dir/viewuser.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/post.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/user.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/ContactForm.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/image_upload.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/class/user.php" />
+        <option value="$PROJECT_DIR$/website-dir/JS/timeline.js" />
+        <option value="$PROJECT_DIR$/website-dir/html/login.html" />
+        <option value="$PROJECT_DIR$/website-dir/html/post_upload.html" />
+        <option value="$PROJECT_DIR$/website-dir/css/index.css" />
+        <option value="$PROJECT_DIR$/website-dir/app/meineProdukte.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/reg.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/272ef652-5f5d-4443-8ff5-0156e40c3843/console.sql" />
+        <option value="$PROJECT_DIR$/website-dir/app/config.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/110f198c-1200-4e54-b37c-f2e0a10df070/console.sql" />
+        <option value="$PROJECT_DIR$/website-dir/app/wishlist.php" />
+        <option value="$PROJECT_DIR$/website-dir/css/footer.css" />
+        <option value="$PROJECT_DIR$/website-dir/test/imagecrop.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/timeline.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/thrift-it.php" />
+        <option value="$PROJECT_DIR$/website-dir/html/bottommenu.html" />
+        <option value="$PROJECT_DIR$/website-dir/css/product.css" />
+        <option value="$PROJECT_DIR$/website-dir/app/compute-search.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/post-like.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/home.php" />
+        <option value="$PROJECT_DIR$/website-dir/html/help.html" />
+        <option value="$PROJECT_DIR$/website-dir/html/impressum.html" />
+        <option value="$PROJECT_DIR$/website-dir/app/login.php" />
+        <option value="$PROJECT_DIR$/website-dir/html/navs.html" />
+        <option value="$PROJECT_DIR$/website-dir/JS/base.js" />
+        <option value="$PROJECT_DIR$/website-dir/app/config-server.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/class/post.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/viewpost.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/compute-timeline.php" />
+        <option value="$PROJECT_DIR$/website-dir/index.php" />
+        <option value="$PROJECT_DIR$/website-dir/css/style.css" />
+        <option value="$PROJECT_DIR$/website-dir/css/nav.css" />
+        <option value="$PROJECT_DIR$/website-dir/app/viewuser.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/funcs.inc.php" />
+        <option value="$PROJECT_DIR$/website-dir/html/post_upload.php" />
+        <option value="$PROJECT_DIR$/../SS-PicknMix/website-dir/app/impressum/impressum.html" />
+        <option value="$PROJECT_DIR$/../SS-PicknMix/website-dir/app/impressum/impressum.php" />
+        <option value="$PROJECT_DIR$/../SS-PicknMix/website-dir/app/impressum/index.php" />
+        <option value="$PROJECT_DIR$/website-dir/app/profile.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="068fd6dd-beca-4b04-b7b3-cd64700b70d7" name="Apache XAMPP" use_path_mappings="true" />
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="D:\OneDrive - HTL Spengergasse\Dokumente\Websites\WS-P1-Thrifter" selected_validation_type="LOCAL" web_path_to_validation_script="http://127.0.0.1/" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="C:/xampp" />
+      <path value="$PROJECT_DIR$" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="213" />
+    <option name="y" value="3" />
+    <option name="width" value="1735" />
+    <option name="height" value="1100" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>UndefinedPHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpUndefinedClassInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="DB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="website-dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="website-dir" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="website-dir" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="class" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="website-dir" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="class" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="website-dir" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="website-dir" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="website-dir" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WS-P1-Thrifter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WS-P1-Thrifter" type="462c0819:PsiDirectoryNode" />
+              <item name="website-dir" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../barman-website" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OneDrive - HTL Spengergasse\Dokumente\Websites\WS-P1-Thrifter\website-dir\app" />
+      <recent name="D:\OneDrive - HTL Spengergasse\Dokumente\Websites\WS-P1-Thrifter\website-dir\app\class" />
+      <recent name="D:\OneDrive - HTL Spengergasse\Dokumente\Websites\WS-P1-Thrifter\website-dir\app\Classes" />
+      <recent name="D:\OneDrive - HTL Spengergasse\Dokumente\Websites\WS-P1-Thrifter\website-dir\html" />
+      <recent name="D:\OneDrive - HTL Spengergasse\Dokumente\Websites\WS-P1-Thrifter\website-dir\JS" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive - HTL Spengergasse\Dokumente\Websites\WS-P1-Thrifter\website-dir\app" />
+      <recent name="D:\OneDrive - HTL Spengergasse\Dokumente\Websites" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHP Web Page.index.php - Florian">
+    <configuration name="user.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/WS-P1-Thrifter/website-dir/app/user.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="compute-search.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/website-dir/app/compute-search.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="compute-timeline.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/website-dir/app/compute-timeline.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="funcs.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/website-dir/app/funcs.inc.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="imagecrop" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/website-dir/test/imagecrop.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="post-like" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/website-dir/app/post-like.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="profile.php - Florian" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="53e2f627-b1a7-4dfa-bfa7-5b83cc034776" server_name="Apache XAMPP" start_url="/WS-P1-Thrifter/website-dir/app/profile.php">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.user.php" />
+      <item itemvalue="PHP Script.imagecrop" />
+      <item itemvalue="PHP Script.compute-search.php" />
+      <item itemvalue="PHP Script.post-like" />
+      <item itemvalue="PHP Script.compute-timeline.php" />
+      <item itemvalue="PHP Script.funcs.inc.php" />
+      <item itemvalue="PHP Web Page.Thrifter." />
+      <item itemvalue="PHP Web Page.index.php - Florian" />
+      <item itemvalue="PHP Web Page.profile.php - Florian" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.user.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35ee4956-575a-4de5-b9fd-ebf4b1c56d5c" name="Default Changelist" comment="" />
+      <created>1540896623455</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540896623455</updated>
+      <workItem from="1540896629408" duration="925000" />
+      <workItem from="1540897667299" duration="806000" />
+      <workItem from="1540898502503" duration="206000" />
+      <workItem from="1540898728896" duration="15626000" />
+      <workItem from="1540984492901" duration="79000" />
+      <workItem from="1541583063086" duration="1842000" />
+      <workItem from="1541682882190" duration="1093000" />
+      <workItem from="1541752982824" duration="2874000" />
+      <workItem from="1541764296701" duration="2022000" />
+      <workItem from="1541799106087" duration="3491000" />
+      <workItem from="1542047291361" duration="76000" />
+      <workItem from="1542275103756" duration="16552000" />
+      <workItem from="1542291961414" duration="739000" />
+      <workItem from="1542293535509" duration="10808000" />
+      <workItem from="1542305351007" duration="6000" />
+      <workItem from="1542445764679" duration="22000" />
+      <workItem from="1542454806995" duration="2449000" />
+      <workItem from="1542466748441" duration="772000" />
+      <workItem from="1542614196618" duration="216000" />
+      <workItem from="1542617660491" duration="5666000" />
+      <workItem from="1542642142194" duration="8167000" />
+      <workItem from="1542701661554" duration="1859000" />
+      <workItem from="1542703644007" duration="1799000" />
+      <workItem from="1542705507525" duration="12695000" />
+      <workItem from="1542736817566" duration="10166000" />
+      <workItem from="1542784317088" duration="1770000" />
+      <workItem from="1542965061642" duration="1431000" />
+      <workItem from="1542970483622" duration="1981000" />
+      <workItem from="1542974005691" duration="550000" />
+      <workItem from="1542979995140" duration="110000" />
+      <workItem from="1543091380830" duration="6114000" />
+      <workItem from="1543219805917" duration="2536000" />
+      <workItem from="1543482066116" duration="186000" />
+      <workItem from="1544172368787" duration="468000" />
+      <workItem from="1544352389294" duration="4594000" />
+      <workItem from="1544368170221" duration="6513000" />
+      <workItem from="1544426881568" duration="9284000" />
+      <workItem from="1544455836624" duration="7499000" />
+      <workItem from="1544474758330" duration="340000" />
+      <workItem from="1544516632980" duration="1781000" />
+      <workItem from="1544532651928" duration="573000" />
+      <workItem from="1544553928965" duration="4966000" />
+      <workItem from="1544706873523" duration="88000" />
+      <workItem from="1544707632294" duration="1321000" />
+      <workItem from="1544713088020" duration="1038000" />
+      <workItem from="1544715185657" duration="17000" />
+      <workItem from="1544722724812" duration="2673000" />
+      <workItem from="1544777182313" duration="4240000" />
+      <workItem from="1544795491947" duration="9032000" />
+      <workItem from="1544897826118" duration="1921000" />
+      <workItem from="1544956809806" duration="1375000" />
+      <workItem from="1544958226724" duration="442000" />
+      <workItem from="1544960269976" duration="1198000" />
+      <workItem from="1545313336776" duration="6312000" />
+      <workItem from="1546180617347" duration="699000" />
+      <workItem from="1546181371956" duration="522000" />
+      <workItem from="1546182126351" duration="33000" />
+      <workItem from="1547031975458" duration="4480000" />
+      <workItem from="1547051935602" duration="7518000" />
+      <workItem from="1547110990060" duration="2753000" />
+      <workItem from="1547118747967" duration="10637000" />
+      <workItem from="1547192876443" duration="5728000" />
+      <workItem from="1547209279929" duration="272000" />
+      <workItem from="1547302094569" duration="22789000" />
+      <workItem from="1547331502558" duration="132000" />
+      <workItem from="1547359078038" duration="7981000" />
+      <workItem from="1547380365185" duration="5839000" />
+      <workItem from="1547402815101" duration="8058000" />
+      <workItem from="1547449532151" duration="897000" />
+      <workItem from="1547453328802" duration="413000" />
+      <workItem from="1547461510673" duration="248000" />
+      <workItem from="1547476162396" duration="12652000" />
+      <workItem from="1547488855005" duration="4163000" />
+      <workItem from="1547536170606" duration="4712000" />
+      <workItem from="1547556542241" duration="15586000" />
+      <workItem from="1547585348227" duration="10462000" />
+      <workItem from="1547596795400" duration="70000" />
+      <workItem from="1547597976361" duration="1898000" />
+      <workItem from="1547623060754" duration="28912000" />
+      <workItem from="1547708894228" duration="5192000" />
+      <workItem from="1547718642609" duration="222000" />
+      <workItem from="1547721844103" duration="111000" />
+      <workItem from="1547722079288" duration="4286000" />
+      <workItem from="1547731051776" duration="3036000" />
+      <workItem from="1547822717394" duration="111000" />
+      <workItem from="1547932941751" duration="800000" />
+      <workItem from="1548062129243" duration="298000" />
+      <workItem from="1548063726347" duration="796000" />
+      <workItem from="1548091297376" duration="50000" />
+      <workItem from="1548333349637" duration="228000" />
+      <workItem from="1548353710374" duration="3685000" />
+      <workItem from="1548405748382" duration="169000" />
+      <workItem from="1548406817515" duration="1315000" />
+      <workItem from="1551213423429" duration="901000" />
+      <workItem from="1553184650600" duration="397000" />
+      <workItem from="1553185202490" duration="13000" />
+      <workItem from="1553186165010" duration="231000" />
+      <workItem from="1553535153354" duration="705000" />
+      <workItem from="1553773965027" duration="25000" />
+      <workItem from="1553787084306" duration="554000" />
+      <workItem from="1554708575686" duration="454000" />
+      <workItem from="1554740885275" duration="879000" />
+      <workItem from="1554991522397" duration="1911000" />
+      <workItem from="1556706907679" duration="615000" />
+      <workItem from="1556709734949" duration="26000" />
+      <workItem from="1556805636515" duration="1852000" />
+      <workItem from="1556807508372" duration="1050000" />
+      <workItem from="1556808612908" duration="579000" />
+      <workItem from="1556905934042" duration="3201000" />
+      <workItem from="1556909786239" duration="9000" />
+      <workItem from="1556996420884" duration="302000" />
+      <workItem from="1557312261929" duration="11000" />
+      <workItem from="1557383630218" duration="150000" />
+      <workItem from="1557566563001" duration="172000" />
+      <workItem from="1557566851636" duration="56000" />
+      <workItem from="1557567571580" duration="681000" />
+      <workItem from="1557593553967" duration="2702000" />
+      <workItem from="1557730678399" duration="1621000" />
+      <workItem from="1557752731869" duration="2787000" />
+      <workItem from="1557935084240" duration="793000" />
+      <workItem from="1557992801101" duration="3216000" />
+      <workItem from="1558080312943" duration="7636000" />
+      <workItem from="1558167973574" duration="931000" />
+      <workItem from="1558332061455" duration="4352000" />
+      <workItem from="1558363836072" duration="583000" />
+      <workItem from="1558461710966" duration="631000" />
+      <workItem from="1558505967485" duration="603000" />
+      <workItem from="1571648937428" duration="97000" />
+      <workItem from="1572947726852" duration="608000" />
+      <workItem from="1572948908781" duration="1395000" />
+      <workItem from="1572963115670" duration="239000" />
+      <workItem from="1572963611934" duration="35000" />
+      <workItem from="1573553350667" duration="29000" />
+      <workItem from="1573556607266" duration="778000" />
+      <workItem from="1573642475746" duration="598000" />
+      <workItem from="1573672841407" duration="1257000" />
+      <workItem from="1573725295350" duration="18000" />
+      <workItem from="1576581539939" duration="26000" />
+      <workItem from="1576585659165" duration="14000" />
+      <workItem from="1577137429708" duration="1718000" />
+      <workItem from="1577632985944" duration="3257000" />
+    </task>
+    <task id="LOCAL-00011" summary="func.php">
+      <created>1542702754282</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542702754282</updated>
+    </task>
+    <task id="LOCAL-00012" summary="func.php">
+      <created>1542721667904</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1542721667904</updated>
+    </task>
+    <task id="LOCAL-00013" summary="updated todos in funcs.php">
+      <created>1542721780927</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1542721780927</updated>
+    </task>
+    <task id="LOCAL-00014" summary="func.php">
+      <created>1542722613412</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1542722613412</updated>
+    </task>
+    <task id="LOCAL-00015" summary="func.php">
+      <created>1542722669240</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1542722669240</updated>
+    </task>
+    <task id="LOCAL-00016" summary="func.php">
+      <created>1542723121955</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1542723121955</updated>
+    </task>
+    <task id="LOCAL-00017" summary="func.php">
+      <created>1542723162449</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1542723162449</updated>
+    </task>
+    <task id="LOCAL-00018" summary="navbar changes | profile.php | home.php">
+      <created>1542736926138</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1542736926138</updated>
+    </task>
+    <task id="LOCAL-00019" summary="func.php | home.php | profile.php | wishlist.php">
+      <created>1542749762003</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1542749762003</updated>
+    </task>
+    <task id="LOCAL-00020" summary="navbar changes | profile.php | home.php">
+      <created>1542749804238</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1542749804238</updated>
+    </task>
+    <task id="LOCAL-00021" summary="navbar changes | profile.php | home.php">
+      <created>1542966166584</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1542966166584</updated>
+    </task>
+    <task id="LOCAL-00022" summary="navbar changes | profile.php | home.php">
+      <created>1542974195171</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1542974195171</updated>
+    </task>
+    <task id="LOCAL-00023" summary="config.php | func -&gt; func.inc.php | method changes | user changes | home change | profil changes | reg.php | style changes (login) | wishlist changes">
+      <created>1544475058113</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1544475058113</updated>
+    </task>
+    <task id="LOCAL-00024" summary="login.php">
+      <created>1544532740181</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1544532740181</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Profile.php">
+      <created>1544558352665</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1544558352665</updated>
+    </task>
+    <task id="LOCAL-00026" summary="navbar changes modified filename -&gt; navs.html">
+      <created>1544724626617</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1544724626617</updated>
+    </task>
+    <task id="LOCAL-00027" summary="File structure changed">
+      <created>1545313639907</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1545313639907</updated>
+    </task>
+    <task id="LOCAL-00028" summary="index.php | footer.html removed | bottommenu">
+      <created>1545318402176</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1545318402176</updated>
+    </task>
+    <task id="LOCAL-00029" summary="deleted footer.html">
+      <created>1545319008491</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1545319008491</updated>
+    </task>
+    <task id="LOCAL-00030" summary="profile.php | timeline.php">
+      <created>1546181544117</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1546181544117</updated>
+    </task>
+    <task id="LOCAL-00031" summary="post class | css | index | home">
+      <created>1547065754524</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1547065754524</updated>
+    </task>
+    <task id="LOCAL-00032" summary="style | index">
+      <created>1547134500550</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1547134500550</updated>
+    </task>
+    <task id="LOCAL-00033" summary="style | index">
+      <created>1547134646852</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1547134646852</updated>
+    </task>
+    <task id="LOCAL-00034" summary="display post | home.php | post.class changes | user.class changes | styles">
+      <created>1547323959638</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1547323959638</updated>
+    </task>
+    <task id="LOCAL-00035" summary="post -&gt; description changes">
+      <created>1547324709559</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1547324709559</updated>
+    </task>
+    <task id="LOCAL-00036" summary="post -&gt; description changes">
+      <created>1547325642747</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1547325642747</updated>
+    </task>
+    <task id="LOCAL-00037" summary="social media modal">
+      <created>1547325810102</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1547325810102</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Postview | userview finished !!!!! :)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))">
+      <created>1547331578959</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1547331578959</updated>
+    </task>
+    <task id="LOCAL-00039" summary="login fixed | security issues">
+      <created>1547375928502</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1547375928502</updated>
+    </task>
+    <task id="LOCAL-00040" summary="post set Methods im Constructor | Security issues (viewpost, viewuser)">
+      <created>1547376677264</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1547376677264</updated>
+    </task>
+    <task id="LOCAL-00041" summary="file structure changed">
+      <created>1547379529190</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1547379529190</updated>
+    </task>
+    <task id="LOCAL-00042" summary="checksession() jz überall">
+      <created>1547379680778</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1547379680778</updated>
+    </task>
+    <task id="LOCAL-00043" summary="login endlich fertig :))))))">
+      <created>1547382305199</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1547382305199</updated>
+    </task>
+    <task id="LOCAL-00044" summary="login fixes profil.php style changes">
+      <created>1547386247500</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1547386247500</updated>
+    </task>
+    <task id="LOCAL-00045" summary="timeline | funcs. | home.php">
+      <created>1547406634802</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1547406634802</updated>
+    </task>
+    <task id="LOCAL-00046" summary="nav color fix | viewuser header fix">
+      <created>1547407210471</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1547407210471</updated>
+    </task>
+    <task id="LOCAL-00047" summary="updated nav | rest files deleted | help.html created | impressum.html created">
+      <created>1547409372564</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1547409372564</updated>
+    </task>
+    <task id="LOCAL-00048" summary="login fixes | post_upload form bereitgestellt -&gt; validateinput">
+      <created>1547412336636</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1547412336636</updated>
+    </task>
+    <task id="LOCAL-00049" summary="login fixes | post_upload form bereitgestellt -&gt; validateinput">
+      <created>1547412720950</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1547412720950</updated>
+    </task>
+    <task id="LOCAL-00050" summary="deleted index &amp; login style | search finished">
+      <created>1547481202725</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1547481202725</updated>
+    </task>
+    <task id="LOCAL-00051" summary="timeline dummy">
+      <created>1547482053149</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1547482053150</updated>
+    </task>
+    <task id="LOCAL-00052" summary="timeline dummy finished ... | compute-timeline">
+      <created>1547483730958</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1547483730959</updated>
+    </task>
+    <task id="LOCAL-00053" summary="timeline nearly finished">
+      <created>1547488770874</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1547488770874</updated>
+    </task>
+    <task id="LOCAL-00054" summary="go back jetzt richtig | timeline funktionen in base.js verschoben | viewpost style changes">
+      <created>1547489319951</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1547489319951</updated>
+    </task>
+    <task id="LOCAL-00055" summary="impressum | style changes (viewpost margintop at main)">
+      <created>1547491130397</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1547491130397</updated>
+    </task>
+    <task id="LOCAL-00056" summary="postliken methode">
+      <created>1547492739517</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1547492739517</updated>
+    </task>
+    <task id="LOCAL-00057" summary="post liken / disliken geht jz">
+      <created>1547596840361</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1547596840361</updated>
+    </task>
+    <task id="LOCAL-00058" summary="thrift-it modus complete">
+      <created>1547663597027</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1547663597028</updated>
+    </task>
+    <task id="LOCAL-00059" summary="style changes | fixes">
+      <created>1547676693952</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1547676693952</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="384349000" />
+  </component>
+  <component name="TodoView" selected-index="2" />
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.17750533" />
+      <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.33557048" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4986577" weight="0.9219858" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.9219858" />
+      <window_info anchor="bottom" id="Database Changes" order="11" sideWeight="0.49932885" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="File Transfer" order="12" sideWeight="0.49798658" visible="true" weight="0.45294726" />
+      <window_info active="true" anchor="bottom" id="CSS Styles" order="13" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.21276596" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32871014" />
+      <window_info anchor="right" id="Database" order="4" weight="0.15346535" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.33557048" />
+      <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.33557048" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4986577" weight="0.9219858" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.9219858" />
+      <window_info anchor="bottom" id="Database Changes" order="11" sideWeight="0.49932885" weight="0.32907802" />
+      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.49798658" weight="0.45815602" />
+      <window_info active="true" anchor="bottom" id="CSS Styles" order="13" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.21276596" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.3295302" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.2758389" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="D:\OneDrive - HTL Spengergasse\Dokumente\Websites\WS-P1-Thrifter\thrifter-temp" />
+    </ignored-roots>
+    <MESSAGE value="style | index" />
+    <MESSAGE value="display post | home.php | post.class changes | user.class changes | styles" />
+    <MESSAGE value="post -&gt; description changes" />
+    <MESSAGE value="social media modal" />
+    <MESSAGE value="Postview | userview finished !!!!! :)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))" />
+    <MESSAGE value="login fixed | security issues" />
+    <MESSAGE value="post set Methods im Constructor | Security issues (viewpost, viewuser)" />
+    <MESSAGE value="file structure changed" />
+    <MESSAGE value="checksession() jz überall" />
+    <MESSAGE value="login endlich fertig :))))))" />
+    <MESSAGE value="login fixes profil.php style changes" />
+    <MESSAGE value="timeline | funcs. | home.php" />
+    <MESSAGE value="nav color fix | viewuser header fix" />
+    <MESSAGE value="updated nav | rest files deleted | help.html created | impressum.html created" />
+    <MESSAGE value="login fixes | post_upload form bereitgestellt -&gt; validateinput" />
+    <MESSAGE value="deleted index &amp; login style | search finished" />
+    <MESSAGE value="timeline dummy" />
+    <MESSAGE value="timeline dummy finished ... | compute-timeline" />
+    <MESSAGE value="timeline nearly finished" />
+    <MESSAGE value="go back jetzt richtig | timeline funktionen in base.js verschoben | viewpost style changes" />
+    <MESSAGE value="impressum | style changes (viewpost margintop at main)" />
+    <MESSAGE value="postliken methode" />
+    <MESSAGE value="post liken / disliken geht jz" />
+    <MESSAGE value="thrift-it modus complete" />
+    <MESSAGE value="style changes | fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="style changes | fixes" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>establishDB()</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/website-dir/JS/timeline.js" />
+    <entry file="file://$PROJECT_DIR$/website-dir/test/imagecrop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="34" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/html/post_upload.html" />
+    <entry file="file://$PROJECT_DIR$/website-dir/app/thrift-it.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="40" selection-start-line="40" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB/Drafts/Thrifter-DB_V1.mwb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/test/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB/Drafts/Thrifter-DB_V1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="das://110f198c-1200-4e54-b37c-f2e0a10df070/schema/thrifter/table/f_favorites" />
+    <entry file="file://$PROJECT_DIR$/website-dir/html/bottommenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/meineProdukte.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/html/help.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="72" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://272ef652-5f5d-4443-8ff5-0156e40c3843/schema/u164197db1/table/p_post" />
+    <entry file="das://272ef652-5f5d-4443-8ff5-0156e40c3843/schema/u164197db1/table/f_favorites" />
+    <entry file="file://$PROJECT_DIR$/website-dir/app/compute-timeline.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SS-PicknMix/website-dir/app/upload/PostUpload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/3368831c-cdca-4bc6-adde-96a3f3fc8339">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>3368831c-cdca-4bc6-adde-96a3f3fc8339</OriginalElement>
+          <nodes>
+            <node x="" y="">3368831c-cdca-4bc6-adde-96a3f3fc8339.TABLE:k49767_bonkers_online.images</node>
+            <node x="" y="">3368831c-cdca-4bc6-adde-96a3f3fc8339.TABLE:k49767_bonkers_online.personal</node>
+            <node x="" y="">3368831c-cdca-4bc6-adde-96a3f3fc8339.TABLE:k49767_bonkers_online.event</node>
+            <node x="" y="">3368831c-cdca-4bc6-adde-96a3f3fc8339.TABLE:k49767_bonkers_online.location</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7841726618705036" x="370.0" y="397.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3368831c-cdca-4bc6-adde-96a3f3fc8339/console.sql" />
+    <entry file="file://$PROJECT_DIR$/website-dir/css/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/timeline.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/viewpost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://272ef652-5f5d-4443-8ff5-0156e40c3843/schema/u164197db1/table/b_brands">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/post-like.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://272ef652-5f5d-4443-8ff5-0156e40c3843/schema/u164197db1/table/u_users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\post">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\post</OriginalElement>
+          <nodes>
+            <node x="993.0" y="0.0">\user</node>
+            <node x="0.0" y="0.0">\post</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.2719546742209632" x="872.0" y="544.0" />
+          <SelectedNodes>
+            <node>\post</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/assets/users/1.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SS-PicknMix/website-dir/app/profile/reg.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/class/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="84" column="23" selection-start-line="63" selection-start-column="8" selection-end-line="84" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/css/product.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="1" selection-start-line="3" selection-end-line="58" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/JS/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/JS/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/JS/bottommenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/compute-search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="65" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/config-server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/config-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SS-PicknMix/website-dir/app/impressum/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.webworker.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="1435" column="4" selection-start-line="1435" selection-start-column="4" selection-end-line="1435" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3621">
+          <caret line="213" column="82" selection-start-line="213" selection-start-column="82" selection-end-line="213" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/class/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/wishlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/viewuser.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/image_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SS-T5-PicknMix/website-dir/app/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/css/nav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/html/post_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="121" column="56" selection-start-line="121" selection-start-column="56" selection-end-line="121" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/html/navs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/app/funcs.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="186" column="5" selection-start-line="176" selection-start-column="4" selection-end-line="186" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website-dir/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="147" column="66" selection-start-line="147" selection-start-column="66" selection-end-line="147" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -296,7 +296,7 @@
     </section>
     <section class="full-height-section p-3 d-flex align-items-center">
         <blockquote class="blockquote col-md-6 mx-auto">
-            <p class="mb-0 h1">Someone that religiously shops at Thrift Stores looking for bargains and often scores
+            <p class="mb-0 h3">Someone that religiously shops at Thrift Stores looking for bargains and often scores
                 amazing deals. Often dedicated to recycling and reuse of products to keep our planet "greener".
             </p>
             <footer class="blockquote-footer h3">Urban Dictionary</footer>
@@ -314,7 +314,7 @@
         <div class="row" style="margin-bottom: 100px">
             <div class="col-9">
                 <h1 class="text-success mb-3"><img src="assets/logo/Logo.svg" style="height: 3rem"> </h1>
-                <h5 class="mt-4 font-weight-bold" style="letter-spacing: 1.5px"><a class="mx-3">Link1</a><a class="mx-3">Link1</a><a class="mx-3">Link1</a><a class="mx-3">Link1</a></h5>
+                <h5 class="mt-4 font-weight-bold" style="letter-spacing: 1.5px"><a class="mx-3" href="app/login.php">Login</a><a class="mx-3" href="app/home.php">Home</a><a class="mx-3" href="app/profile.php">Profil</a></h5>
             </div>
             <div class="col-3 justify-content-center align-content-end">
                 <a data-toggle="modal"

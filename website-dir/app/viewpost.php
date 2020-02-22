@@ -66,9 +66,6 @@ echo file_get_contents('../html/bottommenu.html');
             } else {
                 echo "<a onclick=\"postlike($post->p_id, 'like', this)\"><i class=\"fa-2x far fa-heart text-success\"></i></a>";
             }
-            if(true){
-                echo "<i class=\"fa-2x fas fa-ellipsis-v ml-3\"></i>";
-            }
             echo "</div>";
             echo "<div class='px-4 pt-4'>";
             echo "<div class='row'>";

@@ -202,57 +202,57 @@ checkSession();
                         <script>
                             //TODO birtdate -> calendar field to choose
                             //TODO passsword -> 2 fields which gets compared if equal
-                            $(document).ready(function () {
-                                $('#submit').click(function () {
-                                    var email  = $('#email').val();
-                                    var surname = $('#surname').val();
-                                    var forename = $('#forename').val();
-                                    var pwd1 = $('#password1').val();
-                                    var pwd2 = $('#password2').val();
-                                    var zipcode = $('#zipcode').val();
-                                    var phonenumber = $('#phonenumber').val();
-                                    var description = $('#description').val();
-                                    if (email === '' && surname === '' && forename === '' && pwd1 === '' && pwd2 === '' && zipcode === '' && phonenumber === '' && description === '') {
-                                        $('#error_message').html("Keine Änderungen vorgenommen!");
-                                    } else {
-                                        $.ajax({
-                                            url: "reg.php",
-                                            method: "POST",
-                                            data: {email:email, surname:surname, forename:forename, pwd1:pwd1, pwd2:pwd2, zipcode:zipcode, phonenumber:phonenumber, description:description},
-                                            success:function (data) {
-                                                /*
-                                                if (data == 'error') {
-                                                    $('#error_message').html('Fehler beim Vornehmen der Änderung(en)');
-                                                } else {
-                                                    $('form').trigger('reset');
+                                $(document).ready(function () {
+                                    $('#submit').click(function () {
+                                        var email  = $('#email').val();
+                                        var surname = $('#surname').val();
+                                        var forename = $('#forename').val();
+                                        var pwd1 = $('#password1').val();
+                                        var pwd2 = $('#password2').val();
+                                        var zipcode = $('#zipcode').val();
+                                        var phonenumber = $('#phonenumber').val();
+                                        var description = $('#description').val();
+                                        if (email === '' && surname === '' && forename === '' && pwd1 === '' && pwd2 === '' && zipcode === '' && phonenumber === '' && description === '') {
+                                            $('#error_message').html("Keine Änderungen vorgenommen!");
+                                        } else {
+                                            $.ajax({
+                                                url: "reg.php",
+                                                method: "POST",
+                                                data: {email:email, surname:surname, forename:forename, pwd1:pwd1, pwd2:pwd2, zipcode:zipcode, phonenumber:phonenumber, description:description},
+                                                success:function (data) {
+                                                    /*
+                                                    if (data == 'error') {
+                                                        $('#error_message').html('Fehler beim Vornehmen der Änderung(en)');
+                                                    } else {
+                                                        $('form').trigger('reset');
 
-                                                    //TODO find better way to update the placeholders w/ SESSION-data
-                                                    window.location.reload();
+                                                        //TODO find better way to update the placeholders w/ SESSION-data
+                                                        window.location.reload();
 
-                                                    $('#success_message').fadeIn().html('Änderungen vorgenommen');
-                                                    setTimeout(function () {
-                                                        $('#success_message').fadeOut('Slow');
-                                                    }, 20000);
+                                                        $('#success_message').fadeIn().html('Änderungen vorgenommen');
+                                                        setTimeout(function () {
+                                                            $('#success_message').fadeOut('Slow');
+                                                        }, 20000);
+                                                    }
+                                                    */
+                                                    if (data !== 'success')  {
+                                                        $('#error_message').html(data);
+                                                    } else {
+                                                        $('form').trigger('reset');
+
+                                                        //TODO find better way to update the placeholders w/ SESSION-data
+                                                        window.location.reload();
+
+                                                        $('#success_message').fadeIn().html('Änderungen vorgenommen');
+                                                        setTimeout(function () {
+                                                            $('#success_message').fadeOut('Slow');
+                                                        }, 20000);
+                                                    }
                                                 }
-                                                */
-                                                if (data !== 'success')  {
-                                                    $('#error_message').html(data);
-                                                } else {
-                                                    $('form').trigger('reset');
-
-                                                    //TODO find better way to update the placeholders w/ SESSION-data
-                                                    window.location.reload();
-
-                                                    $('#success_message').fadeIn().html('Änderungen vorgenommen');
-                                                    setTimeout(function () {
-                                                        $('#success_message').fadeOut('Slow');
-                                                    }, 20000);
-                                                }
-                                            }
-                                        });
-                                    }
+                                            });
+                                        }
+                                    });
                                 });
-                            });
                         </script>
                     </div>
                 </div>

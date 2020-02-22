@@ -81,7 +81,7 @@ class post
         } else {
             $string .= "<a onclick=\"postlike($this->p_id, 'like', this)\"><i class=\"fa-2x far fa-heart text-success\"></i></a></div>";
         }
-        $string .= "<div class='product-footer'><h6>$this->p_price</h6></div></div></div>";
+        $string .= "<div class='product-footer'><h6>$this->p_price €</h6></div></div></div>";
         return $string;
     }
 
@@ -89,7 +89,7 @@ class post
     {
         $user = getUserbyID($this->p_u_user);
         $string = "<div class=\"thrift-it\">
-                        <img src=\"../assets/posts/1.png\">
+                        <img src=\"../assets/posts/$this->p_image\">
                         <div class=\"thrift-it-footer\">
                             <div class=\"d-flex align-items-center justify-content-between\"><h4>$this->p_title</h4><h5>".$this->p_price."€</h5></div>
                             <div class=\"d-flex align-items-center justify-content-between\"><span>$user->u_username</span><span>$user->u_zipcode</span></div>

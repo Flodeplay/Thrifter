@@ -41,7 +41,7 @@
 <body>
 <main class="login-main">
     <section class="d-flex flex-column align-items-center justify-content-center"
-             style="min-height: 100vh;">
+             style="min-height: 100vh;padding: 20px">
         <div style="background-color: #f2f2f2; border-radius: 20px; padding:30px; margin: 20px; max-width: 500px; width: 100%" class="shadow-lg">
         <?php
         if (isset($_POST["submit"])) {

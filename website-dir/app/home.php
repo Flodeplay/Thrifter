@@ -41,6 +41,7 @@ checkSession();
 <?php
 echo file_get_contents('../html/navs.html');
 echo file_get_contents('../html/bottommenu.html');
+
 ?>
 <header class="shadow">
     <i></i>

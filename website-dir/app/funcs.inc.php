@@ -160,7 +160,7 @@ function isUserbyName($username)
             return false;
         }
     } else {
-        throw new Exception("Felher! Parameter Falsch!");
+        throw new Exception("Fehler! Parameter Falsch!");
     }
 }
 
@@ -261,6 +261,7 @@ function getPostbyID($post_id){
         throw new Exception("Parameter darf nicht 0 sein");
     }
 }
+
 /** @var post[] $posts */
 function printProduct($posts)
 {
